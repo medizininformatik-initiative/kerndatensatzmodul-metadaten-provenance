@@ -99,6 +99,42 @@ Description: "Example of Patient"
 * meta.tag[0] = ValidationOutcomeCS#success "Validierung erfolgreich"
 ```
 
+### Verhalten von Meta.tag auf FHIR-Servern
+
+Für die praktische Umsetzung des Meta.tag-Ansatzes in den DIZ ist das Verhalten der eingesetzten FHIR-Server relevant. Die folgende Übersicht bezieht sich auf die in der MII verbreiteten Server-Implementierungen.
+
+#### Tag-Persistenz bei Updates (FHIR-Spezifikation)
+
+Die FHIR-Spezifikation schreibt vor, dass Tags bei einem Update einer Ressource **automatisch in die neue Version übernommen** werden, auch wenn sie im Update-Request nicht explizit enthalten sind. Dieses Verhalten stellt sicher, dass einmal gesetzte Provenance-Tags nicht versehentlich verloren gehen. Clients können dieses Verhalten über den HTTP-Header `X-Meta-Snapshot-Mode: TAG` übersteuern -- in diesem Fall werden nur die im Request enthaltenen Tags übernommen.
+
+#### Suche über den `_tag`-Parameter
+
+Der Suchparameter `_tag` ist ein Standard-FHIR-Suchparameter, der auf allen FHIR-Ressourcentypen definiert ist. Die Syntax lautet:
+
+```
+GET [base]/Patient?_tag=http://example.org/cs|code
+```
+
+Damit lassen sich alle Ressourcen finden, die mit einem bestimmten Tag ausgezeichnet sind -- eine zentrale Voraussetzung für die Nutzbarkeit des Meta.tag-Ansatzes.
+
+#### HAPI FHIR / Smile CDR
+
+HAPI FHIR bietet drei Speichermodi für Tags (konfigurierbar über `Tag Storage Mode`):
+
+| Modus | Verhalten | Suchbar | Geeignet für |
+|-------|-----------|---------|-------------|
+| **NON_VERSIONED** (Standard) | Tags werden in dedizierten Datenbanktabellen gespeichert, eine Kollektion für alle Versionen einer Ressource. Hinzufügen/Entfernen eines Tags betrifft **alle Versionen**. | Ja | Wenige, gemeinsam genutzte Tags über viele Ressourcen |
+| **VERSIONED** | Separate Tag-Kollektion pro Ressourcenversion. Änderungen betreffen nur die jeweilige Version. | Ja | Versionsspezifische Tag-Nachverfolgung |
+| **INLINE** | Tags werden direkt im Ressourcen-Body gespeichert. | **Nein** (außer bei manuell angelegtem SearchParameter) | Hohe Kardinalität, viele einzigartige Tags |
+
+**Wichtig für DIZ-Implementierungen:** Im Standard-Modus (NON_VERSIONED) wird die Eindeutigkeit eines Tags nur über `system` + `code` bestimmt -- das `display`-Feld hat keinen Einfluss. Im INLINE-Modus funktioniert die `_tag`-Suche nicht ohne zusätzliche Konfiguration.
+
+#### Blaze (Samply)
+
+Blaze unterstützt laut Dokumentation alle FHIR R4 Suchparameter, einschließlich `_tag`. Die genauen Speicher- und Persistenzmechanismen für Tags sind in der aktuellen Dokumentation nicht im Detail beschrieben. Die tatsächlichen Fähigkeiten können über das CapabilityStatement (`/fhir/metadata`) abgefragt werden.
+
+*Quellen: [Smile CDR: Tags, Profiles, and Security Labels](https://smilecdr.com/docs/fhir_repository/tags_profiles_and_labels.html), [Oracle FHIR: Tag Retention](https://docs.oracle.com/en/industries/health-sciences/healthcare-data-repository/8.2/fhir-guide/tag-retention.html), [Samply Blaze](https://samply.github.io/blaze/)*
+
 ### Vorteile
 
 - Einfache Implementierbarkeit
