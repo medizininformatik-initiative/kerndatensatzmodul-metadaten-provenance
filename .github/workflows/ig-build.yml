@@ -52,7 +52,7 @@ jobs:
 
       - name: Run IG Publisher
         run: |
-          java -jar publisher.jar -ig . -no-narrative
+          java -jar publisher.jar -ig .
 
       - name: Upload IG output
         if: always()
