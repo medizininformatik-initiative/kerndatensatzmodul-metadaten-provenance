@@ -1,0 +1,107 @@
+@startuml Deduplizierung_Onko_OP
+
+title Deduplizierung und Anreicherung einer onkologischen Operation
+
+skinparam sequenceArrowThickness 1.5
+skinparam roundcorner 5
+skinparam maxmessagesize 220
+
+skinparam participant {
+  BackgroundColor #F5F5F5
+  BorderColor #333333
+}
+
+skinparam note {
+  BackgroundColor #FFFFF0
+  BorderColor #999999
+}
+
+actor "Klinik" as klinik
+participant "KIS\n(Abrechnung)" as kis #CCDDFF
+participant "Tumor-\ndokumentation" as tdok #FFDD99
+participant "Krebsregister\n(LKR)" as lkr #FFDD99
+participant "ETL\n(KIS→FHIR)" as etl_kis #CCDDFF
+participant "ETL\n(oBDS→FHIR)" as etl_obds #FFDD99
+database "DIZ\nFHIR-Repository" as diz #DDFFDD
+
+== 12.03.2025: Operation ==
+
+klinik -> kis : OP dokumentiert\n(OPS 5-870)
+activate kis
+
+kis -> etl_kis : OPS-Daten
+activate etl_kis
+
+etl_kis -> diz : **Procedure A**\n(Abrechnung)
+activate diz
+note right of diz #CCDDFF
+  **Procedure A**
+  source: KIS/Abrechnung
+  OPS: 5-870
+  Datum: 12.03.2025
+  Intention: --
+  Residualstatus: --
+  Komplikationen: --
+end note
+deactivate etl_kis
+deactivate kis
+
+== März – Juni 2025: Tumordokumentation ==
+
+klinik -> tdok : Histologie, TNM,\nIntention, Residualstatus,\nKomplikationen ergänzt
+activate tdok
+
+tdok -> lkr : oBDS-Meldung\n(12.06.2025)
+activate lkr
+deactivate tdok
+
+== 12.06.2025: oBDS-Reimport ==
+
+lkr -> etl_obds : oBDS-XML
+activate etl_obds
+deactivate lkr
+
+etl_obds -> diz : **Procedure B**\n(oBDS-Import)
+note right of diz #FFDD99
+  **Procedure B**
+  source: oBDS-Meldung
+  OPS: 5-870
+  Datum: 12.03.2025
+  Intention: **K (kurativ)**
+  Residualstatus: **R0**
+  Komplikationen: **HNK**
+end note
+deactivate etl_obds
+
+== Duplikaterkennung ==
+
+diz -> diz : Match:\ngleicher Patient,\ngleicher OPS,\ngleiches Datum\n(± 7 Tage)
+note right of diz #FFCCCC
+  ⚠ **Duplikat erkannt**
+  Procedure A ≈ Procedure B
+end note
+
+== Merge / Anreicherung ==
+
+diz -> diz : Merge:\nProcedure A + B\n→ Procedure C
+
+note right of diz #DDFFDD
+  **Procedure C** (zusammengeführt)
+  source: Abrechnung + oBDS
+  OPS: 5-870
+  Datum: 12.03.2025
+  Intention: **K (kurativ)** ← aus B
+  Residualstatus: **R0** ← aus B
+  Komplikationen: **HNK** ← aus B
+end note
+
+deactivate diz
+
+note over diz
+  Provenance dokumentiert:
+  • Herkunft (Abrechnung / oBDS)
+  • Merge-Vorgang
+  • Quellressourcen A und B
+end note
+
+@enduml
