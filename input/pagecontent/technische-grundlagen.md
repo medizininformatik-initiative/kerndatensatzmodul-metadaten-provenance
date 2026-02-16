@@ -1,9 +1,3 @@
----
-parent:
----
-
-## {{page-title}}
-
 ### Relevante Standards
 
 #### Dublin Core (DC)

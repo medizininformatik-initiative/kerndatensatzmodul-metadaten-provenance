@@ -1,9 +1,3 @@
----
-parent:
----
-
-## {{page-title}}
-
 ### Konzept
 
 Die BZKF-Implementierung [obds-to-fhir](https://github.com/bzkf/obds-to-fhir) (Christian Gulden, BZKF/Erlangen) nutzt die FHIR Provenance Ressource zur Dokumentation der ETL-Transformation von oBDS-XML-Meldungen zu MII-KDS-konformen FHIR-Ressourcen. Für jede erzeugte Ressource wird eine Provenance-Instanz generiert, die den Transformationsprozess nachvollziehbar macht.

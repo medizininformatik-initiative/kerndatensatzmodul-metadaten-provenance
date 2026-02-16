@@ -1,9 +1,3 @@
----
-parent:
----
-
-## {{page-title}}
-
 ### Konzept
 
 Die [US Core Basic Provenance](https://www.hl7.org/fhir/us/core/basic-provenance.html) Spezifikation ist der bislang am weitesten verbreitete Implementierungsleitfaden für FHIR Provenance. Sie definiert einen pragmatischen Ansatz, der sich auf die wesentlichen Informationen beschränkt und als Vorbild für eine MII-Adaption dienen kann.

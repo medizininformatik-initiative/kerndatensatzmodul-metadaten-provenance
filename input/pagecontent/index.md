@@ -1,10 +1,3 @@
----
-parent:
-topic: Metadaten Provenance
----
-
-## {{page-title}}
-
 Dieses Dokument beschreibt Konzepte und Implementierungsalternativen zur Unterstützung einer basalen Provenance im MII-Kerndatensatz. Es dient als informativer Beitrag zur Diskussion innerhalb der Medizininformatik-Initiative und stellt keine verbindliche Festlegung dar.
 
 | Veröffentlichung |  |
@@ -29,16 +22,12 @@ Beide Ansätze werden anhand konkreter Beispiele beschrieben und verglichen.
 - Christian Gulden (BZKF) -- Provenance-Implementierung in obds-to-fhir
 - Thomas Debertshäuser (BIH/Charité) -- Redaktion und Zusammenführung
 
-## Inhaltsverzeichnis
-
-{{index:root}}
-
-## Ansprechpartner
+### Ansprechpartner
 
 Fragen zu der vorliegenden Publikation können jederzeit unter [chat.fhir.org](https://chat.fhir.org) im Stream 'german/mi-initiative' gestellt werden.
 
 Anmerkungen und Kritik in Form von 'Issues' im [GitHub-Projekt](https://github.com/medizininformatik-initiative/kerndatensatzmodul-metadaten-provenance/issues).
 
-## Disclaimer
+### Disclaimer
 
 Dieser Leitfaden ist ein informativer Beitrag zu Spezifikationsalternativen. Er stellt keine normative Festlegung der Medizininformatik-Initiative dar.

@@ -1,9 +1,3 @@
----
-parent:
----
-
-## {{page-title}}
-
 ### Konzept
 
 Die MII Taskforce Metadaten (Löbe et al., Juli 2025) schlägt einen leichtgewichtigen Ansatz auf Basis von `Resource.meta.tag` vor. Einer Ressource können beliebig viele Schlagwörter aus zentral abgestimmten Vokabularen (CodeSystems) zugeordnet werden.

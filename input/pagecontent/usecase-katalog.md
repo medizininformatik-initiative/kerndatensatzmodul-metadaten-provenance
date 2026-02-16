@@ -1,9 +1,3 @@
----
-parent:
----
-
-## {{page-title}}
-
 Dieser Katalog beschreibt wiederkehrende Provenance-Szenarien in der MII. Jeder Use Case definiert, welche Felder der FHIR Provenance Ressource wie belegt werden.
 
 ### Übersicht
@@ -43,7 +37,7 @@ Zwei FHIR-Ressourcen beschreiben dasselbe klinische Ereignis (z.B. Operation aus
 - `entity[0]` = Quellressource A (`role` = `source`)
 - `entity[1]` = Quellressource B (`role` = `source`)
 
-Siehe auch: {{pagelink:Anwendungsbeispiel-Deduplizierung}}
+Siehe auch: [Anwendungsbeispiel Deduplizierung](anwendungsbeispiel-deduplizierung.html)
 
 ---
 

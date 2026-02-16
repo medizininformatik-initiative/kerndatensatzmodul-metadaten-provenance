@@ -1,9 +1,3 @@
----
-parent:
----
-
-## {{page-title}}
-
 ### Gegenüberstellung der Ansätze
 
 | Kriterium | Meta.tag (Taskforce) | FHIR Provenance (BZKF) |

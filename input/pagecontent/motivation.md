@@ -1,9 +1,3 @@
----
-parent:
----
-
-## {{page-title}}
-
 ### Ausgangslage
 
 Versorgungsdaten unterscheiden sich in vielen Punkten von prospektiven Datensammlungen, die klinische Forscher gewohnt sind. In bisher erfolgten Datennutzungsprojekten der MII sind teilweise Probleme in der Interpretation der Daten durch Dritte aufgetreten. Diese Eigenheiten waren in der Struktur der Versorgungsdaten begründet und keine Fehler des Datenausleitungsprozesses.

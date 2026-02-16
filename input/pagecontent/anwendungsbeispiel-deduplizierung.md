@@ -1,9 +1,3 @@
----
-parent:
----
-
-## {{page-title}}
-
 ### Szenario: Brustkrebs-Operation
 
 Eine onkologische Operation -- die Entfernung eines Brustkrebs-Tumors -- wird am **12.03.2025** in einem Universitätsklinikum durchgeführt.
@@ -50,27 +44,7 @@ Für nachfolgende Nutzungen der Daten -- Ausleitung für Forschungsvorhaben, Ber
 
 ### Ablaufdiagramm
 
-<!-- TODO: PlantUML-Diagramm -->
-
-```
-Zeitachse
-─────────────────────────────────────────────────────────────────────►
-
-12.03.2025              13.03.2025                        12.06.2025
-    │                       │                                 │
-    ▼                       ▼                                 ▼
- OP durchgeführt     Procedure A (KIS)              Procedure B (oBDS)
- OPS 5-870           im DIZ-Repository              im DIZ-Repository
- Brustkrebs-OP              │                                 │
-                            │                                 │
-                            └──────────┐    ┌─────────────────┘
-                                       │    │
-                                       ▼    ▼
-                                   ⚠ Duplikat
-                                       │
-                                       ▼
-                               Deduplizierung?
-```
+<img src="Deduplizierung_Onko_OP.png" alt="Sequenzdiagramm Deduplizierung Onkologie-OP" width="100%"/>
 
 ### Herausforderungen
 
