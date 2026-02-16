@@ -1,51 +1,53 @@
-### Relevante Standards
+Der folgende Abschnitt zählt relevante Standards und Initiativen auf, welche Einfluss auf die Entwicklung des Provenancekonzepts genommen haben. Die Verwendung existierender Standards ist nicht nur wissenschaftliche Best Practice, sondern stellt auch eine minimale Interoperabilität mit Daten aus anderen Repositorien sicher.
 
-#### Dublin Core (DC)
+### Bemerkung zur terminologischen Abgrenzung
 
-Dublin Core (ISO 15836) ist eine Sammlung von Metadatenmerkmalen, die 1995 als einer der ersten nicht-technischen Standards für Web-Ressourcen abgestimmt wurde. Die Aktualisierung DCMI Metadata Terms (DCTERMS, ISO 15836-2) von 2012 definiert u.a. das Merkmal "Provenance" und legt für einzelne Elemente Schemas und Datentypen fest. Aufgrund seiner Einfachheit und breiten Anwendbarkeit wird Dublin Core durchgängig genutzt.
+Die Abgrenzung von Daten und Metadaten ist nicht trivial und existierende Unterscheidungen sind nicht unumstritten. Dasselbe gilt auch für Provenance-Metadaten als Subtyp von Metadaten. Während die Einstufung von Provenance als Subklasse von Metadaten selbst mehrheitlich unstrittig ist, ist die Abgrenzung zwischen Provenance-Merkmal und anderweitigem Metadatum schwierig und wird im Rahmen dieses Konzepts großzügig interpretiert.
 
-#### W3C PROV
+### Dublin Core (DC)
 
-W3C PROV ist ein domänenunabhängiges Top-Level-Modell zur Beschreibung von Provenance-Information, basierend auf drei Konzepten:
+Unter Dublin Core, genauer Dublin Core Metadata Element Set (ISO 15836-1), wird eine Sammlung von initial 15 Merkmalen verstanden, die 1995 als einer der ersten nicht-technischen Standards abgestimmt wurde, um Metadaten in Webseiten (und anderen Web-Ressourcen) auszeichnen zu können. 2012 wurde eine Aktualisierung des Standards unter dem Namen DCMI Metadata Terms (DCTERMS, ISO 15836-2) vorgenommen. DCTERMS teilt die Metadaten in Kategorien/Hierarchien ein, definiert zusätzliche Merkmale (u.a. Provenance) und legt für einzelne Elemente Schemas und Datentypen fest. Aufgrund seiner Einfachheit und breiten Anwendbarkeit wird Dublin Core als einer der wenigen Metadatenstandards durchgängig benutzt.
+
+### W3C PROV
+
+W3C PROV ist ein Standard zur Beschreibung von Provenance-Information für das WWW und geht damit über die Beschreibung von Webseiten deutlich hinaus. Mit PROV lassen sich prinzipiell alle Dinge beschreiben, denen man eine Identifikationsnummer geben kann (physisch vorhanden, virtuell oder imaginär). PROV ist ein domänenunabhängiges Top-Level-Modell und basiert im Wesentlichen auf drei Konzepten:
 
 - **Entität** -- Dinge, die beschrieben werden sollen
 - **Aktivität** -- Handlung, die Entitäten erzeugt, benutzt oder verändert
-- **Agent** -- Person, Organisation oder Software mit Verantwortung für Entitäten/Aktivitäten
+- **Agent** -- Person, Organisation oder Software, die eine Form von Verantwortung für die Erzeugung, Benutzung oder Veränderungen einer Entität im Rahmen einer Aktivität haben
 
-W3C PROV wurde 2013 standardisiert und ist der Goldstandard im Bereich der wissenschaftlichen Provenance.
+Wichtiger Unterschied zu Dublin Core ist die notwendige Behandlung von Aktivitäten, was das Modell ausdrucksstärker, aber auch komplexer macht.
 
-### Provenance in FHIR
+PROV wurde 2013 standardisiert und bietet neben dem Datenmodell viele weitere Komponenten wie eine Ontologie, ein XML-Schema, eine Abfragesprache und ein Mapping nach Dublin Core. W3C PROV ist der Goldstandard im Bereich der wissenschaftlichen Provenance.
 
-Provenance ist in FHIR nicht zentral, sondern auf verschiedenen Ebenen realisierbar:
+### FHIR Metamodell und FHIR Provenance Ressource
 
-#### Ebene 1: Ressourcen-Attribute (5Ws-Pattern)
+Provenance wurde seit Jahrzehnten in praktisch allen HL7-Standards bedacht und gelebt. Dementsprechend nimmt das Thema auch bei FHIR eine zentrale Rolle ein. Allerdings werden Provenance-Daten in FHIR nicht zentral gehalten, sondern an verschiedenen Stellen verteilt gespeichert. Hintergrund ist die Verwendung des **5Ws-Patterns** als ein zentrales Entwicklungsmuster in FHIR. "5Ws" steht für *Who -- What -- When -- Where -- Why* und bedeutet übertragen, dass alle FHIR-Ressourcen diese "W"-Fragen (falls anwendbar) beantworten müssen. Dadurch werden wichtige Provenance-Attribute durchgängig adressiert.
 
-Alle FHIR-Ressourcen beantworten (falls anwendbar) die "5W"-Fragen: Who, What, When, Where, Why. Observations haben z.B. Attribute für Status, Kategorie und Publikationszeit. **Dies deckt die meisten klinisch relevanten Provenance-Informationen ab.**
+Provenance (im breiteren Verständnis) ist mindestens in 5 verschiedenen Ebenen realisierbar:
+
+#### Ebene 1: Spezifische Attribute der FHIR-Ressourcen
+
+Die wichtigste und weitverbreitetste Ebene. FHIR Observations haben neben einem konkreten Wert bspw. optionale Attribute für Status, Kategorie oder Publikationszeit. Damit lassen sich die meisten klinisch relevanten Provenance-Informationen erfassen. Vorteilhaft ist insbesondere die normierte Kodierung der einzelnen Attribute.
 
 #### Ebene 2: AuditEvent
 
-Die Ressource `AuditEvent` deckt sicherheitsrelevante Aktionen ab (Login-Versuche, Datenzugriffe). Sie überschneidet sich inhaltlich teilweise mit Provenance.
+Die FHIR-Ressource `AuditEvent` deckt spezifische sicherheitsrelevante Aktionen ab. Sie überschneidet sich inhaltlich in einigen Punkten mit Provenance, da sie auch Updates von Werten behandelt, ist aber auch keine vollständige Untermenge, da sie bspw. auch Login-Versuche in ein Informationssystem unterstützt.
 
 #### Ebene 3: FHIR Provenance Ressource
 
-Die Ressource `Provenance` erlaubt generische Provenance-Aussagen basierend auf W3C PROV. Sie wird von manchen Ressourcen explizit adressiert (z.B. `MedicationAdministration.eventHistory`), erfährt aber bislang **keine breite praktische Verwendung**.
+Die FHIR-Ressource `Provenance` erlaubt generische Provenance-Aussagen und basiert auf dem Standard W3C PROV. Sie wird von manchen FHIR-Ressourcen explizit adressiert (siehe `MedicationAdministration.eventHistory`), erfährt aber bislang **keine breite praktische Verwendung**. Daher ist ihre Best-Practice-Anwendung noch unklar. Prinzipiell wäre es auch möglich, Attribute aus anderen Ressourcen (siehe Ebene 1) zu duplizieren, um einen zusätzlichen Datenstrom für bestimmte Softwaresysteme zu generieren.
 
 #### Ebene 4: Meta-Element
 
-Der Datentyp `Meta` ist Teil aller FHIR-Ressourcen und enthält drei für Provenance relevante Attribute:
-
-| Attribut | Kardinalität | Typ | Beschreibung |
-|----------|-------------|-----|--------------|
-| `source` | 0..1 | uri | URI des Quellsystems; kann nur einmal vorkommen |
-| `security` | 0..* | Coding | Sicherheits-/Vertraulichkeitsauszeichnung |
-| `tag` | 0..* | Coding | Schlagwörter aus kontrollierten Vokabularen |
+Der FHIR-Datentyp `Meta` ist Teil der abstrakten FHIR-Basisklasse `Resource` und somit Teil aller FHIR-Ressourcen. Die Elemente in Meta sind teilweise sehr spezifisch (z.B. Profilkonformität), teilweise sehr generisch. Insbesondere die Möglichkeit, beliebige Tags als codierte Begriffe aus einem kontrollierten Vokabular zu verwenden, bietet Optionen zur Abbildung von Provenance.
 
 #### Ebene 5: Extensions
 
-Eigene Erweiterungen für lokale Konventionen. Am wenigsten interoperabel, da nicht breit verwertbar.
+FHIR erlaubt die Definition eigener Erweiterungen, um lokale Konventionen durchzusetzen. Extensions können Provenance-Informationen enthalten, die dann jedoch nicht breit verwertbar sind. Daher ist dies die am wenigsten empfehlenswerte Variante.
 
 ### Zusammenfassung
 
-> FHIR Provenance ist nicht gleich W3C PROV. FHIR bildet die meisten Merkmale in eigenen Attributen ab. Nur für den nicht anderweitig spezifizierbaren Rest steht die FHIR Provenance Ressource zur Verfügung -- die Erwartung der FHIR-Community ist, dass diese Ressource selten genutzt wird.
+> Zusammenfassend lässt sich feststellen: FHIR Provenance ist nicht gleich W3C PROV. FHIR bildet die meisten Merkmale in eigenen Attributen ab. Je nachdem, ob man Auditlogs als Teil von Provenance sieht, steht hierfür eine weitere Ressource zur Verfügung. Nur für den nicht anderweitig spezifizierbaren Rest steht die FHIR Provenance Ressource zur Verfügung -- die Erwartung der FHIR-Community ist, dass diese Ressource selten genutzt wird. Zusätzlich ist auch die FHIR-Provenance-Ressource an verschiedene HL7-Vokabulare gebunden und kann nicht völlig frei modelliert werden.
 
-*Quelle: MII Taskforce Metadaten, Konzeptpapier v1.0, Juli 2025 (Matthias Löbe et al.)*
+*Quelle: MII Taskforce Metadaten, Konzeptpapier v1.0, 13.07.2025 (Matthias Löbe et al.)*
