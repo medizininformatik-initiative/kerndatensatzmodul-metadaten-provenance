@@ -51,6 +51,6 @@ menu:
   Ansätze:
     "Meta.tag (Taskforce)": ansatz-metatag.html
     "FHIR Provenance (BZKF)": ansatz-fhir-provenance.html
-  Anwendung:
-    Use-Case-Katalog: usecase-katalog.html
-    "Beispiel: Deduplizierung": anwendungsbeispiel-deduplizierung.html
+  Anwendungsbeispiele:
+    "Deduplizierung Onkologie-OP": anwendungsbeispiel-deduplizierung.html
+  Use Cases: usecase-katalog.html
