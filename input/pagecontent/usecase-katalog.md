@@ -12,6 +12,6 @@ Diese Seite dient als zukünftiger Katalog für Use Cases rund um Provenance und
 |---|----------|--------|
 | 1 | ETL-Import (Quellsystem → DIZ-Repository) | Entwurf |
 | 2 | Merge / Deduplizierung | Entwurf, siehe [Anwendungsbeispiel](anwendungsbeispiel-deduplizierung.html) |
-| 3 | Pseudonymisierung (Datenausleitung) | Entwurf |
+| 3 | Pseudonymisierung / Deidentifizierung (Datenausleitung) | Entwurf — Durchführung durch bestehende MII-Infrastruktur (gPAS, FHIR Pseudonymizer u.a.) abgedeckt; Provenance-Dokumentation offen |
 | 4 | Qualitätsprüfung / Validierung | Entwurf |
 | 5 | Spezifikations-Migration (Terminologie-Update) | Entwurf |
