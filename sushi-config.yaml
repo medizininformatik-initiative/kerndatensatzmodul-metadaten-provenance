@@ -31,27 +31,26 @@ pages:
     title: Motivation und Problemstellung
   technische-grundlagen.md:
     title: Technische Grundlagen
+  isik.md:
+    title: "ISiK: Kennzeichnung von Fremdübernahmen"
   ansatz-metatag.md:
     title: "Ansatz 1: Meta.tag (Taskforce Metadaten)"
   ansatz-fhir-provenance.md:
     title: "Ansatz 2: FHIR Provenance Ressource (BZKF)"
-  ansatz-us-core-provenance.md:
-    title: "Ansatz 3: US Core Basic Provenance"
   usecase-katalog.md:
     title: Use-Case-Katalog
   anwendungsbeispiel-deduplizierung.md:
     title: "Anwendungsbeispiel: Deduplizierung Onkologie-Prozedur"
-  vergleich.md:
-    title: Vergleich und Diskussion
 
 menu:
   Home: index.html
-  Inhalte:
+  Hintergrund:
     Motivation: motivation.html
     Technische Grundlagen: technische-grundlagen.html
+    "ISiK (gematik)": isik.html
+  Ansätze:
     "Meta.tag (Taskforce)": ansatz-metatag.html
     "FHIR Provenance (BZKF)": ansatz-fhir-provenance.html
-    "US Core Provenance": ansatz-us-core-provenance.html
+  Anwendung:
     Use-Case-Katalog: usecase-katalog.html
     "Beispiel: Deduplizierung": anwendungsbeispiel-deduplizierung.html
-    Vergleich: vergleich.html
