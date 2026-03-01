@@ -1,0 +1,46 @@
+CodeSystem: Greifswald_OBC_DQ_Framework
+Id: Greifswald-OBC-DQ-Framework
+Title: "Greifswald OBC DQ-Framework"
+Description: "Data Quality Framework by COS."
+* ^url = "https://www.medizininformatik-initiative.de/fhir/core/modul-meta/CodeSystem/greifswald-obc-dq-framework"
+* ^version = "1.0"
+* ^status = #active
+* ^contact.telecom.system = #email
+* ^compositional = false
+* ^content = #complete
+* ^caseSensitive = false
+* ^count = 34
+* #https://dataquality.qihs.uni-greifswald.de/#DQI-1001 "Unexpected data elements" "The observed set of available data elements does not match the expected set."
+* #https://dataquality.qihs.uni-greifswald.de/#DQI-1002 "Unexpected data records" "The observed set of available data records does not match the expected set."
+* #https://dataquality.qihs.uni-greifswald.de/#DQI-1003 "Duplicates" "The same data elements or data records appear multiple times."
+* #https://dataquality.qihs.uni-greifswald.de/#DQI-1004 "Data record mismatch" "Data records from different data sets do not match as expected."
+* #https://dataquality.qihs.uni-greifswald.de/#DQI-1005 "Data element mismatch" "Data elements from different data sets do not match as expected."
+* #https://dataquality.qihs.uni-greifswald.de/#DQI-1006 "Data type mismatch" "The observed data type does not match the expected data type."
+* #https://dataquality.qihs.uni-greifswald.de/#DQI-1007 "Inhomogeneous value formats" "The observed data values have inhomogeneous format across different data fields."
+* #https://dataquality.qihs.uni-greifswald.de/#DQI-1008 "Uncertain missingness status" "System indicated missing values (e.g. NA/./Null …) appear where a qualified missing code is expected."
+* #https://dataquality.qihs.uni-greifswald.de/#DQI-2001 "Missing values" "Data fields without a measurement value."
+* #https://dataquality.qihs.uni-greifswald.de/#DQI-2002 "Non-response rate" "The proportion of eligible observational units for which no information could be obtained."
+* #https://dataquality.qihs.uni-greifswald.de/#DQI-2003 "Refusal rate" "The proportion of eligible individuals who refuse to give the information sought."
+* #https://dataquality.qihs.uni-greifswald.de/#DQI-2004 "Drop-out rate" "The proportion of all participants who only partially complete the study and prematurely abandon it."
+* #https://dataquality.qihs.uni-greifswald.de/#DQI-2005 "Missing due to specified reason" "Information in a data collection that is missing due to a specified reason."
+* #https://dataquality.qihs.uni-greifswald.de/#DQI-3001 "Inadmissible numerical values" "Observed numerical data values are not admissible according to the allowed ranges."
+* #https://dataquality.qihs.uni-greifswald.de/#DQI-3002 "Inadmissible time-date values" "Observed time-date values are not admissible according to the allowed time and date ranges."
+* #https://dataquality.qihs.uni-greifswald.de/#DQI-3003 "Inadmissible categorical values" "Observed categorical data values are not admissible according to the allowed categories."
+* #https://dataquality.qihs.uni-greifswald.de/#DQI-3004 "Inadmissible standardized vocabulary" "Data values are not admissible according to the reference vocabulary."
+* #https://dataquality.qihs.uni-greifswald.de/#DQI-3005 "Inadmissible precision" "The precision of observed numerical data values does not match the expected precision."
+* #https://dataquality.qihs.uni-greifswald.de/#DQI-3006 "Uncertain numerical values" "Observed numerical values are uncertain or improbable because they are outside the expected ranges."
+* #https://dataquality.qihs.uni-greifswald.de/#DQI-3007 "Uncertain time-date values" "Observed time-date values are uncertain or improbable because they are outside the expected ranges."
+* #https://dataquality.qihs.uni-greifswald.de/#DQI-3008 "Logical contradictions" "Different data values appear in logically impossible combinations."
+* #https://dataquality.qihs.uni-greifswald.de/#DQI-3009 "Empirical contradictions" "Different data values appear in combinations deemed impossible based on empirical reasoning."
+* #https://dataquality.qihs.uni-greifswald.de/#DQI-4001 "Univariate outliers" "Numerical data values deviate markedly from others in a univariate analysis."
+* #https://dataquality.qihs.uni-greifswald.de/#DQI-4002 "Multivariate outliers" "Numerical data values deviate markedly from others in a multivariate analysis."
+* #https://dataquality.qihs.uni-greifswald.de/#DQI-4003 "Unexpected locations" "Observed location parameters differ from expected location parameters."
+* #https://dataquality.qihs.uni-greifswald.de/#DQI-4004 "Unexpected shape" "The observed shape of a distribution differs from the expected shape."
+* #https://dataquality.qihs.uni-greifswald.de/#DQI-4005 "Unexpected scale" "Observed scale parameters differ from expected scale parameters."
+* #https://dataquality.qihs.uni-greifswald.de/#DQI-4006 "Unexpected proportions" "Observed proportions differ from expected proportions."
+* #https://dataquality.qihs.uni-greifswald.de/#DQI-4007 "Unexpected association strength" "The observed strength of an association deviates from the expected strength of the association."
+* #https://dataquality.qihs.uni-greifswald.de/#DQI-4008 "Unexpected association direction" "The observed direction of an association (e.g. negative, positive) deviates from the expected direction."
+* #https://dataquality.qihs.uni-greifswald.de/#DQI-4009 "Unexpected association form" "The observed form of an association (e.g. linear, quadratic, exponential...) deviates from the expected form."
+* #https://dataquality.qihs.uni-greifswald.de/#DQI-4010 "Inter-Class reliability" "Differences between classes (e.g. examiners) when measuring the same or similar objects under specified conditions."
+* #https://dataquality.qihs.uni-greifswald.de/#DQI-4011 "Intra-Class reliability" "Differences within classes (e.g. examiners) when measuring the same or similar objects under specified conditions."
+* #https://dataquality.qihs.uni-greifswald.de/#DQI-4012 "Disagreement with gold standard" "Differences with a gold standard when measuring the same or similar objects under specified conditions."
