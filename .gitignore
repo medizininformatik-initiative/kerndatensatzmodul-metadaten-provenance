@@ -1,0 +1,6 @@
+fsh-generated/
+output/
+temp/
+template/
+input-cache/
+*.jar

@@ -1,0 +1,56 @@
+# ╭─────────────────────────Commonly Used ImplementationGuide Properties───────────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. The most commonly   │
+# │  used properties are included. For a list of all supported properties and their functions,     │
+# │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+id: mii-ig-metadaten-provenance-de-v2026
+canonical: https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance
+name: MII_IG_Metadaten_Provenance_DE
+title: MII IG Kerndatensatz-Modul Metadaten Provenance
+description: "MII Modul zur Dokumentation der Herkunft und Deduplizierung onkologischer Prozeduren (oBDS-Import vs. Abrechnung)"
+status: draft
+version: "2026.0.0-ballot"
+fhirVersion: 4.0.1
+copyrightYear: 2025+
+releaseLabel: ci-build
+publisher:
+  name: Medizininformatik Initiative
+  url: https://www.medizininformatik-initiative.de/
+language: "de-DE"
+
+dependencies:
+  de.basisprofil.r4: 1.5.x
+  de.medizininformatikinitiative.kerndatensatz.meta: 2026.0.x
+  de.medizininformatikinitiative.kerndatensatz.base: 2026.0.x
+  de.medizininformatikinitiative.kerndatensatz.onkologie: 2026.0.x
+
+pages:
+  index.md:
+    title: Übersicht
+  motivation.md:
+    title: Motivation und Problemstellung
+  technische-grundlagen.md:
+    title: Technische Grundlagen
+  isik.md:
+    title: "ISiK: Kennzeichnung von Fremdübernahmen"
+  ansatz-metatag.md:
+    title: "Ansatz 1: Meta.tag (Taskforce Metadaten)"
+  ansatz-fhir-provenance.md:
+    title: "Ansatz 2: FHIR Provenance Ressource (BZKF)"
+  usecase-katalog.md:
+    title: Use-Case-Katalog
+  anwendungsbeispiel-deduplizierung.md:
+    title: "Anwendungsbeispiel: Deduplizierung Onkologie-Prozedur"
+
+menu:
+  Home: index.html
+  Hintergrund:
+    Motivation: motivation.html
+    Technische Grundlagen: technische-grundlagen.html
+    "ISiK (gematik)": isik.html
+  Ansätze:
+    "Meta.tag (Taskforce)": ansatz-metatag.html
+    "FHIR Provenance (BZKF)": ansatz-fhir-provenance.html
+  Anwendungsbeispiele:
+    "Deduplizierung Onkologie-OP": anwendungsbeispiel-deduplizierung.html
+  Use Cases: usecase-katalog.html
