@@ -567,10 +567,11 @@ Die Primärtumor-Diagnose existiert häufig ebenfalls in beiden Quellen: Das KIS
 | | Condition A (KIS) | Condition B (oBDS) |
 |--|-------------------|-------------------|
 | **Quelle** | Abrechnung | oBDS-Meldung |
-| **ICD-10-GM** | C50.4 | C50.4 |
-| **ICD-O-3 Morphologie** | -- | 8500/3 (Invasives duktales Karzinom) |
-| **Diagnosesicherung** | -- | 7 (Histologisch) |
-| **Seitenlokalisation** | -- | L (Links) |
+| **ICD-10-GM** (`code`) | C50.4 | C50.4 |
+| **ICD-O-3 Morphologie** (`extension`) | -- | 8500/3 (Invasives duktales Karzinom) |
+| **ICD-O-3 Topographie** (`bodySite`) | -- | C50.4 |
+| **Seitenlokalisation** (`bodySite`) | -- | L (Links) |
+| **Diagnosesicherung** (`verificationStatus`) | -- | 7 (Histologisch) |
 
 ### Ansatz 1: Meta.tag (Condition)
 
@@ -629,11 +630,33 @@ Die Primärtumor-Diagnose existiert häufig ebenfalls in beiden Quellen: Das KIS
       }
     ]
   },
+  "extension": [
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.6.43.1",
+            "version": "32",
+            "code": "8500/3",
+            "display": "Invasives Karzinom ohne besonderen Typ (NST)"
+          }
+        ]
+      }
+    }
+  ],
   "clinicalStatus": {
     "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/condition-clinical", "code": "active" }]
   },
   "verificationStatus": {
-    "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status", "code": "confirmed" }]
+    "coding": [
+      { "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status", "code": "confirmed" },
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung",
+        "code": "7",
+        "display": "Histologisch"
+      }
+    ]
   },
   "code": {
     "coding": [
@@ -649,6 +672,12 @@ Die Primärtumor-Diagnose existiert häufig ebenfalls in beiden Quellen: Das KIS
     {
       "coding": [
         {
+          "system": "urn:oid:2.16.840.1.113883.6.43.1",
+          "version": "32",
+          "code": "C50.4",
+          "display": "Oberer äußerer Quadrant der Brustdrüse"
+        },
+        {
           "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation",
           "code": "L",
           "display": "Links"
@@ -657,24 +686,15 @@ Die Primärtumor-Diagnose existiert häufig ebenfalls in beiden Quellen: Das KIS
     }
   ],
   "subject": { "reference": "Patient/example-onko" },
-  "recordedDate": "2025-03-12",
-  "evidence": [
-    {
-      "code": [
-        {
-          "coding": [
-            {
-              "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung",
-              "code": "7",
-              "display": "Histologisch"
-            }
-          ]
-        }
-      ]
-    }
-  ]
+  "recordedDate": "2025-03-12"
 }
 ```
+
+**Onko-Datenelemente im oBDS-Import:**
+- `extension:morphology-behavior-icdo3` → ICD-O-3 Morphologie `8500/3` (Invasives Karzinom NST)
+- `verificationStatus.coding[1]` → Diagnosesicherung `7` (Histologisch) als zusätzlicher Coding-Slice neben dem FHIR-Standard `confirmed`
+- `bodySite.coding[0]` → ICD-O-3 Topographie `C50.4`
+- `bodySite.coding[1]` → Seitenlokalisation `L` (Links)
 
 #### Condition A v2 -- nach Deduplizierung (Meta.tag)
 
@@ -705,11 +725,33 @@ Die Primärtumor-Diagnose existiert häufig ebenfalls in beiden Quellen: Das KIS
       }
     ]
   },
+  "extension": [
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-ex-onko-histology-morphology-behavior-icdo3",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.6.43.1",
+            "version": "32",
+            "code": "8500/3",
+            "display": "Invasives Karzinom ohne besonderen Typ (NST)"
+          }
+        ]
+      }
+    }
+  ],
   "clinicalStatus": {
     "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/condition-clinical", "code": "active" }]
   },
   "verificationStatus": {
-    "coding": [{ "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status", "code": "confirmed" }]
+    "coding": [
+      { "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status", "code": "confirmed" },
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung",
+        "code": "7",
+        "display": "Histologisch"
+      }
+    ]
   },
   "code": {
     "coding": [
@@ -725,6 +767,12 @@ Die Primärtumor-Diagnose existiert häufig ebenfalls in beiden Quellen: Das KIS
     {
       "coding": [
         {
+          "system": "urn:oid:2.16.840.1.113883.6.43.1",
+          "version": "32",
+          "code": "C50.4",
+          "display": "Oberer äußerer Quadrant der Brustdrüse"
+        },
+        {
           "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-seitenlokalisation",
           "code": "L",
           "display": "Links"
@@ -733,26 +781,15 @@ Die Primärtumor-Diagnose existiert häufig ebenfalls in beiden Quellen: Das KIS
     }
   ],
   "subject": { "reference": "Patient/example-onko" },
-  "recordedDate": "2025-03-12",
-  "evidence": [
-    {
-      "code": [
-        {
-          "coding": [
-            {
-              "system": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/CodeSystem/mii-cs-onko-primaertumor-diagnosesicherung",
-              "code": "7",
-              "display": "Histologisch"
-            }
-          ]
-        }
-      ]
-    }
-  ]
+  "recordedDate": "2025-03-12"
 }
 ```
 
-**Was passiert ist:** Die Diagnose aus der Abrechnung (nur ICD-10) wurde mit Seitenlokalisation und Diagnosesicherung aus dem oBDS angereichert. Die Tags dokumentieren beide Quellen und die Zusammenführung.
+**Was passiert ist:**
+- v1 hatte nur den ICD-10-GM Code `C50.4` aus der Abrechnung
+- v2 wurde mit den oBDS-Datenelementen angereichert: ICD-O-3 Morphologie (`8500/3`), ICD-O-3 Topographie (`C50.4`), Seitenlokalisation (`L`) und Diagnosesicherung (`7`)
+- Die Tags dokumentieren beide Quellen und die Zusammenführung
+- Die `_history`-Abfrage zeigt klar den Unterschied zwischen der schlanken Abrechnungs-Diagnose (v1) und der onkologisch vollständigen Diagnose (v2)
 
 ### Ansatz 2: FHIR Provenance (Condition)
 
