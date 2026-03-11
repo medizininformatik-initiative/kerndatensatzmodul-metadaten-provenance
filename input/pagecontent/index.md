@@ -19,14 +19,16 @@ Provenance-Metadaten im MII-Kerndatensatz sind mehr als passive Dokumentation. S
 
 Die MII Taskforce Metadaten verbindet dabei wissenschaftliche Grundlagen (Dublin Core, W3C PROV, Greifswalder DQ-Framework) mit der operativen Realität in den Datenintegrationszentren.
 
+**Voraussetzung:** Damit Metadaten actionable sind, müssen sie nicht nur **setzbar** (*settable*), sondern auch **abfragbar** (*retrievable*) sein. Metadaten, die zwar geschrieben, aber nicht über Suchparameter gefunden werden können, verlieren ihren operativen Nutzen. Dies ist eine reale Einschränkung: Bei bestimmten FHIR-Server-Konfigurationen (z.B. HAPI FHIR im INLINE-Modus) ist die `_tag`-Suche standardmäßig nicht verfügbar (siehe [Verhalten von Meta.tag auf FHIR-Servern](ansatz-metatag.html#verhalten-von-metatag-auf-fhir-servern)). Die Wahl des Ansatzes hängt daher auch von der **vorhandenen Infrastruktur** ab.
+
 ### Zielsetzung
 
 Versorgungsdaten unterscheiden sich in vielen Punkten von prospektiven Datensammlungen. Diese Unterschiede müssen ausgedrückt werden können, um korrekte Auswertungen zu ermöglichen. Dieses Dokument stellt zwei technische Ansätze zur Provenance-Auszeichnung gegenüber:
 
-1. **Meta.tag-Ansatz** -- leichtgewichtige Auszeichnung über kontrollierte Vokabulare in `Resource.meta.tag` (Taskforce Metadaten, Löbe et al.). Pragmatisch, sofort implementierbar, mit einer Zeile Code pro Aussage.
-2. **FHIR Provenance Ressource** -- eigene Provenance-Ressourcen mit Referenzen auf Quell- und Zielressourcen (BZKF obds-to-fhir, Gulden). Strukturiert, international interoperabel, mit vollständiger Transformationskette.
+1. **Meta.tag-Ansatz** -- leichtgewichtige Auszeichnung über kontrollierte Vokabulare in `Resource.meta.tag` (Taskforce Metadaten, Löbe et al.). Pragmatisch, sofort implementierbar, mit einer Zeile Code pro Aussage. Setzt voraus, dass der FHIR-Server die `_tag`-Suche unterstützt.
+2. **FHIR Provenance Ressource** -- eigene Provenance-Ressourcen mit Referenzen auf Quell- und Zielressourcen (BZKF obds-to-fhir, Gulden). Strukturiert, international interoperabel, mit vollständiger Transformationskette. Unabhängig von der Tag-Konfiguration des Servers, da Provenance als reguläre Ressource gespeichert und durchsucht wird.
 
-Beide Ansätze sind **komplementär**, nicht gegensätzlich. Sie werden anhand konkreter Beispiele -- insbesondere am [Deduplizierungsszenario in der Onkologie](anwendungsbeispiel-deduplizierung.html) mit vollständiger Ressourcen-History -- beschrieben und verglichen.
+Beide Ansätze sind **komplementär**, nicht gegensätzlich. Welcher Ansatz (oder welche Kombination) im konkreten Fall geeignet ist, hängt von den Anforderungen an Aussagekraft, Implementierungsaufwand und der vorhandenen Server-Infrastruktur ab. Sie werden anhand konkreter Beispiele -- insbesondere am [Deduplizierungsszenario in der Onkologie](anwendungsbeispiel-deduplizierung.html) mit vollständiger Ressourcen-History -- beschrieben und verglichen.
 
 ### Beitragende
 

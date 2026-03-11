@@ -13,6 +13,8 @@
 | **Pflichtfelder** | Keine (v1.0) | Strukturell durch Profil definierbar |
 | **Bestehende IGs** | Bleiben unverändert gültig | Keine Auswirkung (additiv) |
 | **Datenausleitung** | Keine zusätzlichen Abhängigkeiten | Abhängige Ressourcen müssen beachtet werden |
+| **Infrastrukturabhängigkeit** | `_tag`-Suche muss vom FHIR-Server unterstützt werden (HAPI INLINE-Modus: nicht standardmäßig suchbar) | Keine -- Provenance ist eine reguläre Ressource mit Standard-Suchparametern |
+| **Actionable?** | Nur wenn *settable* **und** *retrievable* -- bei fehlender `_tag`-Suche verlieren Tags ihren operativen Nutzen | Ja -- Abfrage über `Provenance?target=` immer möglich |
 
 ### Anwendungsbereiche
 
@@ -24,6 +26,7 @@ Die beiden Ansätze sind **nicht gegensätzlich, sondern komplementär**:
 - Breite Anwendung über alle Ressourcentypen hinweg
 - Schnelle Implementierung ohne Änderung der Datenmodelle
 - Situationen, in denen kein Agent oder keine Aktivität dokumentiert werden muss
+- **Voraussetzung:** Der eingesetzte FHIR-Server muss die `_tag`-Suche unterstützen, damit die Tags operativ nutzbar sind
 
 #### FHIR Provenance eignet sich besonders für:
 
@@ -31,6 +34,7 @@ Die beiden Ansätze sind **nicht gegensätzlich, sondern komplementär**:
 - Nachvollziehbarkeit der Datenherkunft mit konkreten Quellverweisen
 - Deduplizierungsszenarien (welche Quellressourcen wurden zusammengeführt?)
 - Situationen, in denen Agent, Aktivität und Quellentität dokumentiert werden müssen
+- Umgebungen, in denen die `_tag`-Suche nicht verfügbar oder nicht performant ist
 
 ### Empfehlung
 
