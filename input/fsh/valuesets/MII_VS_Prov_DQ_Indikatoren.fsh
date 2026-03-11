@@ -1,7 +1,7 @@
 ValueSet: Alle_DQ_Indikatoren_VS
 Id: primary
-* include codes from valueset Greifswald_OBC_DQ_Framework
-* include codes from valueset DQ_Rule_Repository
+* include codes from system Greifswald_OBC_DQ_Framework
+* include codes from system http://mii.de/CodeSystem/dq-rule-successful
 
 Alias:   SCT = http://snomed.info/sct
 
