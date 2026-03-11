@@ -41,6 +41,10 @@ pages:
     title: Use-Case-Katalog
   anwendungsbeispiel-deduplizierung.md:
     title: "Anwendungsbeispiel: Deduplizierung Onkologie-Prozedur"
+  anwendungsbeispiel-datenqualitaet.md:
+    title: "Anwendungsbeispiel: Datenqualitätsprüfung"
+  dq-framework.md:
+    title: "Datenqualitätsindikatoren (DQ-Framework)"
 
 menu:
   Home: index.html
@@ -53,4 +57,7 @@ menu:
     "FHIR Provenance (BZKF)": ansatz-fhir-provenance.html
   Anwendungsbeispiele:
     "Deduplizierung Onkologie-OP": anwendungsbeispiel-deduplizierung.html
+    "Datenqualitätsprüfung": anwendungsbeispiel-datenqualitaet.html
+  Datenqualität:
+    "DQ-Framework": dq-framework.html
   Use Cases: usecase-katalog.html
