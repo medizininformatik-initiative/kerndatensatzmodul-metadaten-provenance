@@ -178,7 +178,12 @@ Description: "DRG-aufbereiteter Stand der KIS-Routinedaten zum Aufenthalt enc-mi
 * type = $loinc#11506-3 "Subsequent evaluation note"
 * category = $v3-ActReason#HPAYMT "Payment"
 * date = "2026-03-15T23:00:00+01:00"
-* author = Reference(Organization/org-ukb)
+// author trägt das verantwortliche Krankenhaus UND das Quellsystem.
+// Damit lebt die Source-System-Information sauber an dem Artefakt, das das
+// System produziert hat — nicht an der Provenance des nachgelagerten ETL-Laufs
+// (denn an dem ist das KIS gar nicht beteiligt).
+* author[0] = Reference(Organization/org-ukb)
+* author[+] = Reference(Device/src-ikarus-kis-ukb)
 * identifier[0]
   * system = "https://example.org/fhir/sid/kis-drg-aufbereitung"
   * value = "UKB-260100000-enc-mi-001-2026-03-15"
@@ -199,8 +204,12 @@ Description: "DRG-aufbereiteter Stand der KIS-Routinedaten zum Aufenthalt enc-mi
 //  - policy: §21-Inhaltsspec, nach der aufbereitet wurde (NICHT „diese Daten
 //    gingen an InEK" — das ist eine andere Aussage)
 //  - reason: HPAYMT als load-bearing Marker für „Abrechnungskontext"
-//  - agent[author]: der ETL-Job (Device) — er hat die FHIR-Ressourcen erzeugt
+//  - agent[assembler]: der ETL-Job (Device) — er stellt die FHIR-Ressourcen
+//    routinemäßig zusammen (matched MII-Onkologie-Precedent: KIS-ETL als assembler)
 //  - agent[performer]: das datenliefernde Krankenhaus
+//  - Source-System (Ikarus-KIS) ist NICHT Agent dieser Provenance — es war nicht
+//    am ETL-Lauf beteiligt, sondern hat den Quell-Aufbereitungsstand erzeugt.
+//    Das Source-System lebt daher an DocumentReference.author (siehe oben).
 //  - entity[source]: der KIS-DRG-Aufbereitungsstand (NICHT die §21-CSV)
 // -----------------------------------------------------------------------------
 Instance: prov-abrechnungskontext-mi-001
@@ -229,16 +238,16 @@ Description: "Dokumentiert, dass die FHIR-Ressourcen aus einer DRG-aufbereiteten
 // FHIR-Ressourcen an.
 * activity = $v3-DataOperation#CREATE "create"
 
+// Assembler: der ETL-Job stellt die FHIR-Ressourcen routinemäßig zusammen
+// (FHIR-Definition: "device that operates independently of an author on
+// custodial routines"). Konsistent mit MII-Onkologie-Precedent.
 * agent[0]
-  * type = http://terminology.hl7.org/CodeSystem/provenance-participant-type#author "Author"
+  * type = http://terminology.hl7.org/CodeSystem/provenance-participant-type#assembler "Assembler"
   * who = Reference(Device/etl-p21-fhir-v142)
+// Performer: das datenliefernde Krankenhaus (Träger-Org)
 * agent[+]
   * type = http://terminology.hl7.org/CodeSystem/provenance-participant-type#performer "Performer"
   * who = Reference(Organization/org-ukb)
-// Informant: das Quellsystem, aus dem die Rohdaten stammen
-* agent[+]
-  * type = http://terminology.hl7.org/CodeSystem/provenance-participant-type#informant "Informant"
-  * who = Reference(Device/src-ikarus-kis-ukb)
 
 * entity[0]
   * role = #source

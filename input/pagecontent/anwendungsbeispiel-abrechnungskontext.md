@@ -67,8 +67,8 @@ Dieser Fall hat einen **deutlichen Abrechnungs-Bias**: Die ND `I10.90` wird codi
 | 5 | `Procedure` | `proc-mi-001-ptca` | 8-837.k0 PTCA mit DES |
 | 6 | `Organization` | `org-ukb` | Datenlieferndes Krankenhaus (IKNR) |
 | 7 | `Device` | `etl-p21-fhir-v142` | **ETL-Pipeline als Author** |
-| 8 | `Device` | `src-ikarus-kis-ukb` | **Quellsystem** (fiktives „Ikarus-KIS" — klassifiziert als Sekundärsystem) |
-| 9 | `DocumentReference` | `kis-drg-aufbereitung-2026-03-15` | KIS-DRG-Aufbereitungsstand als Quelle |
+| 8 | `Device` | `src-ikarus-kis-ukb` | **Quellsystem** (fiktives „Ikarus-KIS" — klassifiziert als Sekundärsystem). Referenziert über `DocumentReference.author`, **nicht** als Provenance-Agent (siehe unten). |
+| 9 | `DocumentReference` | `kis-drg-aufbereitung-2026-03-15` | KIS-DRG-Aufbereitungsstand als Quelle. `author` = Org/UKB **+** Device/Ikarus-KIS |
 | 10 | `Provenance` | `prov-abrechnungskontext-mi-001` | Provenance über alle FHIR-Ressourcen |
 | 11 | `Bundle` | `bundle-abrechnungskontext-mi-001` | Collection-Bundle |
 
@@ -107,18 +107,18 @@ InstanceOf: Provenance
 * activity = $v3-ActReason#HPAYMT "Payment"
 
 * agent[0]
-  * type = $provenance-participant-type#author
+  * type = $provenance-participant-type#assembler                // ETL stellt FHIR-Ressourcen routinemäßig zusammen
   * who  = Reference(Device/etl-p21-fhir-v142)
 * agent[+]
-  * type = $provenance-participant-type#performer
+  * type = $provenance-participant-type#performer                // Träger-Org
   * who  = Reference(Organization/org-ukb)
-* agent[+]
-  * type = $provenance-participant-type#informant     // Quellsystem
-  * who  = Reference(Device/src-ikarus-kis-ukb)
+// Source-System (Ikarus-KIS) ist HIER kein Agent — es war nicht Beteiligter
+// am ETL-Lauf. Es lebt an DocumentReference.author (siehe Quell-Entity).
 
 * entity[0]
   * role = #source
   * what = Reference(DocumentReference/kis-drg-aufbereitung-2026-03-15)
+//          → DocumentReference.author = [Organization/org-ukb, Device/src-ikarus-kis-ukb]
 ```
 
 Jedes Feld trägt eine konkrete Aussage:
@@ -130,10 +130,27 @@ Jedes Feld trägt eine konkrete Aussage:
 | `occurredPeriod` | Welchen Zeitraum die Daten beschreiben (= Aufenthalt) |
 | `policy` | Nach welcher Inhaltsspec aufbereitet wurde (&#167;21 *und* &#167;301 — gemeinsame Charakteristik) |
 | `reason = HPAYMT` | Abrechnungskontext — der **load-bearing** Marker für Sekundärnutzung |
-| `agent[author]` | Der ETL-Job hat die FHIR-Ressourcen erzeugt |
-| `agent[performer]` | Das Krankenhaus ist die Quell-Organisation |
-| `agent[informant]` | Das **Quellsystem** (hier: Ikarus-KIS, klassifiziert als Sekundärsystem über das hierarchische [`mii-cs-datenquellsystem`](CodeSystem-mii-cs-datenquellsystem.html)) |
-| `entity[source]` | Der konkrete KIS-Aufbereitungsstand, aus dem extrahiert wurde |
+| `agent[assembler]` | Der ETL-Job stellt die FHIR-Ressourcen routinemäßig zusammen (FHIR-Definition: „device that operates independently of an author on custodial routines"; matches MII-Onkologie-Precedent) |
+| `agent[performer]` | Das Krankenhaus ist die Träger-Organisation des ETL-Laufs |
+| `entity[source]` | Der konkrete KIS-Aufbereitungsstand. Folgt man der Referenz, sieht man unter `DocumentReference.author` das **Quellsystem** (Ikarus-KIS), klassifiziert als Sekundärsystem über das hierarchische [`mii-cs-datenquellsystem`](CodeSystem-mii-cs-datenquellsystem.html) |
+
+### Warum das Quellsystem nicht Agent der Provenance ist
+
+Eine naheliegende Modellierung wäre, das Quellsystem (Ikarus-KIS) als zusätzlichen `Provenance.agent` zu führen. In W3C-PROV-Logik ist es aber **nicht Beteiligter dieses ETL-Laufs**, sondern hat den **Quell-Aufbereitungsstand erzeugt** — eine *vorgelagerte* Activity. Daher:
+
+- Die Provenance des ETL-Laufs hat nur die direkt am ETL beteiligten Agents (ETL als `assembler`, UKB als `performer`).
+- Das Quellsystem lebt an der **Quell-Entity** (`DocumentReference.author`), die genau das Artefakt repräsentiert, das das System produziert hat.
+
+Folgen einer Forschungsabfrage zur Quellsystem-Charakteristik:
+
+```
+GET [base]/Provenance?target=Patient/pat-mi-001
+  &_include=Provenance:entity                // → DocumentReference
+                                             //   → DocumentReference.author → Device/Ikarus-KIS
+                                             //     → Device.type = Sekundärsystem
+```
+
+Wer den feineren Pfad braucht (separate Provenance pro Genese-Stufe), kann eine **zweite Provenance** mit `target = DocumentReference/...` und `agent[author] = Device/Ikarus-KIS` ergänzen — Provenance-Ressourcen sind verkettbar.
 
 ### Anmerkung: Klassifikation von Datenquellsystemen
 
