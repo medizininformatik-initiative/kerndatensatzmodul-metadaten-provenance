@@ -198,7 +198,10 @@ Description: "Dokumentiert, dass die FHIR-Ressourcen aus einer DRG-aufbereiteten
 * policy[+] = "https://www.gesetze-im-internet.de/sgb_5/__301.html"
 
 * reason = $v3-ActReason#HPAYMT "Payment"
-* activity = $v3-ActReason#HPAYMT "Payment"
+// activity beschreibt die Datenoperation (CREATE/UPDATE/...), NICHT den
+// Geschäftsgrund (der steckt in reason). Hier: der ETL-Job legt neue
+// FHIR-Ressourcen an.
+* activity = $v3-DataOperation#CREATE "create"
 
 * agent[0]
   * type = http://terminology.hl7.org/CodeSystem/provenance-participant-type#author "Author"

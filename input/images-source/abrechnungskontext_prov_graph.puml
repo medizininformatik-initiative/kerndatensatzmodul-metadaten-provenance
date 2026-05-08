@@ -1,0 +1,66 @@
+@startuml Abrechnungskontext_Prov_Graph
+
+title Provenance-Graph: Abrechnungsdatenkontext (Beispielfall mi-001)
+
+skinparam shadowing false
+skinparam DefaultTextAlignment center
+skinparam RankSep 35
+skinparam NodeSep 25
+skinparam ArrowFontSize 11
+
+' W3C PROV color convention:
+'   Entity   = ochre/orange
+'   Activity = purple
+'   Agent    = blue
+
+skinparam usecase<<entity>> {
+    BackgroundColor #fff3e0
+    BorderColor #f57c00
+    FontColor #e65100
+}
+
+skinparam rectangle<<activity>> {
+    BackgroundColor #f3e5f5
+    BorderColor #7b1fa2
+    FontColor #4a148c
+    RoundCorner 20
+}
+
+skinparam frame<<agent>> {
+    BackgroundColor #e1f5ff
+    BorderColor #0288d1
+    FontColor #01579b
+}
+
+' === Source-Entity ===
+usecase "**KIS-DRG-Aufbereitung**\nUKB 2026-03-15" as KIS <<entity>>
+
+' === Activity ===
+rectangle "**ETL-Pipeline**\np21-to-fhir v1.4.2" as ETL <<activity>>
+
+' === Agent ===
+frame "**Org: UKB**\nIKNR 260100000" as UKB <<agent>>
+
+' === Generated entities ===
+usecase "Patient\npat-mi-001" as Patient <<entity>>
+usecase "Encounter\nenc-mi-001" as Encounter <<entity>>
+usecase "Condition (HD)\nI21.0" as CondHD <<entity>>
+usecase "Condition (ND)\nI10.90" as CondND <<entity>>
+usecase "Procedure\n8-837.k0" as Proc <<entity>>
+
+' === Relationships ===
+KIS --> ETL : used\nas source
+UKB ..> ETL : wasAssociatedWith\n(performer)
+ETL --> Patient   : generated
+ETL --> Encounter : generated
+ETL --> CondHD    : generated
+ETL --> CondND    : generated
+ETL --> Proc      : generated
+
+legend right
+  | <#fff3e0> | Entity (FHIR-Ressource oder Quell-Artefakt) |
+  | <#f3e5f5> | Activity (Datenoperation) |
+  | <#e1f5ff> | Agent (Organisation, Person, System) |
+endlegend
+
+@enduml

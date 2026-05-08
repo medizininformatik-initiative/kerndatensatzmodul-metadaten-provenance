@@ -44,7 +44,7 @@ pages:
   anwendungsbeispiel-datenqualitaet.md:
     title: "Anwendungsbeispiel: Datenqualitätsprüfung"
   anwendungsbeispiel-abrechnungskontext.md:
-    title: "Anwendungsbeispiel: Abrechnungsdatenkontext (§21, §301, DRG)"
+    title: "Anwendungsbeispiel: Abrechnungsdatenkontext (KHEntgG, SGB V, DRG)"
   dq-framework.md:
     title: "Datenqualitätsindikatoren (DQ-Framework)"
 
@@ -60,7 +60,7 @@ menu:
   Anwendungsbeispiele:
     "Deduplizierung Onkologie-OP": anwendungsbeispiel-deduplizierung.html
     "Datenqualitätsprüfung": anwendungsbeispiel-datenqualitaet.html
-    "Abrechnungskontext (§21, §301)": anwendungsbeispiel-abrechnungskontext.html
+    "Abrechnungskontext (KHEntgG, SGB V)": anwendungsbeispiel-abrechnungskontext.html
   Datenqualität:
     "DQ-Framework": dq-framework.html
   Use Cases: usecase-katalog.html
