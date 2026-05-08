@@ -1,22 +1,22 @@
 ### Worum es geht
 
-Wenn in MII-/DIZ-Diskussionen von **„&#167;21-Daten"** die Rede ist, ist meist nicht die tatsächlich an die InEK übermittelte Datenlieferung gemeint, sondern eine **DRG-aufbereitete Routinedatenstrecke**, die zeitnah aus dem Krankenhausinformationssystem (KIS) nach FHIR ausgespielt wird. Diese Seite schärft den Begriff und zeigt, **wie sich der Abrechnungs-Charakter solcher Daten sauber per FHIR Provenance dokumentieren lässt**, ohne den Begriff „&#167;21" zu überdehnen.
+Wenn in MII-/DIZ-Diskussionen von **„Paragraf-21-Daten"** die Rede ist, ist meist nicht die tatsächlich an die InEK übermittelte Datenlieferung gemeint, sondern eine **DRG-aufbereitete Routinedatenstrecke**, die zeitnah aus dem Krankenhausinformationssystem (KIS) nach FHIR ausgespielt wird. Diese Seite schärft den Begriff und zeigt, **wie sich der Abrechnungs-Charakter solcher Daten sauber per FHIR Provenance dokumentieren lässt**, ohne den Begriff „Paragraf 21" zu überdehnen.
 
-### Begriffsklärung: drei Lesarten von „&#167;21-Daten"
+### Begriffsklärung: drei Lesarten von „Paragraf-21-Daten"
 
 | Lesart | Was gemeint ist | Wann verfügbar | Realität im DIZ? |
 |---|---|---|---|
-| **A. Die &#167;21-CSV-Lieferung** | Das konkrete CSV-Paket, das das Krankenhaus jährlich an die InEK übermittelt (`Stamm.csv`, `Fall.csv`, `FAB.csv`, `ICD.csv`, `OPS.csv`, `Entgelte.csv`, `ZE.csv`) | bis 31.03. des Folgejahres (Frist nach KHEntgG &#167;21) | Selten — die FHIR-Daten werden in der Regel **nicht** aus dieser Lieferung rück-transformiert |
-| **B. &#167;21-konforme Aufbereitung** | Daten nach &#167;21-Inhaltsspec aufbereitet (DRG-Codierung, Grouping, Filterregeln), aber **nicht** als CSV-Lieferung an InEK, sondern parallel als FHIR-Bundle ins DIZ | zeitnah (täglich/wöchentlich) | **Häufig** — entspricht der typischen DIZ-ETL-Strecke |
-| **C. DRG-aufbereitete Routinedaten** | Lose Bezeichnung für „Daten aus dem KIS, durch Codierung und DRG-Logik geprägt", ohne strikten Bezug zur &#167;21-Spec | live | **Häufig** — z. B. interne fall-begleitende Codierung |
+| **A. Die Paragraf-21-CSV-Lieferung** | Das konkrete CSV-Paket, das das Krankenhaus jährlich an die InEK übermittelt (`Stamm.csv`, `Fall.csv`, `FAB.csv`, `ICD.csv`, `OPS.csv`, `Entgelte.csv`, `ZE.csv`) | bis 31.03. des Folgejahres (Frist nach KHEntgG Paragraf 21) | Selten — die FHIR-Daten werden in der Regel **nicht** aus dieser Lieferung rück-transformiert |
+| **B. Paragraf-21-konforme Aufbereitung** | Daten nach Paragraf-21-Inhaltsspec aufbereitet (DRG-Codierung, Grouping, Filterregeln), aber **nicht** als CSV-Lieferung an InEK, sondern parallel als FHIR-Bundle ins DIZ | zeitnah (täglich/wöchentlich) | **Häufig** — entspricht der typischen DIZ-ETL-Strecke |
+| **C. DRG-aufbereitete Routinedaten** | Lose Bezeichnung für „Daten aus dem KIS, durch Codierung und DRG-Logik geprägt", ohne strikten Bezug zur Paragraf-21-Spec | live | **Häufig** — z. B. interne fall-begleitende Codierung |
 
-In der Praxis treffen DIZ-Daten meist **Lesart B** oder **C**. Die Provenance dieser Seite modelliert genau diesen Fall: zeitnahe FHIR-Erzeugung aus dem KIS-DRG-Aufbereitungsstand, **nicht** Ableitung aus einer &#167;21-CSV-Lieferung.
+In der Praxis treffen DIZ-Daten meist **Lesart B** oder **C**. Die Provenance dieser Seite modelliert genau diesen Fall: zeitnahe FHIR-Erzeugung aus dem KIS-DRG-Aufbereitungsstand, **nicht** Ableitung aus einer Paragraf-21-CSV-Lieferung.
 
-### &#167;21 vs. &#167;301: die große Schnittmenge
+### Paragraf 21 vs. Paragraf 301: die große Schnittmenge
 
-Sowohl die jährliche &#167;21-Lieferung an die InEK als auch die fall-bezogene &#167;301-Übermittlung an die Krankenkassen werden aus **demselben KIS-DRG-Aufbereitungsstand** gespeist. Inhaltlich überlappen sie sich stark.
+Sowohl die jährliche Paragraf-21-Lieferung an die InEK als auch die fall-bezogene Paragraf-301-Übermittlung an die Krankenkassen werden aus **demselben KIS-DRG-Aufbereitungsstand** gespeist. Inhaltlich überlappen sie sich stark.
 
-| Eigenschaft | &#167;301 SGB V | &#167;21 KHEntgG |
+| Eigenschaft | Paragraf 301 SGB V | Paragraf 21 KHEntgG |
 |---|---|---|
 | **Empfänger** | Krankenkasse des Versicherten | InEK (Datenannahmestelle) |
 | **Format** | EDIFACT/DTA | CSV |
@@ -29,18 +29,18 @@ Für die Sekundärnutzung tragen beide Quellen denselben **DRG-codierten Kern**.
 
 ```
 KIS-DRG-Aufbereitung 2026-03-15
-       ├─→ &#167;301-DTA       (3 Werktage nach Entlassung, an Krankenkasse)
+       ├─→ Paragraf-301-DTA       (3 Werktage nach Entlassung, an Krankenkasse)
        ├─→ FHIR-Bundle    (zeitnah, ins DIZ)              ← Quelle dieses Beispiels
-       └─→ &#167;21-CSV        (Q1 2027, an InEK)
+       └─→ Paragraf-21-CSV        (Q1 2027, an InEK)
 ```
 
 ### Warum das für die Provenance wichtig ist
 
 Aus dieser Schwester-Output-Konstellation folgen drei Modellierungs-Entscheidungen:
 
-1. **`Provenance.entity.what` zeigt nicht auf die &#167;21-CSV**, sondern auf den **gemeinsamen KIS-DRG-Aufbereitungsstand**. Die &#167;21-Lieferung ist ein paralleler Output, nicht der Vorfahre der FHIR-Daten.
-2. **`Provenance.agent[author] = Device (ETL-Job)`** — nicht das Krankenhaus, nicht der G-DRG-Grouper. Die FHIR-Ressource wird durch die ETL-Pipeline erzeugt.
-3. **`Provenance.reason = HPAYMT`** trägt den Abrechnungs-Charakter; **`policy`** verweist auf &#167;21- bzw. &#167;301-Spec als „nach welcher Inhaltsdefinition wurde aufbereitet".
+1. **`Provenance.entity.what` zeigt nicht auf die Paragraf-21-CSV**, sondern auf den **gemeinsamen KIS-DRG-Aufbereitungsstand**. Die Paragraf-21-Lieferung ist ein paralleler Output, nicht der Vorfahre der FHIR-Daten.
+2. **`Provenance.agent[assembler] = Device (ETL-Job)`** — nicht das Krankenhaus, nicht der G-DRG-Grouper. Die FHIR-Ressource wird durch die ETL-Pipeline routinemäßig zusammengestellt.
+3. **`Provenance.reason = HPAYMT`** trägt den Abrechnungs-Charakter; **`policy`** verweist auf Paragraf 21- bzw. Paragraf 301-Spec als „nach welcher Inhaltsdefinition wurde aufbereitet".
 
 ### Klinisches Beispiel: Akuter Myokardinfarkt mit PTCA
 
@@ -84,7 +84,7 @@ Die folgende Darstellung zeigt die Beziehungen zwischen Quell-Entity, ETL-Aktivi
 
 <img src="Abrechnungskontext_Prov_Graph.png" alt="Provenance-Graph für den Abrechnungskontext-Beispielfall: KIS-DRG-Aufbereitung als Source-Entity, ETL-Pipeline als Activity, UKB als Performer-Agent, daraus erzeugt: Patient, Encounter, Conditions HD/ND, Procedure" width="100%"/>
 
-Schwester-Outputs aus demselben KIS-DRG-Aufbereitungsstand (&#167;21-CSV an InEK, &#167;301-DTA an Krankenkasse) sind hier bewusst **nicht** dargestellt — sie sind nicht Vorfahren der FHIR-Ressourcen und gehören daher nicht in deren Provenance-Kette.
+Schwester-Outputs aus demselben KIS-DRG-Aufbereitungsstand (Paragraf-21-CSV an InEK, Paragraf-301-DTA an Krankenkasse) sind hier bewusst **nicht** dargestellt — sie sind nicht Vorfahren der FHIR-Ressourcen und gehören daher nicht in deren Provenance-Kette.
 
 ### Die Provenance im Detail
 
@@ -132,7 +132,7 @@ Jedes Feld trägt eine konkrete Aussage:
 | `target[*]` | Diese FHIR-Ressourcen sind alle aus demselben ETL-Lauf entstanden |
 | `recorded` | Wann der ETL-Job gelaufen ist (zeitnah, einen Tag nach Entlassung) |
 | `occurredPeriod` | Welchen Zeitraum die Daten beschreiben (= Aufenthalt) |
-| `policy` | Nach welcher Inhaltsspec aufbereitet wurde (&#167;21 *und* &#167;301 — gemeinsame Charakteristik) |
+| `policy` | Nach welcher Inhaltsspec aufbereitet wurde (Paragraf 21 *und* Paragraf 301 — gemeinsame Charakteristik) |
 | `reason = HPAYMT` | Abrechnungskontext — der **load-bearing** Marker für Sekundärnutzung |
 | `agent[assembler]` | Der ETL-Job stellt die FHIR-Ressourcen routinemäßig zusammen (FHIR-Definition: „device that operates independently of an author on custodial routines"; matches MII-Onkologie-Precedent) |
 | `agent[performer]` | Das Krankenhaus ist die Träger-Organisation des ETL-Laufs |
@@ -307,7 +307,7 @@ Liefert die Suche die im DIZ vorhandenen Abrechnungs-Provenances, ist die Regist
 
 ### Verhältnis zum Meta.tag-Ansatz
 
-Die &#167;21-/&#167;301-Charakterisierung lässt sich auch über `Meta.tag` am Patienten/an den Conditions abbilden — das ist [Ansatz 1 (Taskforce Metadaten)](ansatz-metatag.html). Der Vergleich:
+Die Paragraf 21-/Paragraf 301-Charakterisierung lässt sich auch über `Meta.tag` am Patienten/an den Conditions abbilden — das ist [Ansatz 1 (Taskforce Metadaten)](ansatz-metatag.html). Der Vergleich:
 
 | Aspekt | Meta.tag | Provenance (dieser Ansatz) |
 |---|---|---|
@@ -327,7 +327,7 @@ Provenance ist der reichhaltigere Ansatz — zum Preis einer zusätzlichen Resso
 - **Granularität der Provenance:** Ist die Provenance fall-basiert oder pipeline-lauf-basiert? Im Beispiel: **beides gleichzeitig** — `target[]` umfasst alle FHIR-Ressourcen *eines Falles*, `recorded` markiert *einen ETL-Lauf*. Bei wiederholten Pipeline-Läufen (Bug-Fix, Re-Codierung, Pipeline-Update) entstehen **zusätzliche Provenance-Ressourcen** (append-only) — die Historie bleibt damit nachvollziehbar.
 - **Granularität:** Eine Provenance über alle Ressourcen (wie hier) vs. eine pro Ressource. Die hier gezeigte Variante ist pragmatisch; bei feinerer Differenzierung (z. B. Codierfachkraft vs. ETL-Job) lohnen sich getrennte Provenance-Instanzen.
 - **CodeSystem für Quell-Aufbereitungsstände:** Der `DocumentReference.identifier.system` ist hier ein Platzhalter (`https://example.org/...`). Für produktiven Einsatz sollte ein MII-weites Namensschema diskutiert werden.
-- **`policy` als Mehrfach-Verweis:** Die Beispiel-Provenance referenziert &#167;21 *und* &#167;301, weil beide aus demselben Aufbereitungsstand entstehen. Alternativ könnte eine eigene URL „DRG-Aufbereitung allgemein" als Ankerpunkt dienen.
-- **`reason` HPAYMT vs. HLEGAL:** &#167;21 ist primär Pflicht-/Kalkulations-Datensatz, formal eher `HLEGAL`. Die DIZ-FHIR-Daten dienen aber Sekundärnutzung — die Abrechnungs-Charakteristik ist hier das relevante Signal, daher `HPAYMT`.
+- **`policy` als Mehrfach-Verweis:** Die Beispiel-Provenance referenziert Paragraf 21 *und* Paragraf 301, weil beide aus demselben Aufbereitungsstand entstehen. Alternativ könnte eine eigene URL „DRG-Aufbereitung allgemein" als Ankerpunkt dienen.
+- **`reason` HPAYMT vs. HLEGAL:** Paragraf 21 ist primär Pflicht-/Kalkulations-Datensatz, formal eher `HLEGAL`. Die DIZ-FHIR-Daten dienen aber Sekundärnutzung — die Abrechnungs-Charakteristik ist hier das relevante Signal, daher `HPAYMT`.
 - **Verhältnis zur DRG-Klassifikation:** Der G-DRG-Grouper gehört nicht in die Patient-Provenance, sondern an die `Encounter.hospitalization` bzw. an eine eigene Klassifikations-Provenance. Diese Seite blendet das aus, um die Hauptaussage scharf zu halten.
 - **OpenLineage / W3C PROV-O:** Wenn der ETL-Stack ohnehin OpenLineage-Events emittiert, kann `Provenance.entity.what` auf das Lineage-Event referenzieren, statt Inhalte parallel in FHIR nachzubauen.
