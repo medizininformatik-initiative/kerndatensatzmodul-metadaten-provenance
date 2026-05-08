@@ -135,6 +135,23 @@ Jedes Feld trägt eine konkrete Aussage:
 | `agent[informant]` | Das **Quellsystem** (hier: Ikarus-KIS, klassifiziert als Sekundärsystem über das hierarchische [`mii-cs-datenquellsystem`](CodeSystem-mii-cs-datenquellsystem.html)) |
 | `entity[source]` | Der konkrete KIS-Aufbereitungsstand, aus dem extrahiert wurde |
 
+### Anmerkung: Klassifikation von Datenquellsystemen
+
+Das hier verwendete [`mii-cs-datenquellsystem`](CodeSystem-mii-cs-datenquellsystem.html) ist eine **MII-eigene Setzung** — Stand 2026 existiert kein international etablierter CodeSystem-Standard, den wir hätten übernehmen können. Verwandte, aber nicht direkt anwendbare Quellen:
+
+| Standard | Was er liefert | Warum's nicht passt |
+|---|---|---|
+| **ISO/IEC 25010** | Software-Qualitätsmodell (Funktionalität, Zuverlässigkeit, ...) | Bewertet *Eigenschaften*, klassifiziert keine **System-Typen** |
+| **IEC 62304** / DIN EN 62304 | Risiko-Klassen für Medizinprodukte-Software (A/B/C) | Sicherheits-/Risikoklassen, nicht funktional |
+| **HL7 v3 RoleCode** | Codes für Einrichtungen | Facility-Typen (Krankenhaus etc.), nicht IT-Systeme |
+| **IHE Actors** (XDS, XCA, ...) | Rollen wie „Document Source", „Document Repository" | Profil-spezifische Rollen, kein flacher Katalog |
+| **SNOMED CT** | Hat Codes wie `706594005 \|Information system\|`, `308040009 \|Hospital information system\|` | Sehr grob; „Abrechnungssystem"/„DRG-Grouper" als Konzepte fehlen |
+| **gematik Primärsystem-Definition** | Klar definiert für TI-Kontext (PVS/KIS am Konnektor) | Nur Primär-Begriff, keine Sekundär-Hierarchie |
+
+Das hier definierte CS ist daher als **MII-Vorschlag** gekennzeichnet (`experimental = true`) und **kandidiert zur Übernahme in MII-weite Terminologie-Pflege**. Wenn künftig ein etablierter Standard verfügbar wird, sollte dieser referenziert oder per ConceptMap überbrückt werden.
+
+**Hierarchie statt Doppel-Klassifikation:** Die ursprüngliche Idee war, „Art" (Primär/Sekundär) und „Typ" (KIS/Abrechnung/...) als zwei getrennte CodeSystems zu führen. Das wäre redundant — z. B. impliziert `#Abrechnungssystem` automatisch `#Sekundaersystem`. Mit `hierarchyMeaning = is-a` trägt **ein** CodeSystem beide Aussagen. Subsumption-fähige Server unterstützen damit Filter wie `?type:below=Sekundaersystem`.
+
 ### Was Sekundärnutzer:innen damit tun können
 
 Die Provenance ermöglicht automatisierte Filter und Inventarisierungen, ohne dass jede Ressource einzeln getaggt werden muss.
