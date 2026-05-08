@@ -38,8 +38,9 @@ usecase "**KIS-DRG-Aufbereitung**\nUKB 2026-03-15" as KIS <<entity>>
 ' === Activity ===
 rectangle "**ETL-Pipeline**\np21-to-fhir v1.4.2" as ETL <<activity>>
 
-' === Agent ===
+' === Agents ===
 frame "**Org: UKB**\nIKNR 260100000" as UKB <<agent>>
+frame "**Device: Ikarus-KIS**\nSekundärsystem (Abrechnung)" as KISsrc <<agent>>
 
 ' === Generated entities ===
 usecase "Patient\npat-mi-001" as Patient <<entity>>
@@ -49,8 +50,9 @@ usecase "Condition (ND)\nI10.90" as CondND <<entity>>
 usecase "Procedure\n8-837.k0" as Proc <<entity>>
 
 ' === Relationships ===
-KIS --> ETL : used\nas source
-UKB ..> ETL : wasAssociatedWith\n(performer)
+KIS    --> ETL : used\nas source
+UKB    ..> ETL : wasAssociatedWith\n(performer)
+KISsrc ..> ETL : wasAssociatedWith\n(informant)
 ETL --> Patient   : generated
 ETL --> Encounter : generated
 ETL --> CondHD    : generated

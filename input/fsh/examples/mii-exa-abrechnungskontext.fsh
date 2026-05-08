@@ -135,7 +135,33 @@ Description: "Versionierte ETL-Pipeline, die aus dem KIS-DRG-Aufbereitungsstand 
 
 
 // -----------------------------------------------------------------------------
-// 8. DocumentReference (KIS-DRG-Aufbereitungsstand als Quelle)
+// 8. Device — das Quellsystem (Ikarus-KIS, fiktiv, Anlehnung an Dedalus)
+//
+// Beschreibt das KIS, aus dem die DRG-aufbereiteten Daten stammen.
+// Klassifikation per MII_CS_Datenquellsystem (hierarchisch).
+// Im Beispiel verwenden wir bewusst nur das Top-Level (#Sekundaersystem) —
+// die Children (Abrechnungssystem, KIS, DRG_Grouper, ...) sind im
+// CodeSystem vorgehalten und können nach Bedarf eingesetzt werden.
+// -----------------------------------------------------------------------------
+Instance: src-ikarus-kis-ukb
+InstanceOf: Device
+Usage: #example
+Title: "Device: Ikarus-KIS am UKB (Quellsystem)"
+Description: "Krankenhausinformationssystem 'Ikarus-KIS' (fiktiver Hersteller mit Anlehnung an reale KIS-Anbieter) am UKB, hier in der Rolle als Quellsystem für DRG-aufbereitete Routinedaten. Klassifiziert per MII-CodeSystem als Sekundärsystem (zweckgebunden aufbereitet)."
+* status = #active
+* deviceName[0]
+  * name = "Ikarus-KIS — Subsystem Abrechnung"
+  * type = #user-friendly-name
+* type
+  * coding[0] = $mii-cs-datenquellsystem#Sekundaersystem "Sekundärsystem"
+* manufacturer = "Ikarus Healthcare GmbH (fiktiv)"
+* modelNumber = "Ikarus-KIS 2025.1"
+* owner = Reference(Organization/org-ukb)
+* note.text = "Fiktiver KIS-Hersteller. Der Name spielt auf die Mythologie an (Ikarus = Sohn des Dedalus) und ist NICHT mit einem realen Produkt assoziiert."
+
+
+// -----------------------------------------------------------------------------
+// 9. DocumentReference (KIS-DRG-Aufbereitungsstand als Quelle)
 //
 // Wichtig: Wir referenzieren NICHT die §21-CSV-Lieferung an InEK als Quelle,
 // weil die zum Zeitpunkt der ETL-Ausführung noch nicht existiert. Quelle
@@ -163,7 +189,7 @@ Description: "DRG-aufbereiteter Stand der KIS-Routinedaten zum Aufenthalt enc-mi
 
 
 // -----------------------------------------------------------------------------
-// 9. Provenance — der Kern dieses Beispiels
+// 10. Provenance — der Kern dieses Beispiels
 //
 // Modellierungs-Entscheidungen:
 //  - target: alle FHIR-Ressourcen, die der ETL-Lauf erzeugt hat (Patient,
@@ -209,6 +235,10 @@ Description: "Dokumentiert, dass die FHIR-Ressourcen aus einer DRG-aufbereiteten
 * agent[+]
   * type = http://terminology.hl7.org/CodeSystem/provenance-participant-type#performer "Performer"
   * who = Reference(Organization/org-ukb)
+// Informant: das Quellsystem, aus dem die Rohdaten stammen
+* agent[+]
+  * type = http://terminology.hl7.org/CodeSystem/provenance-participant-type#informant "Informant"
+  * who = Reference(Device/src-ikarus-kis-ukb)
 
 * entity[0]
   * role = #source
@@ -216,7 +246,7 @@ Description: "Dokumentiert, dass die FHIR-Ressourcen aus einer DRG-aufbereiteten
 
 
 // -----------------------------------------------------------------------------
-// 10. Bundle (collection) — packt alles zusammen
+// 11. Bundle (collection) — packt alles zusammen
 // -----------------------------------------------------------------------------
 Instance: bundle-abrechnungskontext-mi-001
 InstanceOf: Bundle
@@ -250,6 +280,9 @@ Description: "Collection-Bundle mit allen Ressourcen des Anwendungsbeispiels Abr
 * entry[+]
   * fullUrl = "http://example.org/fhir/Device/etl-p21-fhir-v142"
   * resource = etl-p21-fhir-v142
+* entry[+]
+  * fullUrl = "http://example.org/fhir/Device/src-ikarus-kis-ukb"
+  * resource = src-ikarus-kis-ukb
 * entry[+]
   * fullUrl = "http://example.org/fhir/DocumentReference/kis-drg-aufbereitung-2026-03-15"
   * resource = kis-drg-aufbereitung-2026-03-15

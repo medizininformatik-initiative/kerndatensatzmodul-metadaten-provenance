@@ -1,5 +1,6 @@
 // MII Metadaten Provenance
 Alias: $mii-cs-provenance-prozedur-herkunft = https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/CodeSystem/mii-cs-provenance-prozedur-herkunft
+Alias: $mii-cs-datenquellsystem = https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/CodeSystem/mii-cs-datenquellsystem
 
 // HL7 Terminologien
 Alias: $v3-DataOperation = http://terminology.hl7.org/CodeSystem/v3-DataOperation

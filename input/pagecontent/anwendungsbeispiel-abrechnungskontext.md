@@ -67,9 +67,10 @@ Dieser Fall hat einen **deutlichen Abrechnungs-Bias**: Die ND `I10.90` wird codi
 | 5 | `Procedure` | `proc-mi-001-ptca` | 8-837.k0 PTCA mit DES |
 | 6 | `Organization` | `org-ukb` | Datenlieferndes Krankenhaus (IKNR) |
 | 7 | `Device` | `etl-p21-fhir-v142` | **ETL-Pipeline als Author** |
-| 8 | `DocumentReference` | `kis-drg-aufbereitung-2026-03-15` | KIS-DRG-Aufbereitungsstand als Quelle |
-| 9 | `Provenance` | `prov-abrechnungskontext-mi-001` | Provenance über alle FHIR-Ressourcen |
-| 10 | `Bundle` | `bundle-abrechnungskontext-mi-001` | Collection-Bundle |
+| 8 | `Device` | `src-ikarus-kis-ukb` | **Quellsystem** (fiktives „Ikarus-KIS" — klassifiziert als Sekundärsystem) |
+| 9 | `DocumentReference` | `kis-drg-aufbereitung-2026-03-15` | KIS-DRG-Aufbereitungsstand als Quelle |
+| 10 | `Provenance` | `prov-abrechnungskontext-mi-001` | Provenance über alle FHIR-Ressourcen |
+| 11 | `Bundle` | `bundle-abrechnungskontext-mi-001` | Collection-Bundle |
 
 **Eine** Provenance referenziert hier alle erzeugten FHIR-Ressourcen (`target[0..n]`). Soll später eine feinere Granularität dokumentiert werden — z. B. ein zusätzlicher Codierungs-Schritt durch eine Codierfachkraft oder eine separate DRG-Klassifikation —, kommt eine zweite Provenance hinzu.
 
@@ -111,6 +112,9 @@ InstanceOf: Provenance
 * agent[+]
   * type = $provenance-participant-type#performer
   * who  = Reference(Organization/org-ukb)
+* agent[+]
+  * type = $provenance-participant-type#informant     // Quellsystem
+  * who  = Reference(Device/src-ikarus-kis-ukb)
 
 * entity[0]
   * role = #source
@@ -128,6 +132,7 @@ Jedes Feld trägt eine konkrete Aussage:
 | `reason = HPAYMT` | Abrechnungskontext — der **load-bearing** Marker für Sekundärnutzung |
 | `agent[author]` | Der ETL-Job hat die FHIR-Ressourcen erzeugt |
 | `agent[performer]` | Das Krankenhaus ist die Quell-Organisation |
+| `agent[informant]` | Das **Quellsystem** (hier: Ikarus-KIS, klassifiziert als Sekundärsystem über das hierarchische [`mii-cs-datenquellsystem`](CodeSystem-mii-cs-datenquellsystem.html)) |
 | `entity[source]` | Der konkrete KIS-Aufbereitungsstand, aus dem extrahiert wurde |
 
 ### Was Sekundärnutzer:innen damit tun können
@@ -277,7 +282,9 @@ Provenance ist der reichhaltigere Ansatz — zum Preis einer zusätzlichen Resso
 
 ### Offene Punkte
 
-- **SearchParameter-Lücke in R4:** FHIR R4 definiert keinen Standard-Suchparameter für `Provenance.reason` oder `Provenance.policy`. Dieses IG schließt die `reason`-Lücke mit [`provenance-reason`](SearchParameter-mii-sp-provenance-reason.html). Ein analoger SearchParameter für `policy` ist denkbar, wenn die Filterung nach &#167;21- vs. &#167;301-Aufbereitung relevant wird.
+- **SearchParameter-Lücke in R4:** FHIR R4 definiert keinen Standard-Suchparameter für `Provenance.reason` oder `Provenance.policy`. Dieses IG schließt die `reason`-Lücke mit [`provenance-reason`](SearchParameter-mii-sp-provenance-reason.html). Ein analoger SearchParameter für `policy` ist denkbar, wenn die Filterung nach KHEntgG- vs. SGB-V-Aufbereitung relevant wird.
+- **Quellsystem-Klassifikation:** Das CodeSystem [`mii-cs-datenquellsystem`](CodeSystem-mii-cs-datenquellsystem.html) ist hierarchisch (Top-Level: Primär-/Sekundärsystem, darunter konkrete Typen wie KIS, Abrechnungssystem, DRG-Grouper, DWH, ...). Im Beispiel wird bewusst nur das Top-Level (`#Sekundaersystem`) verwendet; die Children sind im CodeSystem vorgehalten. Stand 2026 existiert kein international etablierter CS für Datenquellsystem-Typen — das CodeSystem ist ein MII-Vorschlag und kandidiert zur Übernahme in MII-weite Terminologie.
+- **Granularität der Provenance:** Ist die Provenance fall-basiert oder pipeline-lauf-basiert? Im Beispiel: **beides gleichzeitig** — `target[]` umfasst alle FHIR-Ressourcen *eines Falles*, `recorded` markiert *einen ETL-Lauf*. Bei wiederholten Pipeline-Läufen (Bug-Fix, Re-Codierung, Pipeline-Update) entstehen **zusätzliche Provenance-Ressourcen** (append-only) — die Historie bleibt damit nachvollziehbar.
 - **Granularität:** Eine Provenance über alle Ressourcen (wie hier) vs. eine pro Ressource. Die hier gezeigte Variante ist pragmatisch; bei feinerer Differenzierung (z. B. Codierfachkraft vs. ETL-Job) lohnen sich getrennte Provenance-Instanzen.
 - **CodeSystem für Quell-Aufbereitungsstände:** Der `DocumentReference.identifier.system` ist hier ein Platzhalter (`https://example.org/...`). Für produktiven Einsatz sollte ein MII-weites Namensschema diskutiert werden.
 - **`policy` als Mehrfach-Verweis:** Die Beispiel-Provenance referenziert &#167;21 *und* &#167;301, weil beide aus demselben Aufbereitungsstand entstehen. Alternativ könnte eine eigene URL „DRG-Aufbereitung allgemein" als Ankerpunkt dienen.
