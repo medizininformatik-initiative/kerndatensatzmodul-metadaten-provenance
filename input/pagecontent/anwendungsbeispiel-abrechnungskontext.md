@@ -74,7 +74,9 @@ Dieser Fall hat einen **deutlichen Abrechnungs-Bias**: Die ND `I10.90` wird codi
 
 **Eine** Provenance referenziert hier alle erzeugten FHIR-Ressourcen (`target[0..n]`). Soll später eine feinere Granularität dokumentiert werden — z. B. ein zusätzlicher Codierungs-Schritt durch eine Codierfachkraft oder eine separate DRG-Klassifikation —, kommt eine zweite Provenance hinzu.
 
-Vollständige FSH: [`mii-exa-abrechnungskontext.fsh`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-metadaten-provenance/blob/main/input/fsh/examples/mii-exa-abrechnungskontext.fsh).
+**Direktzugriff auf einzelne Ressourcen:** [Bundle](Bundle-bundle-abrechnungskontext-mi-001.html) · [Provenance](Provenance-prov-abrechnungskontext-mi-001.html) · [DocumentReference (Quell-Aufbereitung)](DocumentReference-kis-drg-aufbereitung-2026-03-15.html) · [Device (ETL-Pipeline)](Device-etl-p21-fhir-v142.html) · [Device (Ikarus-KIS)](Device-src-ikarus-kis-ukb.html) · [Patient](Patient-pat-mi-001.html) · [Encounter](Encounter-enc-mi-001.html) · [Condition HD](Condition-cond-mi-001-hd-i21.html) · [Condition ND](Condition-cond-mi-001-nd-i10.html) · [Procedure](Procedure-proc-mi-001-ptca.html) · [Organization](Organization-org-ukb.html)
+
+FSH-Quelltext: [`mii-exa-abrechnungskontext.fsh`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-metadaten-provenance/blob/main/input/fsh/examples/mii-exa-abrechnungskontext.fsh).
 
 ### Provenance-Graph (W3C PROV-Stil)
 
@@ -85,6 +87,8 @@ Die folgende Darstellung zeigt die Beziehungen zwischen Quell-Entity, ETL-Aktivi
 Schwester-Outputs aus demselben KIS-DRG-Aufbereitungsstand (&#167;21-CSV an InEK, &#167;301-DTA an Krankenkasse) sind hier bewusst **nicht** dargestellt — sie sind nicht Vorfahren der FHIR-Ressourcen und gehören daher nicht in deren Provenance-Kette.
 
 ### Die Provenance im Detail
+
+→ Rendering im IG: [`prov-abrechnungskontext-mi-001`](Provenance-prov-abrechnungskontext-mi-001.html)
 
 ```fsh
 Instance: prov-abrechnungskontext-mi-001
