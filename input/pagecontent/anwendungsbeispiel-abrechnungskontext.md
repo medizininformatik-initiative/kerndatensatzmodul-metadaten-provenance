@@ -270,7 +270,7 @@ Anschließend ein Reindex-Trigger, damit bestehende Provenance-Ressourcen den ne
 
 | Server | Custom SearchParameter | `_has` Reverse Chain | Hinweise |
 |---|---|---|---|
-| **HAPI FHIR** | ✅ | ✅ | Nach PUT `SearchParameter.status = #active` setzen und `POST [base]/$reindex` aufrufen. Reverse Chain `_has` produktionsreif. |
+| **HAPI FHIR** | ✅ | ✅ | SearchParameter wird mit `status = active` ausgeliefert und ist nach `PUT` direkt indexierbar; anschließend `POST [base]/$reindex` aufrufen. Reverse Chain `_has` produktionsreif. |
 | **SMILE CDR** | ✅ | ✅ | Wie HAPI, plus UI-gestützte SP-Verwaltung und automatisches Reindexing einstellbar. |
 | **Blaze** | ✅ | ✅ | SearchParameter wird beim PUT indiziert (RocksDB). Verschachtelte Queries (`_has:Provenance:target:reason=...`) vor produktiver Nutzung explizit testen — falls problematisch, Variante A (Provenance-Liste mit `_include:target`) als Fallback nutzen, beides liefert dasselbe Ergebnis. |
 

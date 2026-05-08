@@ -16,8 +16,8 @@ Description: "Suchparameter für Provenance.reason. Ermöglicht das Filtern alle
 * url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/SearchParameter/provenance-reason"
 * version = "0.2.0-rc.1"
 * name = "MII_SP_Provenance_Reason"
-* status = #draft
-* experimental = true
+* status = #active
+* experimental = false
 * publisher = "Medizininformatik Initiative"
 * contact[0].telecom[0].system = #url
 * contact[0].telecom[0].value = "https://www.medizininformatik-initiative.de"
