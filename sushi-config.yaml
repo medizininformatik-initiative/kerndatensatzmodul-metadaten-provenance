@@ -9,7 +9,7 @@ name: MII_IG_Metadaten_Provenance_DE
 title: MII IG Kerndatensatz-Modul Metadaten Provenance
 description: "MII Modul zur Dokumentation der Herkunft und Deduplizierung onkologischer Prozeduren (oBDS-Import vs. Abrechnung)"
 status: draft
-version: "2026.0.0-ballot"
+version: "0.2.0-rc.1"
 fhirVersion: 4.0.1
 copyrightYear: 2025+
 releaseLabel: ci-build
@@ -43,6 +43,8 @@ pages:
     title: "Anwendungsbeispiel: Deduplizierung Onkologie-Prozedur"
   anwendungsbeispiel-datenqualitaet.md:
     title: "Anwendungsbeispiel: Datenqualitätsprüfung"
+  anwendungsbeispiel-abrechnungskontext.md:
+    title: "Anwendungsbeispiel: Abrechnungsdatenkontext (§21, §301, DRG)"
   dq-framework.md:
     title: "Datenqualitätsindikatoren (DQ-Framework)"
 
@@ -58,6 +60,7 @@ menu:
   Anwendungsbeispiele:
     "Deduplizierung Onkologie-OP": anwendungsbeispiel-deduplizierung.html
     "Datenqualitätsprüfung": anwendungsbeispiel-datenqualitaet.html
+    "Abrechnungskontext (§21, §301)": anwendungsbeispiel-abrechnungskontext.html
   Datenqualität:
     "DQ-Framework": dq-framework.html
   Use Cases: usecase-katalog.html
