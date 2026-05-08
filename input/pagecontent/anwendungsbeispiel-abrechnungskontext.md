@@ -60,17 +60,17 @@ Dieser Fall hat einen **deutlichen Abrechnungs-Bias**: Die ND `I10.90` wird codi
 
 | # | Ressource | ID | Zweck |
 |---|---|---|---|
-| 1 | `Patient` | `pat-mi-001` | Pseudonymisierter Patient |
-| 2 | `Encounter` | `enc-mi-001` | Aufenthalt 01.–15.03.2026 |
-| 3 | `Condition` (HD) | `cond-mi-001-hd-i21` | I21.0 Vorderwandinfarkt |
-| 4 | `Condition` (ND) | `cond-mi-001-nd-i10` | I10.90 Hypertonie |
-| 5 | `Procedure` | `proc-mi-001-ptca` | 8-837.k0 PTCA mit DES |
-| 6 | `Organization` | `org-ukb` | Datenlieferndes Krankenhaus (IKNR) |
-| 7 | `Device` | `etl-p21-fhir-v142` | **ETL-Pipeline als Author** |
-| 8 | `Device` | `src-ikarus-kis-ukb` | **Quellsystem** (fiktives „Ikarus-KIS" — klassifiziert als Sekundärsystem). Referenziert über `DocumentReference.author`, **nicht** als Provenance-Agent (siehe unten). |
-| 9 | `DocumentReference` | `kis-drg-aufbereitung-2026-03-15` | KIS-DRG-Aufbereitungsstand als Quelle. `author` = Org/UKB **+** Device/Ikarus-KIS |
-| 10 | `Provenance` | `prov-abrechnungskontext-mi-001` | Provenance über alle FHIR-Ressourcen |
-| 11 | `Bundle` | `bundle-abrechnungskontext-mi-001` | Collection-Bundle |
+| 1 | `Patient` | [`pat-mi-001`](Patient-pat-mi-001.html) | Pseudonymisierter Patient |
+| 2 | `Encounter` | [`enc-mi-001`](Encounter-enc-mi-001.html) | Aufenthalt 01.–15.03.2026 |
+| 3 | `Condition` (HD) | [`cond-mi-001-hd-i21`](Condition-cond-mi-001-hd-i21.html) | I21.0 Vorderwandinfarkt |
+| 4 | `Condition` (ND) | [`cond-mi-001-nd-i10`](Condition-cond-mi-001-nd-i10.html) | I10.90 Hypertonie |
+| 5 | `Procedure` | [`proc-mi-001-ptca`](Procedure-proc-mi-001-ptca.html) | 8-837.k0 PTCA mit DES |
+| 6 | `Organization` | [`org-ukb`](Organization-org-ukb.html) | Datenlieferndes Krankenhaus (IKNR) |
+| 7 | `Device` | [`etl-p21-fhir-v142`](Device-etl-p21-fhir-v142.html) | **ETL-Pipeline als `assembler`** |
+| 8 | `Device` | [`src-ikarus-kis-ukb`](Device-src-ikarus-kis-ukb.html) | **Quellsystem** (fiktives „Ikarus-KIS" — klassifiziert als Sekundärsystem). Referenziert über `DocumentReference.author`, **nicht** als Provenance-Agent (siehe unten). |
+| 9 | `DocumentReference` | [`kis-drg-aufbereitung-2026-03-15`](DocumentReference-kis-drg-aufbereitung-2026-03-15.html) | KIS-DRG-Aufbereitungsstand als Quelle. `author` = Org/UKB **+** Device/Ikarus-KIS |
+| 10 | `Provenance` | [`prov-abrechnungskontext-mi-001`](Provenance-prov-abrechnungskontext-mi-001.html) | Provenance über alle FHIR-Ressourcen |
+| 11 | `Bundle` | [`bundle-abrechnungskontext-mi-001`](Bundle-bundle-abrechnungskontext-mi-001.html) | Collection-Bundle |
 
 **Eine** Provenance referenziert hier alle erzeugten FHIR-Ressourcen (`target[0..n]`). Soll später eine feinere Granularität dokumentiert werden — z. B. ein zusätzlicher Codierungs-Schritt durch eine Codierfachkraft oder eine separate DRG-Klassifikation —, kommt eine zweite Provenance hinzu.
 
