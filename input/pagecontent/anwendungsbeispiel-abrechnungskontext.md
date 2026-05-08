@@ -152,6 +152,8 @@ GET [base]/Provenance?target=Patient/pat-mi-001
 
 Wer den feineren Pfad braucht (separate Provenance pro Genese-Stufe), kann eine **zweite Provenance** mit `target = DocumentReference/...` und `agent[author] = Device/Ikarus-KIS` ergänzen — Provenance-Ressourcen sind verkettbar.
 
+> **Hinweis zur DocumentReference im realen Betrieb:** Die hier gezeigte DocumentReference für den KIS-DRG-Aufbereitungsstand ist in vielen DIZ-Setups eher ein **konzeptuelles Modell-Element** als ein tatsächlich persistiertes Artefakt — die Aufbereitung läuft oft als Pipeline ohne dass ein Snapshot als FHIR-Ressource abgelegt wird. Wenn das eigene DIZ keinen solchen Aufbereitungsstand-Snapshot hält, sind zwei pragmatische Alternativen denkbar: das Source-System direkt als `Provenance.agent` zu führen (mit den semantischen Kompromissen, die [oben](#warum-das-quellsystem-nicht-agent-der-provenance-ist) diskutiert sind), oder es nur als `entity.what.display`-String mitzuführen (verliert dann allerdings die Filterbarkeit über das CodeSystem). Die hier gezeigte Variante mit DocumentReference ist die **didaktisch sauberste**, weil sie Daten-Artefakt und Quellsystem getrennt sichtbar macht.
+
 ### Anmerkung: Klassifikation von Datenquellsystemen
 
 Das hier verwendete [`mii-cs-datenquellsystem`](CodeSystem-mii-cs-datenquellsystem.html) ist eine **MII-eigene Setzung** — Stand 2026 existiert kein international etablierter CodeSystem-Standard, den wir hätten übernehmen können. Verwandte, aber nicht direkt anwendbare Quellen:
