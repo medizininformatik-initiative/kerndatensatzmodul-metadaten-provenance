@@ -1,0 +1,14 @@
+{
+  "resourceType" : "Patient",
+  "id" : "pat-mi-001",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient pat-mi-001</b></p><a name=\"pat-mi-001\"> </a><a name=\"hcpat-mi-001\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Anonymous Patient Male, DoB: 1958-04-22 ( https://example.org/fhir/sid/patienten-pseudonym#P21-MI-001)</p><hr/></div>"
+  },
+  "identifier" : [{
+    "system" : "https://example.org/fhir/sid/patienten-pseudonym",
+    "value" : "P21-MI-001"
+  }],
+  "gender" : "male",
+  "birthDate" : "1958-04-22"
+}

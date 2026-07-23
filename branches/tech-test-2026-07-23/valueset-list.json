@@ -1,0 +1,30 @@
+{
+  "codeSystems" : [{
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/ValueSet/mii-vs-provenance-prozedur-herkunft",
+    "version" : "0.2.0-rc.1",
+    "status" : "draft",
+    "name" : "MII_VS_Provenance_Prozedur_Herkunft",
+    "title" : "MII VS Provenance Prozedur Herkunft",
+    "description" : "Value Set für die Herkunft onkologischer Prozeduren zur Unterscheidung von Datenquellen und Deduplizierungsstatus.",
+    "systems" : ["https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/CodeSystem/mii-cs-provenance-prozedur-herkunft"]
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/ValueSet/primary",
+    "version" : "0.2.0-rc.1",
+    "status" : "draft",
+    "name" : "Alle_DQ_Indikatoren_VS",
+    "title" : null,
+    "description" : "",
+    "systems" : ["http://mii.de/CodeSystem/dq-rule-successful",
+    "https://www.medizininformatik-initiative.de/fhir/core/modul-meta/CodeSystem/greifswald-obc-dq-framework"]
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/ValueSet/procedure-intent-vs",
+    "version" : "0.2.0-rc.1",
+    "status" : "draft",
+    "name" : "ProcedureIntentVS",
+    "title" : "Procedure Intent Value Set",
+    "description" : "The purpose of a procedure.",
+    "systems" : ["http://snomed.info/sct"]
+  }]
+}

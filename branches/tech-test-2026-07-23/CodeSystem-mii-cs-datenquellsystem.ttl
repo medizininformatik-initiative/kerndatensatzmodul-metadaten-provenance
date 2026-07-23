@@ -1,0 +1,119 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/CodeSystem/mii-cs-datenquellsystem> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-cs-datenquellsystem"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/shareablecodesystem" ;
+       fhir:index 0 ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-datenquellsystem</b></p><a name=\"mii-cs-datenquellsystem\"> </a><a name=\"hcmii-cs-datenquellsystem\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/CodeSystem/mii-cs-datenquellsystem</code> defines the following codes in a Is-A hierarchy:</p><table class=\"codes\"><tr><td><b>Lvl</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>1</td><td style=\"white-space:nowrap\">Primaersystem<a name=\"mii-cs-datenquellsystem-Primaersystem\"> </a></td><td>Primärsystem</td><td>System der Primärerfassung am Ort der Versorgung — Daten entstehen hier zum ersten Mal.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  KIS<a name=\"mii-cs-datenquellsystem-KIS\"> </a></td><td>Krankenhausinformationssystem</td><td>Zentrales klinisches Informationssystem des Krankenhauses (Aufnahme, Verlegung, Entlassung, Doku).</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  Tumordoku<a name=\"mii-cs-datenquellsystem-Tumordoku\"> </a></td><td>Tumordokumentationssystem</td><td>Spezialsystem zur klinischen Tumordokumentation.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  LIS<a name=\"mii-cs-datenquellsystem-LIS\"> </a></td><td>Laborinformationssystem</td><td>System zur Verwaltung von Laborbefunden und -anforderungen.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  RIS<a name=\"mii-cs-datenquellsystem-RIS\"> </a></td><td>Radiologie-Informationssystem</td><td>System zur Verwaltung radiologischer Befunde und Untersuchungen.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  PACS<a name=\"mii-cs-datenquellsystem-PACS\"> </a></td><td>Picture Archiving and Communication System</td><td>Bildarchivierungssystem (Radiologie, Pathologie etc.).</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  OP_Doku<a name=\"mii-cs-datenquellsystem-OP_Doku\"> </a></td><td>OP-Dokumentationssystem</td><td>Dokumentationssystem für operative Eingriffe.</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">Sekundaersystem<a name=\"mii-cs-datenquellsystem-Sekundaersystem\"> </a></td><td>Sekundärsystem</td><td>System, das Daten aus Primärsystemen aufnimmt oder transformiert (zweckgebunden aufbereitet).</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  Abrechnungssystem<a name=\"mii-cs-datenquellsystem-Abrechnungssystem\"> </a></td><td>Abrechnungssystem</td><td>System oder Subsystem zur Erstellung von Abrechnungs- und DRG-Datensätzen (§21 KHEntgG, §301 SGB V).</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  DRG_Grouper<a name=\"mii-cs-datenquellsystem-DRG_Grouper\"> </a></td><td>DRG-Grouper</td><td>System zur DRG-/PEPP-Klassifikation.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  DWH<a name=\"mii-cs-datenquellsystem-DWH\"> </a></td><td>Data Warehouse</td><td>Konsolidiertes Datenarchiv für Auswertung und Reporting.</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  Forschungsdaten<a name=\"mii-cs-datenquellsystem-Forschungsdaten\"> </a></td><td>Forschungsdaten- / DIZ-System</td><td>Forschungsdaten-Plattform oder Datenintegrationszentrum (z. B. MII-DIZ-Repository).</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  Krebsregister<a name=\"mii-cs-datenquellsystem-Krebsregister\"> </a></td><td>Krebsregister</td><td>Klinisches oder epidemiologisches Krebsregister.</td></tr></table></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/CodeSystem/mii-cs-datenquellsystem"] ;
+  fhir:CodeSystem.version [ fhir:value "0.2.0-rc.1"] ;
+  fhir:CodeSystem.name [ fhir:value "MII_CS_Datenquellsystem"] ;
+  fhir:CodeSystem.title [ fhir:value "MII CS Datenquellsystem"] ;
+  fhir:CodeSystem.status [ fhir:value "draft"] ;
+  fhir:CodeSystem.experimental [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.date [ fhir:value "2026-07-23T11:57:36+00:00"^^xsd:dateTime] ;
+  fhir:CodeSystem.publisher [ fhir:value "Medizininformatik Initiative"] ;
+  fhir:CodeSystem.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "Medizininformatik Initiative" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.medizininformatik-initiative.de/" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "Hierarchisches CodeSystem zur Klassifikation von Datenquellsystemen. Top-Level unterscheidet Primärsysteme (Erfassung am Ort der Versorgung) von Sekundärsystemen (Aufnahme/Transformation aus Primärsystemen). Darunter konkrete Systemtypen wie KIS, Abrechnungssystem, DRG-Grouper, DWH usw. Die Hierarchie erlaubt Subsumption-basierte Filter (z. B. ?type:below=Sekundaersystem).\n\nStand 2026 existiert kein international etablierter CodeSystem-Standard für Datenquellsystem-Typen im Kontext klinischer Sekundärnutzung. Verwandte, aber nicht direkt anwendbare Quellen: ISO/IEC 25010 (Software-Qualitätsmodell, kein Typ-Katalog), IEC 62304 (Risiko-Klassen für Medizinprodukte-Software), HL7 v3 RoleCode (Einrichtungstypen, nicht IT-Systeme), IHE Actors (profil-spezifische Rollen wie Document Source / Repository), SNOMED CT (sehr grobe Codes wie 706594005 |Information system| oder 308040009 |Hospital information system|), gematik Primärsystem-Definition (TI-spezifisch, nur Primär-Begriff). Dieses CodeSystem ist daher ein MII-spezifischer Vorschlag und kandidiert zur Übernahme in MII-weite Terminologie-Pflege."] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.hierarchyMeaning [ fhir:value "is-a"] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.count [ fhir:value "13"^^xsd:nonNegativeInteger] ;
+  fhir:CodeSystem.concept [
+     fhir:index 0 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Primaersystem" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Primärsystem" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "System der Primärerfassung am Ort der Versorgung — Daten entstehen hier zum ersten Mal." ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index 0 ;
+       fhir:CodeSystem.concept.code [ fhir:value "KIS" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Krankenhausinformationssystem" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Zentrales klinisches Informationssystem des Krankenhauses (Aufnahme, Verlegung, Entlassung, Doku)." ]
+     ], [
+       fhir:index 1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "Tumordoku" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Tumordokumentationssystem" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Spezialsystem zur klinischen Tumordokumentation." ]
+     ], [
+       fhir:index 2 ;
+       fhir:CodeSystem.concept.code [ fhir:value "LIS" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Laborinformationssystem" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "System zur Verwaltung von Laborbefunden und -anforderungen." ]
+     ], [
+       fhir:index 3 ;
+       fhir:CodeSystem.concept.code [ fhir:value "RIS" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Radiologie-Informationssystem" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "System zur Verwaltung radiologischer Befunde und Untersuchungen." ]
+     ], [
+       fhir:index 4 ;
+       fhir:CodeSystem.concept.code [ fhir:value "PACS" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Picture Archiving and Communication System" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Bildarchivierungssystem (Radiologie, Pathologie etc.)." ]
+     ], [
+       fhir:index 5 ;
+       fhir:CodeSystem.concept.code [ fhir:value "OP_Doku" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "OP-Dokumentationssystem" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Dokumentationssystem für operative Eingriffe." ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Sekundaersystem" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sekundärsystem" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "System, das Daten aus Primärsystemen aufnimmt oder transformiert (zweckgebunden aufbereitet)." ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index 0 ;
+       fhir:CodeSystem.concept.code [ fhir:value "Abrechnungssystem" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Abrechnungssystem" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "System oder Subsystem zur Erstellung von Abrechnungs- und DRG-Datensätzen (§21 KHEntgG, §301 SGB V)." ]
+     ], [
+       fhir:index 1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "DRG_Grouper" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "DRG-Grouper" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "System zur DRG-/PEPP-Klassifikation." ]
+     ], [
+       fhir:index 2 ;
+       fhir:CodeSystem.concept.code [ fhir:value "DWH" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Data Warehouse" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Konsolidiertes Datenarchiv für Auswertung und Reporting." ]
+     ], [
+       fhir:index 3 ;
+       fhir:CodeSystem.concept.code [ fhir:value "Forschungsdaten" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Forschungsdaten- / DIZ-System" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Forschungsdaten-Plattform oder Datenintegrationszentrum (z. B. MII-DIZ-Repository)." ]
+     ], [
+       fhir:index 4 ;
+       fhir:CodeSystem.concept.code [ fhir:value "Krebsregister" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Krebsregister" ] ;
+       fhir:CodeSystem.concept.definition [ fhir:value "Klinisches oder epidemiologisches Krebsregister." ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/CodeSystem/mii-cs-datenquellsystem.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

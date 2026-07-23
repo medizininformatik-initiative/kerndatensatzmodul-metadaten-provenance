@@ -1,0 +1,860 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Anwendungsbeispiel: Abrechnungsdatenkontext (KHEntgG, SGB V, DRG) - MII IG Kerndatensatz-Modul Metadaten Provenance v0.2.0-rc.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"10"}
+    h3,h4,h5,h6{--heading-prefix:"10"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Metadaten Provenance</span>
+            <br/>
+            <span style="display:inline-block;">0.2.0-rc.1 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Hintergrund
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="motivation.html">Motivation</a>
+      </li>
+      <li>
+        <a href="technische-grundlagen.html">Technische Grundlagen</a>
+      </li>
+      <li>
+        <a href="isik.html">ISiK (gematik)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Ansätze
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="ansatz-metatag.html">Meta.tag (Taskforce)</a>
+      </li>
+      <li>
+        <a href="ansatz-fhir-provenance.html">FHIR Provenance (BZKF)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Anwendungsbeispiele
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="anwendungsbeispiel-deduplizierung.html">Deduplizierung Onkologie-OP</a>
+      </li>
+      <li>
+        <a href="anwendungsbeispiel-datenqualitaet.html">Datenqualitätsprüfung</a>
+      </li>
+      <li>
+        <a href="anwendungsbeispiel-abrechnungskontext.html">Abrechnungskontext (KHEntgG, SGB V)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Datenqualität
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="dq-framework.html">DQ-Framework</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="usecase-katalog.html">Use Cases</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Anwendungsbeispiel: Abrechnungsdatenkontext (KHEntgG, SGB V, DRG)</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Metadaten Provenance - Local Development build (v0.2.0-rc.1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Anwendungsbeispiel: Abrechnungsdatenkontext (KHEntgG, SGB V, DRG)</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#worum-es-geht" id="markdown-toc-worum-es-geht">Worum es geht</a></li>
+  <li><a href="#begriffsklärung-drei-lesarten-von-paragraf-21-daten" id="markdown-toc-begriffsklärung-drei-lesarten-von-paragraf-21-daten">Begriffsklärung: drei Lesarten von „Paragraf-21-Daten"</a></li>
+  <li><a href="#paragraf-21-vs-paragraf-301-die-große-schnittmenge" id="markdown-toc-paragraf-21-vs-paragraf-301-die-große-schnittmenge">Paragraf 21 vs. Paragraf 301: die große Schnittmenge</a></li>
+  <li><a href="#warum-das-für-die-provenance-wichtig-ist" id="markdown-toc-warum-das-für-die-provenance-wichtig-ist">Warum das für die Provenance wichtig ist</a></li>
+  <li><a href="#klinisches-beispiel-akuter-myokardinfarkt-mit-ptca" id="markdown-toc-klinisches-beispiel-akuter-myokardinfarkt-mit-ptca">Klinisches Beispiel: Akuter Myokardinfarkt mit PTCA</a></li>
+  <li><a href="#welche-ressourcen-das-bundle-enthält" id="markdown-toc-welche-ressourcen-das-bundle-enthält">Welche Ressourcen das Bundle enthält</a></li>
+  <li><a href="#provenance-graph-w3c-prov-stil" id="markdown-toc-provenance-graph-w3c-prov-stil">Provenance-Graph (W3C PROV-Stil)</a></li>
+  <li><a href="#die-provenance-im-detail" id="markdown-toc-die-provenance-im-detail">Die Provenance im Detail</a></li>
+  <li><a href="#warum-das-quellsystem-nicht-agent-der-provenance-ist" id="markdown-toc-warum-das-quellsystem-nicht-agent-der-provenance-ist">Warum das Quellsystem nicht Agent der Provenance ist</a></li>
+  <li><a href="#anmerkung-klassifikation-von-datenquellsystemen" id="markdown-toc-anmerkung-klassifikation-von-datenquellsystemen">Anmerkung: Klassifikation von Datenquellsystemen</a></li>
+  <li><a href="#was-sekundärnutzerinnen-damit-tun-können" id="markdown-toc-was-sekundärnutzerinnen-damit-tun-können">Was Sekundärnutzer:innen damit tun können</a></li>
+  <li><a href="#verhältnis-zum-metatag-ansatz" id="markdown-toc-verhältnis-zum-metatag-ansatz">Verhältnis zum Meta.tag-Ansatz</a></li>
+  <li><a href="#offene-punkte" id="markdown-toc-offene-punkte">Offene Punkte</a></li>
+</ul>
+
+</div>
+<h3 id="worum-es-geht">Worum es geht</h3>
+
+<p>Wenn in MII-/DIZ-Diskussionen von <strong>„Paragraf-21-Daten"</strong> die Rede ist, ist meist nicht die tatsächlich an die InEK übermittelte Datenlieferung gemeint, sondern eine <strong>DRG-aufbereitete Routinedatenstrecke</strong>, die zeitnah aus dem Krankenhausinformationssystem (KIS) nach FHIR ausgespielt wird. Diese Seite schärft den Begriff und zeigt, <strong>wie sich der Abrechnungs-Charakter solcher Daten sauber per FHIR Provenance dokumentieren lässt</strong>, ohne den Begriff „Paragraf 21" zu überdehnen.</p>
+
+<h3 id="begriffsklärung-drei-lesarten-von-paragraf-21-daten">Begriffsklärung: drei Lesarten von „Paragraf-21-Daten"</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Lesart</th>
+      <th>Was gemeint ist</th>
+      <th>Wann verfügbar</th>
+      <th>Realität im DIZ?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>A. Die Paragraf-21-CSV-Lieferung</strong></td>
+      <td>Das konkrete CSV-Paket, das das Krankenhaus jährlich an die InEK übermittelt (<code class="language-plaintext highlighter-rouge">Stamm.csv</code>, <code class="language-plaintext highlighter-rouge">Fall.csv</code>, <code class="language-plaintext highlighter-rouge">FAB.csv</code>, <code class="language-plaintext highlighter-rouge">ICD.csv</code>, <code class="language-plaintext highlighter-rouge">OPS.csv</code>, <code class="language-plaintext highlighter-rouge">Entgelte.csv</code>, <code class="language-plaintext highlighter-rouge">ZE.csv</code>)</td>
+      <td>bis 31.03. des Folgejahres (Frist nach KHEntgG Paragraf 21)</td>
+      <td>Selten — die FHIR-Daten werden in der Regel <strong>nicht</strong> aus dieser Lieferung rück-transformiert</td>
+    </tr>
+    <tr>
+      <td><strong>B. Paragraf-21-konforme Aufbereitung</strong></td>
+      <td>Daten nach Paragraf-21-Inhaltsspec aufbereitet (DRG-Codierung, Grouping, Filterregeln), aber <strong>nicht</strong> als CSV-Lieferung an InEK, sondern parallel als FHIR-Bundle ins DIZ</td>
+      <td>zeitnah (täglich/wöchentlich)</td>
+      <td><strong>Häufig</strong> — entspricht der typischen DIZ-ETL-Strecke</td>
+    </tr>
+    <tr>
+      <td><strong>C. DRG-aufbereitete Routinedaten</strong></td>
+      <td>Lose Bezeichnung für „Daten aus dem KIS, durch Codierung und DRG-Logik geprägt", ohne strikten Bezug zur Paragraf-21-Spec</td>
+      <td>live</td>
+      <td><strong>Häufig</strong> — z. B. interne fall-begleitende Codierung</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>In der Praxis treffen DIZ-Daten meist <strong>Lesart B</strong> oder <strong>C</strong>. Die Provenance dieser Seite modelliert genau diesen Fall: zeitnahe FHIR-Erzeugung aus dem KIS-DRG-Aufbereitungsstand, <strong>nicht</strong> Ableitung aus einer Paragraf-21-CSV-Lieferung.</p>
+
+<h3 id="paragraf-21-vs-paragraf-301-die-große-schnittmenge">Paragraf 21 vs. Paragraf 301: die große Schnittmenge</h3>
+
+<p>Sowohl die jährliche Paragraf-21-Lieferung an die InEK als auch die fall-bezogene Paragraf-301-Übermittlung an die Krankenkassen werden aus <strong>demselben KIS-DRG-Aufbereitungsstand</strong> gespeist. Inhaltlich überlappen sie sich stark.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Eigenschaft</th>
+      <th>Paragraf 301 SGB V</th>
+      <th>Paragraf 21 KHEntgG</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Empfänger</strong></td>
+      <td>Krankenkasse des Versicherten</td>
+      <td>InEK (Datenannahmestelle)</td>
+    </tr>
+    <tr>
+      <td><strong>Format</strong></td>
+      <td>EDIFACT/DTA</td>
+      <td>CSV</td>
+    </tr>
+    <tr>
+      <td><strong>Zeitpunkt</strong></td>
+      <td>je Fall, <strong>zeitnah</strong> (Aufnahme: 3 Werktage; Entlassung: nach Codierung)</td>
+      <td>jährlich, bis 31.03. Folgejahr</td>
+    </tr>
+    <tr>
+      <td><strong>Versicherten-Identifikation</strong></td>
+      <td>ja (KV-Nr., Versichertenstatus)</td>
+      <td>nein (pseudonymisiert)</td>
+    </tr>
+    <tr>
+      <td><strong>DRG/Entgelte</strong></td>
+      <td>fall-individuell (Rechnung)</td>
+      <td>aggregiert (Kalkulation)</td>
+    </tr>
+    <tr>
+      <td><strong>Gemeinsam</strong></td>
+      <td>Aufnahme/Entlassung, <strong>HD/ND mit Sicherheitskennzeichen</strong>, <strong>OPS mit Datum</strong>, Fachabteilungen, DRG, Belegungstage</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Für die Sekundärnutzung tragen beide Quellen denselben <strong>DRG-codierten Kern</strong>. Die wichtigste gemeinsame Eigenschaft ist nicht die Format- oder Empfängerwahl, sondern die <strong>Filterung durch die Abrechnungs-/DRG-Logik</strong> — und genau diese Eigenschaft soll die Provenance dokumentieren.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>KIS-DRG-Aufbereitung 2026-03-15
+       ├─→ Paragraf-301-DTA       (3 Werktage nach Entlassung, an Krankenkasse)
+       ├─→ FHIR-Bundle    (zeitnah, ins DIZ)              ← Quelle dieses Beispiels
+       └─→ Paragraf-21-CSV        (Q1 2027, an InEK)
+</code></pre></div></div>
+
+<h3 id="warum-das-für-die-provenance-wichtig-ist">Warum das für die Provenance wichtig ist</h3>
+
+<p>Aus dieser Schwester-Output-Konstellation folgen drei Modellierungs-Entscheidungen:</p>
+
+<ol>
+  <li><strong><code class="language-plaintext highlighter-rouge">Provenance.entity.what</code> zeigt nicht auf die Paragraf-21-CSV</strong>, sondern auf den <strong>gemeinsamen KIS-DRG-Aufbereitungsstand</strong>. Die Paragraf-21-Lieferung ist ein paralleler Output, nicht der Vorfahre der FHIR-Daten.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">Provenance.agent[assembler] = Device (ETL-Job)</code></strong> — nicht das Krankenhaus, nicht der G-DRG-Grouper. Die FHIR-Ressource wird durch die ETL-Pipeline routinemäßig zusammengestellt.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">Provenance.reason = HPAYMT</code></strong> trägt den Abrechnungs-Charakter; <strong><code class="language-plaintext highlighter-rouge">policy</code></strong> verweist auf Paragraf 21- bzw. Paragraf 301-Spec als „nach welcher Inhaltsdefinition wurde aufbereitet".</li>
+</ol>
+
+<h3 id="klinisches-beispiel-akuter-myokardinfarkt-mit-ptca">Klinisches Beispiel: Akuter Myokardinfarkt mit PTCA</h3>
+
+<p><strong>Szenario:</strong> 67-jähriger Patient, stationäre Aufnahme als Notfall am 01.03.2026 mit akutem Vorderwand-STEMI. Sofortige PTCA mit Drug-Eluting-Stent. Entlassung nach 14 Tagen am 15.03.2026. ETL-Lauf in der Nacht zum 16.03.2026.</p>
+
+<p><strong>Codierung im DRG-Kontext:</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Code</th>
+      <th>Bedeutung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>HD</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">I21.0</code></td>
+      <td>Akuter transmuraler Myokardinfarkt der Vorderwand</td>
+    </tr>
+    <tr>
+      <td><strong>ND</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">I10.90</code></td>
+      <td>Essentielle Hypertonie (PCCL-relevant, daher codiert)</td>
+    </tr>
+    <tr>
+      <td><strong>OPS</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">8-837.k0</code></td>
+      <td>PTCA mit Implantation eines beschichteten Stents (1 Stent)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Dieser Fall hat einen <strong>deutlichen Abrechnungs-Bias</strong>: Die ND <code class="language-plaintext highlighter-rouge">I10.90</code> wird codiert, weil sie erlöswirksam ist (PCCL-relevant für die DRG-Eingruppierung). Ein NLP-extrahierter Entlassbrief würde Hypertonie möglicherweise nur am Rande erwähnen, dafür aber differenziertere Befunde liefern (Killip-Klassifikation, EF, Door-to-Balloon-Zeit), die in der DRG-Codierung nicht erfasst sind.</p>
+
+<h3 id="welche-ressourcen-das-bundle-enthält">Welche Ressourcen das Bundle enthält</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Ressource</th>
+      <th>ID</th>
+      <th>Zweck</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td><code class="language-plaintext highlighter-rouge">Patient</code></td>
+      <td><a href="Patient-pat-mi-001.html"><code class="language-plaintext highlighter-rouge">pat-mi-001</code></a></td>
+      <td>Pseudonymisierter Patient</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><code class="language-plaintext highlighter-rouge">Encounter</code></td>
+      <td><a href="Encounter-enc-mi-001.html"><code class="language-plaintext highlighter-rouge">enc-mi-001</code></a></td>
+      <td>Aufenthalt 01.–15.03.2026</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><code class="language-plaintext highlighter-rouge">Condition</code> (HD)</td>
+      <td><a href="Condition-cond-mi-001-hd-i21.html"><code class="language-plaintext highlighter-rouge">cond-mi-001-hd-i21</code></a></td>
+      <td>I21.0 Vorderwandinfarkt</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td><code class="language-plaintext highlighter-rouge">Condition</code> (ND)</td>
+      <td><a href="Condition-cond-mi-001-nd-i10.html"><code class="language-plaintext highlighter-rouge">cond-mi-001-nd-i10</code></a></td>
+      <td>I10.90 Hypertonie</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td><code class="language-plaintext highlighter-rouge">Procedure</code></td>
+      <td><a href="Procedure-proc-mi-001-ptca.html"><code class="language-plaintext highlighter-rouge">proc-mi-001-ptca</code></a></td>
+      <td>8-837.k0 PTCA mit DES</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td><code class="language-plaintext highlighter-rouge">Organization</code></td>
+      <td><a href="Organization-org-ukb.html"><code class="language-plaintext highlighter-rouge">org-ukb</code></a></td>
+      <td>Datenlieferndes Krankenhaus (IKNR)</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td><code class="language-plaintext highlighter-rouge">Device</code></td>
+      <td><a href="Device-etl-p21-fhir-v142.html"><code class="language-plaintext highlighter-rouge">etl-p21-fhir-v142</code></a></td>
+      <td><strong>ETL-Pipeline als <code class="language-plaintext highlighter-rouge">assembler</code></strong></td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td><code class="language-plaintext highlighter-rouge">Device</code></td>
+      <td><a href="Device-src-ikarus-kis-ukb.html"><code class="language-plaintext highlighter-rouge">src-ikarus-kis-ukb</code></a></td>
+      <td><strong>Quellsystem</strong> (fiktives „Ikarus-KIS" — klassifiziert als Sekundärsystem). Referenziert über <code class="language-plaintext highlighter-rouge">DocumentReference.author</code>, <strong>nicht</strong> als Provenance-Agent (siehe unten).</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td><code class="language-plaintext highlighter-rouge">DocumentReference</code></td>
+      <td><a href="DocumentReference-kis-drg-aufbereitung-2026-03-15.html"><code class="language-plaintext highlighter-rouge">kis-drg-aufbereitung-2026-03-15</code></a></td>
+      <td>KIS-DRG-Aufbereitungsstand als Quelle. <code class="language-plaintext highlighter-rouge">author</code> = Org/UKB <strong>+</strong> Device/Ikarus-KIS</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td><code class="language-plaintext highlighter-rouge">Provenance</code></td>
+      <td><a href="Provenance-prov-abrechnungskontext-mi-001.html"><code class="language-plaintext highlighter-rouge">prov-abrechnungskontext-mi-001</code></a></td>
+      <td>Provenance über alle FHIR-Ressourcen</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td><code class="language-plaintext highlighter-rouge">Bundle</code></td>
+      <td><a href="Bundle-bundle-abrechnungskontext-mi-001.html"><code class="language-plaintext highlighter-rouge">bundle-abrechnungskontext-mi-001</code></a></td>
+      <td>Collection-Bundle</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Eine</strong> Provenance referenziert hier alle erzeugten FHIR-Ressourcen (<code class="language-plaintext highlighter-rouge">target[0..n]</code>). Soll später eine feinere Granularität dokumentiert werden — z. B. ein zusätzlicher Codierungs-Schritt durch eine Codierfachkraft oder eine separate DRG-Klassifikation —, kommt eine zweite Provenance hinzu.</p>
+
+<p><strong>Direktzugriff auf einzelne Ressourcen:</strong> <a href="Bundle-bundle-abrechnungskontext-mi-001.html">Bundle</a> · <a href="Provenance-prov-abrechnungskontext-mi-001.html">Provenance</a> · <a href="DocumentReference-kis-drg-aufbereitung-2026-03-15.html">DocumentReference (Quell-Aufbereitung)</a> · <a href="Device-etl-p21-fhir-v142.html">Device (ETL-Pipeline)</a> · <a href="Device-src-ikarus-kis-ukb.html">Device (Ikarus-KIS)</a> · <a href="Patient-pat-mi-001.html">Patient</a> · <a href="Encounter-enc-mi-001.html">Encounter</a> · <a href="Condition-cond-mi-001-hd-i21.html">Condition HD</a> · <a href="Condition-cond-mi-001-nd-i10.html">Condition ND</a> · <a href="Procedure-proc-mi-001-ptca.html">Procedure</a> · <a href="Organization-org-ukb.html">Organization</a></p>
+
+<p>FSH-Quelltext: <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-metadaten-provenance/blob/main/input/fsh/examples/mii-exa-abrechnungskontext.fsh"><code class="language-plaintext highlighter-rouge">mii-exa-abrechnungskontext.fsh</code></a>.</p>
+
+<h3 id="provenance-graph-w3c-prov-stil">Provenance-Graph (W3C PROV-Stil)</h3>
+
+<p>Die folgende Darstellung zeigt die Beziehungen zwischen Quell-Entity, ETL-Aktivität, beteiligten Agenten und den erzeugten Ziel-Ressourcen:</p>
+
+<p><img src="Abrechnungskontext_Prov_Graph.png" alt="Provenance-Graph für den Abrechnungskontext-Beispielfall: KIS-DRG-Aufbereitung als Source-Entity, ETL-Pipeline als Activity, UKB als Performer-Agent, daraus erzeugt: Patient, Encounter, Conditions HD/ND, Procedure" width="100%" /></p>
+
+<p>Schwester-Outputs aus demselben KIS-DRG-Aufbereitungsstand (Paragraf-21-CSV an InEK, Paragraf-301-DTA an Krankenkasse) sind hier bewusst <strong>nicht</strong> dargestellt — sie sind nicht Vorfahren der FHIR-Ressourcen und gehören daher nicht in deren Provenance-Kette.</p>
+
+<h3 id="die-provenance-im-detail">Die Provenance im Detail</h3>
+
+<p>→ Rendering im IG: <a href="Provenance-prov-abrechnungskontext-mi-001.html"><code class="language-plaintext highlighter-rouge">prov-abrechnungskontext-mi-001</code></a></p>
+
+<pre><code class="language-fsh">Instance: prov-abrechnungskontext-mi-001
+InstanceOf: Provenance
+* target[0] = Reference(Patient/pat-mi-001)
+* target[+] = Reference(Encounter/enc-mi-001)
+* target[+] = Reference(Condition/cond-mi-001-hd-i21)
+* target[+] = Reference(Condition/cond-mi-001-nd-i10)
+* target[+] = Reference(Procedure/proc-mi-001-ptca)
+
+* recorded = "2026-03-16T03:12:00+01:00"          // ETL-Lauf, 1 Tag nach Entlassung
+* occurredPeriod                                   // Zeitraum, den die Daten beschreiben
+  * start = "2026-03-01T08:42:00+01:00"
+  * end   = "2026-03-15T14:30:00+01:00"
+
+* policy[0] = "https://www.gesetze-im-internet.de/khentgg/__21.html"
+* policy[+] = "https://www.gesetze-im-internet.de/sgb_5/__301.html"
+
+* reason   = $v3-ActReason#HPAYMT "Payment"
+* activity = $v3-ActReason#HPAYMT "Payment"
+
+* agent[0]
+  * type = $provenance-participant-type#assembler                // ETL stellt FHIR-Ressourcen routinemäßig zusammen
+  * who  = Reference(Device/etl-p21-fhir-v142)
+* agent[+]
+  * type = $provenance-participant-type#performer                // Träger-Org
+  * who  = Reference(Organization/org-ukb)
+// Source-System (Ikarus-KIS) ist HIER kein Agent — es war nicht Beteiligter
+// am ETL-Lauf. Es lebt an DocumentReference.author (siehe Quell-Entity).
+
+* entity[0]
+  * role = #source
+  * what = Reference(DocumentReference/kis-drg-aufbereitung-2026-03-15)
+//          → DocumentReference.author = [Organization/org-ukb, Device/src-ikarus-kis-ukb]
+</code></pre>
+
+<p>Jedes Feld trägt eine konkrete Aussage:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Feld</th>
+      <th>Aussage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">target[*]</code></td>
+      <td>Diese FHIR-Ressourcen sind alle aus demselben ETL-Lauf entstanden</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">recorded</code></td>
+      <td>Wann der ETL-Job gelaufen ist (zeitnah, einen Tag nach Entlassung)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">occurredPeriod</code></td>
+      <td>Welchen Zeitraum die Daten beschreiben (= Aufenthalt)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">policy</code></td>
+      <td>Nach welcher Inhaltsspec aufbereitet wurde (Paragraf 21 <em>und</em> Paragraf 301 — gemeinsame Charakteristik)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">reason = HPAYMT</code></td>
+      <td>Abrechnungskontext — der <strong>load-bearing</strong> Marker für Sekundärnutzung</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">agent[assembler]</code></td>
+      <td>Der ETL-Job stellt die FHIR-Ressourcen routinemäßig zusammen (FHIR-Definition: „device that operates independently of an author on custodial routines"; matches MII-Onkologie-Precedent)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">agent[performer]</code></td>
+      <td>Das Krankenhaus ist die Träger-Organisation des ETL-Laufs</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">entity[source]</code></td>
+      <td>Der konkrete KIS-Aufbereitungsstand. Folgt man der Referenz, sieht man unter <code class="language-plaintext highlighter-rouge">DocumentReference.author</code> das <strong>Quellsystem</strong> (Ikarus-KIS), klassifiziert als Sekundärsystem über das hierarchische <a href="CodeSystem-mii-cs-datenquellsystem.html"><code class="language-plaintext highlighter-rouge">mii-cs-datenquellsystem</code></a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="warum-das-quellsystem-nicht-agent-der-provenance-ist">Warum das Quellsystem nicht Agent der Provenance ist</h3>
+
+<p>Eine naheliegende Modellierung wäre, das Quellsystem (Ikarus-KIS) als zusätzlichen <code class="language-plaintext highlighter-rouge">Provenance.agent</code> zu führen. In W3C-PROV-Logik ist es aber <strong>nicht Beteiligter dieses ETL-Laufs</strong>, sondern hat den <strong>Quell-Aufbereitungsstand erzeugt</strong> — eine <em>vorgelagerte</em> Activity. Daher:</p>
+
+<ul>
+  <li>Die Provenance des ETL-Laufs hat nur die direkt am ETL beteiligten Agents (ETL als <code class="language-plaintext highlighter-rouge">assembler</code>, UKB als <code class="language-plaintext highlighter-rouge">performer</code>).</li>
+  <li>Das Quellsystem lebt an der <strong>Quell-Entity</strong> (<code class="language-plaintext highlighter-rouge">DocumentReference.author</code>), die genau das Artefakt repräsentiert, das das System produziert hat.</li>
+</ul>
+
+<p>Folgen einer Forschungsabfrage zur Quellsystem-Charakteristik:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/Provenance?target=Patient/pat-mi-001
+  &amp;_include=Provenance:entity                // → DocumentReference
+                                             //   → DocumentReference.author → Device/Ikarus-KIS
+                                             //     → Device.type = Sekundärsystem
+</code></pre></div></div>
+
+<p>Wer den feineren Pfad braucht (separate Provenance pro Genese-Stufe), kann eine <strong>zweite Provenance</strong> mit <code class="language-plaintext highlighter-rouge">target = DocumentReference/...</code> und <code class="language-plaintext highlighter-rouge">agent[author] = Device/Ikarus-KIS</code> ergänzen — Provenance-Ressourcen sind verkettbar.</p>
+
+<blockquote>
+  <p><strong>Hinweis zur DocumentReference im realen Betrieb:</strong> Die hier gezeigte DocumentReference für den KIS-DRG-Aufbereitungsstand ist in vielen DIZ-Setups eher ein <strong>konzeptuelles Modell-Element</strong> als ein tatsächlich persistiertes Artefakt — die Aufbereitung läuft oft als Pipeline ohne dass ein Snapshot als FHIR-Ressource abgelegt wird. Wenn das eigene DIZ keinen solchen Aufbereitungsstand-Snapshot hält, sind zwei pragmatische Alternativen denkbar: das Source-System direkt als <code class="language-plaintext highlighter-rouge">Provenance.agent</code> zu führen (mit den semantischen Kompromissen, die <a href="#warum-das-quellsystem-nicht-agent-der-provenance-ist">oben</a> diskutiert sind), oder es nur als <code class="language-plaintext highlighter-rouge">entity.what.display</code>-String mitzuführen (verliert dann allerdings die Filterbarkeit über das CodeSystem). Die hier gezeigte Variante mit DocumentReference ist die <strong>didaktisch sauberste</strong>, weil sie Daten-Artefakt und Quellsystem getrennt sichtbar macht.</p>
+</blockquote>
+
+<h3 id="anmerkung-klassifikation-von-datenquellsystemen">Anmerkung: Klassifikation von Datenquellsystemen</h3>
+
+<p>Das hier verwendete <a href="CodeSystem-mii-cs-datenquellsystem.html"><code class="language-plaintext highlighter-rouge">mii-cs-datenquellsystem</code></a> ist eine <strong>MII-eigene Setzung</strong> — Stand 2026 existiert kein international etablierter CodeSystem-Standard, den wir hätten übernehmen können. Verwandte, aber nicht direkt anwendbare Quellen:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Standard</th>
+      <th>Was er liefert</th>
+      <th>Warum's nicht passt</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>ISO/IEC 25010</strong></td>
+      <td>Software-Qualitätsmodell (Funktionalität, Zuverlässigkeit, …)</td>
+      <td>Bewertet <em>Eigenschaften</em>, klassifiziert keine <strong>System-Typen</strong></td>
+    </tr>
+    <tr>
+      <td><strong>IEC 62304</strong> / DIN EN 62304</td>
+      <td>Risiko-Klassen für Medizinprodukte-Software (A/B/C)</td>
+      <td>Sicherheits-/Risikoklassen, nicht funktional</td>
+    </tr>
+    <tr>
+      <td><strong>HL7 v3 RoleCode</strong></td>
+      <td>Codes für Einrichtungen</td>
+      <td>Facility-Typen (Krankenhaus etc.), nicht IT-Systeme</td>
+    </tr>
+    <tr>
+      <td><strong>IHE Actors</strong> (XDS, XCA, …)</td>
+      <td>Rollen wie „Document Source", „Document Repository"</td>
+      <td>Profil-spezifische Rollen, kein flacher Katalog</td>
+    </tr>
+    <tr>
+      <td><strong>SNOMED CT</strong></td>
+      <td>Hat Codes wie <code class="language-plaintext highlighter-rouge">706594005 \|Information system\|</code>, <code class="language-plaintext highlighter-rouge">308040009 \|Hospital information system\|</code></td>
+      <td>Sehr grob; „Abrechnungssystem"/„DRG-Grouper" als Konzepte fehlen</td>
+    </tr>
+    <tr>
+      <td><strong>gematik Primärsystem-Definition</strong></td>
+      <td>Klar definiert für TI-Kontext (PVS/KIS am Konnektor)</td>
+      <td>Nur Primär-Begriff, keine Sekundär-Hierarchie</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Das hier definierte CS ist daher als <strong>MII-Vorschlag</strong> gekennzeichnet (<code class="language-plaintext highlighter-rouge">experimental = true</code>) und <strong>kandidiert zur Übernahme in MII-weite Terminologie-Pflege</strong>. Wenn künftig ein etablierter Standard verfügbar wird, sollte dieser referenziert oder per ConceptMap überbrückt werden.</p>
+
+<p><strong>Hierarchie statt Doppel-Klassifikation:</strong> Die ursprüngliche Idee war, „Art" (Primär/Sekundär) und „Typ" (KIS/Abrechnung/…) als zwei getrennte CodeSystems zu führen. Das wäre redundant — z. B. impliziert <code class="language-plaintext highlighter-rouge">#Abrechnungssystem</code> automatisch <code class="language-plaintext highlighter-rouge">#Sekundaersystem</code>. Mit <code class="language-plaintext highlighter-rouge">hierarchyMeaning = is-a</code> trägt <strong>ein</strong> CodeSystem beide Aussagen. Subsumption-fähige Server unterstützen damit Filter wie <code class="language-plaintext highlighter-rouge">?type:below=Sekundaersystem</code>.</p>
+
+<h3 id="was-sekundärnutzerinnen-damit-tun-können">Was Sekundärnutzer:innen damit tun können</h3>
+
+<p>Die Provenance ermöglicht automatisierte Filter und Inventarisierungen, ohne dass jede Ressource einzeln getaggt werden muss.</p>
+
+<blockquote>
+  <p><strong>Hinweis zu SearchParameter:</strong> Für <code class="language-plaintext highlighter-rouge">Provenance.reason</code> ist in FHIR R4 <strong>kein Standard-Suchparameter</strong> definiert. Damit die nachfolgenden Filter funktionieren, definiert dieses IG den eigenen SearchParameter <a href="SearchParameter-mii-sp-provenance-reason.html"><code class="language-plaintext highlighter-rouge">provenance-reason</code></a>. Server, die diesen registrieren, unterstützen die <code class="language-plaintext highlighter-rouge">?reason=</code>-Queries; ohne den Parameter müssen Provenance-Ressourcen clientseitig nachgefiltert werden.</p>
+</blockquote>
+
+<p><strong>Alle Ressourcen aus Abrechnungskontext finden</strong> (benötigt <code class="language-plaintext highlighter-rouge">provenance-reason</code>):</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/Provenance?reason=http://terminology.hl7.org/CodeSystem/v3-ActReason|HPAYMT
+</code></pre></div></div>
+
+<p><strong>Conditions, deren Quelle <em>nicht</em> Abrechnungskontext ist</strong> (z. B. für klinische Forschungsfragen, bei denen DRG-Codierungs-Bias problematisch wäre — benötigt <code class="language-plaintext highlighter-rouge">provenance-reason</code>):</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/Condition?_has:Provenance:target:reason:not=...|HPAYMT
+</code></pre></div></div>
+
+<p><strong>Welche Aufbereitungs-Stände haben das DIZ erreicht</strong> (Inventar über Quell-Entities — Standard-Suchparameter):</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/Provenance?entity=DocumentReference/...
+</code></pre></div></div>
+
+<p><strong>Welche ETL-Job-Version hat eine Ressource erzeugt</strong> (für Fehlerrückverfolgung bei Pipeline-Updates — Standard-Suchparameter):</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/Provenance?target=Patient/pat-mi-001
+  → Provenance.agent[author].who → Device.version
+</code></pre></div></div>
+
+<h4 id="beispiel-abfragen-für-sekundärnutzung">Beispiel-Abfragen für Sekundärnutzung</h4>
+
+<h5 id="variante-a-alle-abrechnungsdaten-kohorten-übergreifend">Variante A: Alle Abrechnungsdaten (kohorten-übergreifend)</h5>
+
+<p>Einfacher Fall — eine Forschungsgruppe oder ein DQ-Prozess will <strong>alle</strong> Ressourcen aus DRG-aufbereiteter Routinedatenstrecke einsehen, ohne Krankheits-Filter:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/Provenance
+  ?reason=http://terminology.hl7.org/CodeSystem/v3-ActReason|HPAYMT
+  &amp;_include=Provenance:target
+  &amp;_count=200
+</code></pre></div></div>
+
+<p>→ liefert alle Provenance-Ressourcen mit Reason <code class="language-plaintext highlighter-rouge">HPAYMT</code> plus deren <code class="language-plaintext highlighter-rouge">target</code>-Ressourcen (Patient, Encounter, Condition, Procedure …) als FHIR Bundle. Über <code class="language-plaintext highlighter-rouge">_count</code> und Paginierung lässt sich der gesamte Bestand exportieren.</p>
+
+<p>Ergänzend, falls man sich für die Quell-Seite interessiert (welche Aufbereitungsstände, welche ETL-Job-Versionen):</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/Provenance
+  ?reason=http://terminology.hl7.org/CodeSystem/v3-ActReason|HPAYMT
+  &amp;_include=Provenance:entity
+  &amp;_include=Provenance:agent
+</code></pre></div></div>
+
+<p>→ liefert zusätzlich die referenzierten <code class="language-plaintext highlighter-rouge">DocumentReference</code>s (KIS-Aufbereitungsstände) und <code class="language-plaintext highlighter-rouge">Device</code>s (ETL-Pipelines) — gut für Inventar-Reports.</p>
+
+<p>Die Funktion hängt am IG-eigenen <a href="SearchParameter-mii-sp-provenance-reason.html"><code class="language-plaintext highlighter-rouge">provenance-reason</code></a>; ohne ihn liefert der Server keinen Match.</p>
+
+<h5 id="variante-b-abrechnungsdaten-zu-patientinnen-mit-herzinfarkt">Variante B: Abrechnungsdaten zu Patient:innen mit Herzinfarkt</h5>
+
+<p>Forschungsgruppe will die DRG-codierte Versorgungsrealität von Myokardinfarkt-Patient:innen untersuchen — explizit <strong>aus Abrechnungsdaten</strong>, weil die DRG-Codierung dort vollständig ist (PCCL-Logik, vgl. den Bias-Hinweis <a href="#klinisches-beispiel-akuter-myokardinfarkt-mit-ptca">oben</a>).</p>
+
+<p>Die Frage zerfällt in zwei Schritte:</p>
+
+<p><strong>(1) Kohorten-Definition</strong> — Conditions mit I21.* aus Abrechnungskontext, plus zugehörige Patient:innen:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/Condition
+  ?code:in=http://fhir.de/CodeSystem/bfarm/icd-10-gm|I21.0,
+            http://fhir.de/CodeSystem/bfarm/icd-10-gm|I21.1,
+            http://fhir.de/CodeSystem/bfarm/icd-10-gm|I21.2,
+            http://fhir.de/CodeSystem/bfarm/icd-10-gm|I21.4,
+            http://fhir.de/CodeSystem/bfarm/icd-10-gm|I21.9
+  &amp;category=http://terminology.hl7.org/CodeSystem/diagnosis-role|billing
+  &amp;_has:Provenance:target:reason=http://terminology.hl7.org/CodeSystem/v3-ActReason|HPAYMT
+  &amp;_include=Condition:subject
+</code></pre></div></div>
+
+<p>→ liefert alle Conditions mit ICD-10-GM I21.* und deren Patient:innen, eingeschränkt auf solche mit Abrechnungs-Provenance.</p>
+
+<p><strong>(2) Daten-Extraktion</strong> — alle weiteren Ressourcen dieser Patient:innen aus Abrechnungskontext:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/Provenance
+  ?reason=http://terminology.hl7.org/CodeSystem/v3-ActReason|HPAYMT
+  &amp;patient=Patient/pat-mi-001,Patient/pat-mi-002,...
+  &amp;_include=Provenance:target
+</code></pre></div></div>
+
+<p>→ liefert Provenance + alle referenzierten Ressourcen (Encounter, Nebendiagnosen, Prozeduren). Über den Standard-Suchparameter <code class="language-plaintext highlighter-rouge">patient</code> bleibt die Kohorte eingeschränkt.</p>
+
+<p>Ergebnis: ein FHIR Bundle pro Patient:in mit Patient, Encounter, Conditions (HD + ND), Procedure — alle nachweislich aus DRG-aufbereiteter Routinedatenstrecke (vgl. das hier modellierte Beispiel-Bundle <a href="Bundle-bundle-abrechnungskontext-mi-001.html"><code class="language-plaintext highlighter-rouge">bundle-abrechnungskontext-mi-001</code></a>).</p>
+
+<h5 id="caveats-für-beide-varianten">Caveats für beide Varianten</h5>
+
+<ul>
+  <li><strong>Chained Reverse-Search</strong> (<code class="language-plaintext highlighter-rouge">_has:Provenance:target:reason=...</code>) wird nicht von allen FHIR-Servern unterstützt. Fallback: erst Provenance-Liste über Variante A holen, dann clientseitig joinen.</li>
+  <li><strong>Bias-Vermeidung</strong>: Wenn die Forschungsfrage den DRG-Codierungs-Bias <em>vermeiden</em> will (z. B. tatsächliche Krankheits-Prävalenz ohne PCCL-Anreize), dieselbe Logik mit <code class="language-plaintext highlighter-rouge">reason:not=HPAYMT</code> und ggf. zusätzlich Filter auf NLP-/Versorgungs-Provenance.</li>
+  <li><strong>Pseudonymisierung &amp; Berechtigungen</strong> laufen auf der DIZ-Seite vor der Auslieferung — die Queries hier sind die fachliche Vorlage, nicht die produktive 1:1-Implementierung.</li>
+</ul>
+
+<h4 id="server-support-für-provenance-reason">Server-Support für <code class="language-plaintext highlighter-rouge">provenance-reason</code></h4>
+
+<p>Da <code class="language-plaintext highlighter-rouge">Provenance.reason</code> in FHIR R4 keinen Standard-Suchparameter hat, muss der hier definierte <a href="SearchParameter-mii-sp-provenance-reason.html"><code class="language-plaintext highlighter-rouge">provenance-reason</code></a> auf dem Ziel-Server <strong>registriert und indiziert</strong> werden, bevor die obigen Queries funktionieren.</p>
+
+<p><strong>Registrier-Workflow (servertyp-übergreifend):</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PUT [base]/SearchParameter/mii-sp-provenance-reason
+Content-Type: application/fhir+json
+
+{ ...generierte SearchParameter-Ressource aus diesem IG... }
+</code></pre></div></div>
+
+<p>Anschließend ein Reindex-Trigger, damit bestehende Provenance-Ressourcen den neuen Index aufbauen — Aufruf hängt vom Servertyp ab (siehe unten).</p>
+
+<p><strong>Einschätzung für gängige FHIR-Server in MII-DIZen:</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Server</th>
+      <th>Custom SearchParameter</th>
+      <th><code class="language-plaintext highlighter-rouge">_has</code> Reverse Chain</th>
+      <th>Hinweise</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>HAPI FHIR</strong></td>
+      <td>✅</td>
+      <td>✅</td>
+      <td>SearchParameter wird mit <code class="language-plaintext highlighter-rouge">status = active</code> ausgeliefert und ist nach <code class="language-plaintext highlighter-rouge">PUT</code> direkt indexierbar; anschließend <code class="language-plaintext highlighter-rouge">POST [base]/$reindex</code> aufrufen. Reverse Chain <code class="language-plaintext highlighter-rouge">_has</code> produktionsreif.</td>
+    </tr>
+    <tr>
+      <td><strong>SMILE CDR</strong></td>
+      <td>✅</td>
+      <td>✅</td>
+      <td>Wie HAPI, plus UI-gestützte SP-Verwaltung und automatisches Reindexing einstellbar.</td>
+    </tr>
+    <tr>
+      <td><strong>Blaze</strong></td>
+      <td>✅</td>
+      <td>✅</td>
+      <td>SearchParameter wird beim PUT indiziert (RocksDB). Verschachtelte Queries (<code class="language-plaintext highlighter-rouge">_has:Provenance:target:reason=...</code>) vor produktiver Nutzung explizit testen — falls problematisch, Variante A (Provenance-Liste mit <code class="language-plaintext highlighter-rouge">_include:target</code>) als Fallback nutzen, beides liefert dasselbe Ergebnis.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Empfehlung:</strong> In jedem DIZ vor produktiver Nutzung einen kleinen Smoke-Test fahren:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 1. SearchParameter registrieren (PUT s.o.)
+# 2. Reindex auslösen (servertyp-abhängig)
+# 3. Smoke-Test:
+GET [base]/Provenance?reason=http://terminology.hl7.org/CodeSystem/v3-ActReason|HPAYMT&amp;_count=1
+</code></pre></div></div>
+
+<p>Liefert die Suche die im DIZ vorhandenen Abrechnungs-Provenances, ist die Registrierung erfolgreich. Wenn das Ergebnis leer bleibt, obwohl Provenance-Ressourcen mit <code class="language-plaintext highlighter-rouge">reason=HPAYMT</code> existieren, ist meist der Reindex noch nicht durchgelaufen.</p>
+
+<h3 id="verhältnis-zum-metatag-ansatz">Verhältnis zum Meta.tag-Ansatz</h3>
+
+<p>Die Paragraf 21-/Paragraf 301-Charakterisierung lässt sich auch über <code class="language-plaintext highlighter-rouge">Meta.tag</code> am Patienten/an den Conditions abbilden — das ist <a href="ansatz-metatag.html">Ansatz 1 (Taskforce Metadaten)</a>. Der Vergleich:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Aspekt</th>
+      <th>Meta.tag</th>
+      <th>Provenance (dieser Ansatz)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>„Abrechnungskontext"</strong> filterbar?</td>
+      <td>Ja, über <code class="language-plaintext highlighter-rouge">_tag</code></td>
+      <td>Ja, über <code class="language-plaintext highlighter-rouge">Provenance?reason=HPAYMT</code></td>
+    </tr>
+    <tr>
+      <td><strong>ETL-Job-Version dokumentiert?</strong></td>
+      <td>Nein</td>
+      <td>Ja, über <code class="language-plaintext highlighter-rouge">agent[author] → Device.version</code></td>
+    </tr>
+    <tr>
+      <td><strong>Quell-Aufbereitungsstand referenziert?</strong></td>
+      <td>Nein</td>
+      <td>Ja, über <code class="language-plaintext highlighter-rouge">entity.what</code></td>
+    </tr>
+    <tr>
+      <td><strong>Zeitpunkt des ETL-Laufs?</strong></td>
+      <td>Nur über <code class="language-plaintext highlighter-rouge">meta.lastUpdated</code> (überschreibbar)</td>
+      <td>Explizit über <code class="language-plaintext highlighter-rouge">recorded</code></td>
+    </tr>
+    <tr>
+      <td><strong>Fall-Rückverfolgung</strong> (z. B. „welche FHIR-Ressourcen aus diesem KIS-Stand?")</td>
+      <td>Nein</td>
+      <td>Ja, über <code class="language-plaintext highlighter-rouge">entity.what.identifier</code></td>
+    </tr>
+    <tr>
+      <td><strong>Zusätzliche Ressourcen?</strong></td>
+      <td>Keine</td>
+      <td>1 Provenance pro ETL-Lauf, 1 DocumentReference, 1 Device</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Provenance ist der reichhaltigere Ansatz — zum Preis einer zusätzlichen Ressource pro ETL-Lauf. Beide Ansätze schließen sich nicht aus.</p>
+
+<h3 id="offene-punkte">Offene Punkte</h3>
+
+<ul>
+  <li><strong>SearchParameter-Lücke in R4:</strong> FHIR R4 definiert keinen Standard-Suchparameter für <code class="language-plaintext highlighter-rouge">Provenance.reason</code> oder <code class="language-plaintext highlighter-rouge">Provenance.policy</code>. Dieses IG schließt die <code class="language-plaintext highlighter-rouge">reason</code>-Lücke mit <a href="SearchParameter-mii-sp-provenance-reason.html"><code class="language-plaintext highlighter-rouge">provenance-reason</code></a>. Ein analoger SearchParameter für <code class="language-plaintext highlighter-rouge">policy</code> ist denkbar, wenn die Filterung nach KHEntgG- vs. SGB-V-Aufbereitung relevant wird.</li>
+  <li><strong>Quellsystem-Klassifikation:</strong> Das CodeSystem <a href="CodeSystem-mii-cs-datenquellsystem.html"><code class="language-plaintext highlighter-rouge">mii-cs-datenquellsystem</code></a> ist hierarchisch (Top-Level: Primär-/Sekundärsystem, darunter konkrete Typen wie KIS, Abrechnungssystem, DRG-Grouper, DWH, …). Im Beispiel wird bewusst nur das Top-Level (<code class="language-plaintext highlighter-rouge">#Sekundaersystem</code>) verwendet; die Children sind im CodeSystem vorgehalten. Stand 2026 existiert kein international etablierter CS für Datenquellsystem-Typen — das CodeSystem ist ein MII-Vorschlag und kandidiert zur Übernahme in MII-weite Terminologie.</li>
+  <li><strong>Granularität der Provenance:</strong> Ist die Provenance fall-basiert oder pipeline-lauf-basiert? Im Beispiel: <strong>beides gleichzeitig</strong> — <code class="language-plaintext highlighter-rouge">target[]</code> umfasst alle FHIR-Ressourcen <em>eines Falles</em>, <code class="language-plaintext highlighter-rouge">recorded</code> markiert <em>einen ETL-Lauf</em>. Bei wiederholten Pipeline-Läufen (Bug-Fix, Re-Codierung, Pipeline-Update) entstehen <strong>zusätzliche Provenance-Ressourcen</strong> (append-only) — die Historie bleibt damit nachvollziehbar.</li>
+  <li><strong>Granularität:</strong> Eine Provenance über alle Ressourcen (wie hier) vs. eine pro Ressource. Die hier gezeigte Variante ist pragmatisch; bei feinerer Differenzierung (z. B. Codierfachkraft vs. ETL-Job) lohnen sich getrennte Provenance-Instanzen.</li>
+  <li><strong>CodeSystem für Quell-Aufbereitungsstände:</strong> Der <code class="language-plaintext highlighter-rouge">DocumentReference.identifier.system</code> ist hier ein Platzhalter (<code class="language-plaintext highlighter-rouge">https://example.org/...</code>). Für produktiven Einsatz sollte ein MII-weites Namensschema diskutiert werden.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">policy</code> als Mehrfach-Verweis:</strong> Die Beispiel-Provenance referenziert Paragraf 21 <em>und</em> Paragraf 301, weil beide aus demselben Aufbereitungsstand entstehen. Alternativ könnte eine eigene URL „DRG-Aufbereitung allgemein" als Ankerpunkt dienen.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">reason</code> HPAYMT vs. HLEGAL:</strong> Paragraf 21 ist primär Pflicht-/Kalkulations-Datensatz, formal eher <code class="language-plaintext highlighter-rouge">HLEGAL</code>. Die DIZ-FHIR-Daten dienen aber Sekundärnutzung — die Abrechnungs-Charakteristik ist hier das relevante Signal, daher <code class="language-plaintext highlighter-rouge">HPAYMT</code>.</li>
+  <li><strong>Verhältnis zur DRG-Klassifikation:</strong> Der G-DRG-Grouper gehört nicht in die Patient-Provenance, sondern an die <code class="language-plaintext highlighter-rouge">Encounter.hospitalization</code> bzw. an eine eigene Klassifikations-Provenance. Diese Seite blendet das aus, um die Hauptaussage scharf zu halten.</li>
+  <li><strong>OpenLineage / W3C PROV-O:</strong> Wenn der ETL-Stack ohnehin OpenLineage-Events emittiert, kann <code class="language-plaintext highlighter-rouge">Provenance.entity.what</code> auf das Lineage-Event referenzieren, statt Inhalte parallel in FHIR nachzubauen.</li>
+</ul>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  Package mii-ig-metadaten-provenance-de-v2026#0.2.0-rc.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jul 23, 2026 11:57+0000">2026-07-23</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

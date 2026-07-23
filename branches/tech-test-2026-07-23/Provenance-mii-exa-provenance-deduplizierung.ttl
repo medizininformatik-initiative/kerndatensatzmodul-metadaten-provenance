@@ -1,0 +1,76 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Provenance/mii-exa-provenance-deduplizierung> a fhir:Provenance ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-exa-provenance-deduplizierung"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/StructureDefinition/mii-pr-provenance-prozedur-herkunft|0.2.0-rc.1" ;
+       fhir:index 0 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/StructureDefinition/mii-pr-provenance-prozedur-herkunft|0.2.0-rc.1>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Provenance mii-exa-provenance-deduplizierung</b></p><a name=\"mii-exa-provenance-deduplizierung\"> </a><a name=\"hcmii-exa-provenance-deduplizierung\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-provenance-prozedur-herkunft.html\">MII PR Provenance Ressourcen-Herkunft</a> version: 0.2.0-rc.1</p></div><p>Provenance for <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Procedure/op-1\">Procedure/op-1</a></p><p>Summary</p><table class=\"grid\"><tr><td>Recorded</td><td>2025-06-15 10:00:00+0200</td></tr><tr><td>Activity</td><td><span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/CodeSystem/mii-cs-provenance-prozedur-herkunft deduplizierung}\">Deduplizierung/Zusammenführung</span></td></tr></table><p><b>Agents</b></p><table class=\"grid\"><tr><td><b>Type</b></td><td><b>who</b></td></tr><tr><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/provenance-participant-type assembler}\">Assembler</span></td><td><a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Device/dedup-service\">Deduplizierungsdienst (DIZ)</a></td></tr></table></div>"
+  ] ;
+  fhir:Provenance.target [
+     fhir:index 0 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Procedure/op-1> ;
+     fhir:Reference.reference [ fhir:value "Procedure/op-1" ]
+  ] ;
+  fhir:Provenance.recorded [ fhir:value "2025-06-15T10:00:00+02:00"^^xsd:dateTime] ;
+  fhir:Provenance.activity [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/CodeSystem/mii-cs-provenance-prozedur-herkunft" ] ;
+       fhir:Coding.code [ fhir:value "deduplizierung" ] ;
+       fhir:Coding.display [ fhir:value "Deduplizierung/Zusammenführung" ]
+     ]
+  ] ;
+  fhir:Provenance.agent [
+     fhir:index 0 ;
+     fhir:Provenance.agent.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/provenance-participant-type" ] ;
+         fhir:Coding.code [ fhir:value "assembler" ] ;
+         fhir:Coding.display [ fhir:value "Assembler" ]
+       ]
+     ] ;
+     fhir:Provenance.agent.who [
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Device/dedup-service> ;
+       fhir:Reference.reference [ fhir:value "Device/dedup-service" ] ;
+       fhir:Reference.display [ fhir:value "Deduplizierungsdienst (DIZ)" ]
+     ]
+  ] ;
+  fhir:Provenance.entity [
+     fhir:index 0 ;
+     fhir:Provenance.entity.role [ fhir:value "source" ] ;
+     fhir:Provenance.entity.what [
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Procedure/op-1> ;
+       fhir:Reference.reference [ fhir:value "Procedure/op-1" ] ;
+       fhir:Reference.display [ fhir:value "Abrechnungsprozedur (Original, v1)" ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:Provenance.entity.role [ fhir:value "source" ] ;
+     fhir:Provenance.entity.what [
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Procedure/op-2> ;
+       fhir:Reference.reference [ fhir:value "Procedure/op-2" ] ;
+       fhir:Reference.display [ fhir:value "oBDS-Importprozedur (zusammengeführt, v1)" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Provenance/mii-exa-provenance-deduplizierung.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

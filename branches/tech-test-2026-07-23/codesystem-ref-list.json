@@ -1,0 +1,59 @@
+{
+  "codeSystems" : [{
+    "url" : "http://mii.de/CodeSystem/dq-rule-successful",
+    "version" : "0.2.0-rc.1",
+    "status" : "draft",
+    "name" : "DQ_Rule_Successful",
+    "title" : null,
+    "description" : "",
+    "uses" : {
+    },
+    "ValueSet-primary.html" : "Alle_DQ_Indikatoren_VS"
+  },
+  {
+    "url" : "http://snomed.info/sct",
+    "version" : null,
+    "status" : "active",
+    "name" : "SNOMED_CT",
+    "title" : "SNOMED CT (all versions)",
+    "description" : "SNOMED CT is the most comprehensive and precise clinical health terminology product in the world, owned and distributed around the world by The International Health Terminology Standards Development Organisation (IHTSDO).",
+    "oids" : ["2.16.840.1.113883.6.96"],
+    "uses" : {
+    },
+    "ValueSet-procedure-intent-vs.html" : "Procedure Intent Value Set"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+    "version" : "2.0.0",
+    "status" : "active",
+    "name" : "ProvenanceParticipantType",
+    "title" : "Provenance participant type",
+    "description" : "These codes define the type of participation by an agent in a provenance activity. An agent is something that bears the responsibility identified by the type of participation in the activity taking place, for the existence of an entity, or for another agent's activity. An Agent may be An agent, device, system, organization, group, care-team, or other identifiable thing.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1131"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-provenance-agent-type.html" : "Provenance participant type"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/core/modul-meta/CodeSystem/greifswald-obc-dq-framework",
+    "version" : "0.2.0-rc.1",
+    "status" : "active",
+    "name" : "Greifswald_OBC_DQ_Framework",
+    "title" : "Greifswald OBC DQ-Framework",
+    "description" : "Data Quality Framework by COS.",
+    "uses" : {
+    },
+    "ValueSet-primary.html" : "Alle_DQ_Indikatoren_VS"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/CodeSystem/mii-cs-provenance-prozedur-herkunft",
+    "version" : "0.2.0-rc.1",
+    "status" : "draft",
+    "name" : "MII_CS_Provenance_Prozedur_Herkunft",
+    "title" : "MII CS Provenance Prozedur Herkunft",
+    "description" : "CodeSystem für die Herkunft onkologischer Prozeduren zur Unterscheidung von Datenquellen und Deduplizierungsstatus.",
+    "uses" : {
+    },
+    "ValueSet-mii-vs-provenance-prozedur-herkunft.html" : "MII VS Provenance Prozedur Herkunft"
+  }]
+}

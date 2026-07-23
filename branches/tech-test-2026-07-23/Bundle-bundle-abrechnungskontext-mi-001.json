@@ -1,0 +1,372 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "bundle-abrechnungskontext-mi-001",
+  "identifier" : {
+    "system" : "https://medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/bundle",
+    "value" : "abrechnungskontext-mi-001"
+  },
+  "type" : "collection",
+  "timestamp" : "2026-03-16T03:12:00+01:00",
+  "entry" : [{
+    "fullUrl" : "http://example.org/fhir/Patient/pat-mi-001",
+    "resource" : {
+      "resourceType" : "Patient",
+      "id" : "pat-mi-001",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_pat-mi-001\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient pat-mi-001</b></p><a name=\"pat-mi-001\"> </a><a name=\"hcpat-mi-001\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Anonymous Patient Male, DoB: 1958-04-22 ( https://example.org/fhir/sid/patienten-pseudonym#P21-MI-001)</p><hr/></div>"
+      },
+      "identifier" : [{
+        "system" : "https://example.org/fhir/sid/patienten-pseudonym",
+        "value" : "P21-MI-001"
+      }],
+      "gender" : "male",
+      "birthDate" : "1958-04-22"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/Encounter/enc-mi-001",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "enc-mi-001",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Encounter_enc-mi-001\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Encounter enc-mi-001</b></p><a name=\"enc-mi-001\"> </a><a name=\"hcenc-mi-001\"> </a><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.2.0/CodeSystem-v3-ActCode.html#v3-ActCode-IMP\">ActCode: IMP</a> (inpatient encounter)</p><p><b>subject</b>: <a href=\"Patient-pat-mi-001.html\">Anonymous Patient Male, DoB: 1958-04-22 ( https://example.org/fhir/sid/patienten-pseudonym#P21-MI-001)</a></p><p><b>period</b>: 2026-03-01 08:42:00+0100 --&gt; 2026-03-15 14:30:00+0100</p><h3>Hospitalizations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>AdmitSource</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/admit-source emd}\">From accident/emergency department</span></td></tr></table></div>"
+      },
+      "status" : "finished",
+      "class" : {
+        "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code" : "IMP",
+        "display" : "inpatient encounter"
+      },
+      "subject" : {
+        "reference" : "Patient/pat-mi-001"
+      },
+      "period" : {
+        "start" : "2026-03-01T08:42:00+01:00",
+        "end" : "2026-03-15T14:30:00+01:00"
+      },
+      "hospitalization" : {
+        "admitSource" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/admit-source",
+            "code" : "emd",
+            "display" : "From accident/emergency department"
+          }]
+        }
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/Condition/cond-mi-001-hd-i21",
+    "resource" : {
+      "resourceType" : "Condition",
+      "id" : "cond-mi-001-hd-i21",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Condition_cond-mi-001-hd-i21\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Condition cond-mi-001-hd-i21</b></p><a name=\"cond-mi-001-hd-i21\"> </a><a name=\"hccond-mi-001-hd-i21\"> </a><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/diagnosis-role billing}\">Billing</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm I21.0}\">Akuter transmuraler Myokardinfarkt der Vorderwand</span></p><p><b>subject</b>: <a href=\"Patient-pat-mi-001.html\">Anonymous Patient Male, DoB: 1958-04-22 ( https://example.org/fhir/sid/patienten-pseudonym#P21-MI-001)</a></p><p><b>encounter</b>: <a href=\"Encounter-enc-mi-001.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP); period = 2026-03-01 08:42:00+0100 --&gt; 2026-03-15 14:30:00+0100</a></p><p><b>recordedDate</b>: 2026-03-15</p></div>"
+      },
+      "clinicalStatus" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code" : "active"
+        }]
+      },
+      "verificationStatus" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+          "code" : "confirmed"
+        }]
+      },
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+          "code" : "billing",
+          "display" : "Billing"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+          "code" : "I21.0",
+          "display" : "Akuter transmuraler Myokardinfarkt der Vorderwand"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/pat-mi-001"
+      },
+      "encounter" : {
+        "reference" : "Encounter/enc-mi-001"
+      },
+      "recordedDate" : "2026-03-15"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/Condition/cond-mi-001-nd-i10",
+    "resource" : {
+      "resourceType" : "Condition",
+      "id" : "cond-mi-001-nd-i10",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Condition_cond-mi-001-nd-i10\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Condition cond-mi-001-nd-i10</b></p><a name=\"cond-mi-001-nd-i10\"> </a><a name=\"hccond-mi-001-nd-i10\"> </a><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/diagnosis-role billing}\">Billing</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm I10.90}\">Essentielle Hypertonie, nicht näher bezeichnet</span></p><p><b>subject</b>: <a href=\"Patient-pat-mi-001.html\">Anonymous Patient Male, DoB: 1958-04-22 ( https://example.org/fhir/sid/patienten-pseudonym#P21-MI-001)</a></p><p><b>encounter</b>: <a href=\"Encounter-enc-mi-001.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP); period = 2026-03-01 08:42:00+0100 --&gt; 2026-03-15 14:30:00+0100</a></p><p><b>recordedDate</b>: 2026-03-15</p></div>"
+      },
+      "clinicalStatus" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code" : "active"
+        }]
+      },
+      "verificationStatus" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+          "code" : "confirmed"
+        }]
+      },
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+          "code" : "billing",
+          "display" : "Billing"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+          "code" : "I10.90",
+          "display" : "Essentielle Hypertonie, nicht näher bezeichnet"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/pat-mi-001"
+      },
+      "encounter" : {
+        "reference" : "Encounter/enc-mi-001"
+      },
+      "recordedDate" : "2026-03-15"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/Procedure/proc-mi-001-ptca",
+    "resource" : {
+      "resourceType" : "Procedure",
+      "id" : "proc-mi-001-ptca",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Procedure_proc-mi-001-ptca\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Procedure proc-mi-001-ptca</b></p><a name=\"proc-mi-001-ptca\"> </a><a name=\"hcproc-mi-001-ptca\"> </a><p><b>status</b>: Completed</p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/ops 8-837.k0}\">Perkutan-transluminale Gefäßintervention an Herz und Koronargefäßen: Einlegen eines beschichteten Stents in Koronargefäße: Ein Stent</span></p><p><b>subject</b>: <a href=\"Patient-pat-mi-001.html\">Anonymous Patient Male, DoB: 1958-04-22 ( https://example.org/fhir/sid/patienten-pseudonym#P21-MI-001)</a></p><p><b>encounter</b>: <a href=\"Encounter-enc-mi-001.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP); period = 2026-03-01 08:42:00+0100 --&gt; 2026-03-15 14:30:00+0100</a></p><p><b>performed</b>: 2026-03-01 11:18:00+0100</p></div>"
+      },
+      "status" : "completed",
+      "code" : {
+        "coding" : [{
+          "system" : "http://fhir.de/CodeSystem/bfarm/ops",
+          "code" : "8-837.k0",
+          "display" : "Perkutan-transluminale Gefäßintervention an Herz und Koronargefäßen: Einlegen eines beschichteten Stents in Koronargefäße: Ein Stent"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/pat-mi-001"
+      },
+      "encounter" : {
+        "reference" : "Encounter/enc-mi-001"
+      },
+      "performedDateTime" : "2026-03-01T11:18:00+01:00"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/Organization/org-ukb",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "org-ukb",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_org-ukb\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization org-ukb</b></p><a name=\"org-ukb\"> </a><a name=\"hcorg-ukb\"> </a><p><b>identifier</b>: <code>http://fhir.de/NamingSystem/arge-ik/iknr</code>/260100000</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/organization-type prov}\">Healthcare Provider</span></p><p><b>name</b>: Universitätsklinikum Beispielstadt</p></div>"
+      },
+      "identifier" : [{
+        "system" : "http://fhir.de/NamingSystem/arge-ik/iknr",
+        "value" : "260100000"
+      }],
+      "type" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/organization-type",
+          "code" : "prov",
+          "display" : "Healthcare Provider"
+        }]
+      }],
+      "name" : "Universitätsklinikum Beispielstadt"
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/Device/etl-p21-fhir-v142",
+    "resource" : {
+      "resourceType" : "Device",
+      "id" : "etl-p21-fhir-v142",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Device_etl-p21-fhir-v142\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Device etl-p21-fhir-v142</b></p><a name=\"etl-p21-fhir-v142\"> </a><a name=\"hcetl-p21-fhir-v142\"> </a><p><b>status</b>: Active</p><p><b>manufacturer</b>: Universitätsklinikum Beispielstadt – DIZ-IT</p><h3>DeviceNames</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Name</b></td><td><b>Type</b></td></tr><tr><td style=\"display: none\">*</td><td>p21-to-fhir ETL-Pipeline</td><td>User Friendly name</td></tr></table><h3>Versions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td></tr><tr><td style=\"display: none\">*</td><td>1.4.2</td></tr></table><p><b>note</b>: </p><blockquote><div><p>Transformiert den KIS-DRG-Aufbereitungsstand (gleicher Stand, aus dem auch §21-CSV und §301-DTA gespeist werden) in FHIR R4 nach MII-KDM-Profilen.</p>\n</div></blockquote></div>"
+      },
+      "status" : "active",
+      "manufacturer" : "Universitätsklinikum Beispielstadt – DIZ-IT",
+      "deviceName" : [{
+        "name" : "p21-to-fhir ETL-Pipeline",
+        "type" : "user-friendly-name"
+      }],
+      "version" : [{
+        "value" : "1.4.2"
+      }],
+      "note" : [{
+        "text" : "Transformiert den KIS-DRG-Aufbereitungsstand (gleicher Stand, aus dem auch §21-CSV und §301-DTA gespeist werden) in FHIR R4 nach MII-KDM-Profilen."
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/Device/src-ikarus-kis-ukb",
+    "resource" : {
+      "resourceType" : "Device",
+      "id" : "src-ikarus-kis-ukb",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Device_src-ikarus-kis-ukb\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Device src-ikarus-kis-ukb</b></p><a name=\"src-ikarus-kis-ukb\"> </a><a name=\"hcsrc-ikarus-kis-ukb\"> </a><p><b>status</b>: Active</p><p><b>manufacturer</b>: Ikarus Healthcare GmbH (fiktiv)</p><h3>DeviceNames</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Name</b></td><td><b>Type</b></td></tr><tr><td style=\"display: none\">*</td><td>Ikarus-KIS — Subsystem Abrechnung</td><td>User Friendly name</td></tr></table><p><b>modelNumber</b>: Ikarus-KIS 2025.1</p><p><b>type</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/CodeSystem/mii-cs-datenquellsystem Sekundaersystem}\">Sekundärsystem</span></p><p><b>owner</b>: <a href=\"Organization-org-ukb.html\">Organization Universitätsklinikum Beispielstadt</a></p><p><b>note</b>: </p><blockquote><div><p>Fiktiver KIS-Hersteller. Der Name spielt auf die Mythologie an (Ikarus = Sohn des Dedalus) und ist NICHT mit einem realen Produkt assoziiert.</p>\n</div></blockquote></div>"
+      },
+      "status" : "active",
+      "manufacturer" : "Ikarus Healthcare GmbH (fiktiv)",
+      "deviceName" : [{
+        "name" : "Ikarus-KIS — Subsystem Abrechnung",
+        "type" : "user-friendly-name"
+      }],
+      "modelNumber" : "Ikarus-KIS 2025.1",
+      "type" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/CodeSystem/mii-cs-datenquellsystem",
+          "code" : "Sekundaersystem",
+          "display" : "Sekundärsystem"
+        }]
+      },
+      "owner" : {
+        "reference" : "Organization/org-ukb"
+      },
+      "note" : [{
+        "text" : "Fiktiver KIS-Hersteller. Der Name spielt auf die Mythologie an (Ikarus = Sohn des Dedalus) und ist NICHT mit einem realen Produkt assoziiert."
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/DocumentReference/kis-drg-aufbereitung-2026-03-15",
+    "resource" : {
+      "resourceType" : "DocumentReference",
+      "id" : "kis-drg-aufbereitung-2026-03-15",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"DocumentReference_kis-drg-aufbereitung-2026-03-15\"> </a><p class=\"res-header-id\"><b>Generated Narrative: DocumentReference kis-drg-aufbereitung-2026-03-15</b></p><a name=\"kis-drg-aufbereitung-2026-03-15\"> </a><a name=\"hckis-drg-aufbereitung-2026-03-15\"> </a><p><b>identifier</b>: <code>https://example.org/fhir/sid/kis-drg-aufbereitung</code>/UKB-260100000-enc-mi-001-2026-03-15</p><p><b>status</b>: Current</p><p><b>type</b>: <span title=\"Codes:{http://loinc.org 11506-3}\">Subsequent evaluation note</span></p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActReason HPAYMT}\">Payment</span></p><p><b>date</b>: 2026-03-15 23:00:00+0100</p><p><b>author</b>: </p><ul><li><a href=\"Organization-org-ukb.html\">Organization Universitätsklinikum Beispielstadt</a></li><li><a href=\"Device-src-ikarus-kis-ukb.html\">Device: status = active; manufacturer = Ikarus Healthcare GmbH (fiktiv); modelNumber = Ikarus-KIS 2025.1; type = Sekundärsystem; note = Fiktiver KIS-Hersteller. Der Name spielt auf die Mythologie an (Ikarus = Sohn des Dedalus) und ist NICHT mit einem realen Produkt assoziiert.</a></li></ul><p><b>description</b>: Gemeinsamer DRG-Aufbereitungsstand (Codierung + Grouping). Schwester-Outputs: §21-CSV (Lieferung an InEK Q1/2027), §301-DTA (innerhalb von 3 Werktagen an Krankenkasse), FHIR-Bundle (zeitnah ins DIZ).</p><blockquote><p><b>content</b></p><h3>Attachments</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ContentType</b></td><td><b>Title</b></td></tr><tr><td style=\"display: none\">*</td><td>application/octet-stream</td><td>KIS-DRG-Aufbereitungsstand UKB enc-mi-001 (2026-03-15)</td></tr></table></blockquote></div>"
+      },
+      "identifier" : [{
+        "system" : "https://example.org/fhir/sid/kis-drg-aufbereitung",
+        "value" : "UKB-260100000-enc-mi-001-2026-03-15"
+      }],
+      "status" : "current",
+      "type" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "11506-3",
+          "display" : "Subsequent evaluation note"
+        }]
+      },
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+          "code" : "HPAYMT",
+          "display" : "Payment"
+        }]
+      }],
+      "date" : "2026-03-15T23:00:00+01:00",
+      "author" : [{
+        "reference" : "Organization/org-ukb"
+      },
+      {
+        "reference" : "Device/src-ikarus-kis-ukb"
+      }],
+      "description" : "Gemeinsamer DRG-Aufbereitungsstand (Codierung + Grouping). Schwester-Outputs: §21-CSV (Lieferung an InEK Q1/2027), §301-DTA (innerhalb von 3 Werktagen an Krankenkasse), FHIR-Bundle (zeitnah ins DIZ).",
+      "content" : [{
+        "attachment" : {
+          "contentType" : "application/octet-stream",
+          "title" : "KIS-DRG-Aufbereitungsstand UKB enc-mi-001 (2026-03-15)"
+        }
+      }]
+    }
+  },
+  {
+    "fullUrl" : "http://example.org/fhir/Provenance/prov-abrechnungskontext-mi-001",
+    "resource" : {
+      "resourceType" : "Provenance",
+      "id" : "prov-abrechnungskontext-mi-001",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Provenance_prov-abrechnungskontext-mi-001\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Provenance prov-abrechnungskontext-mi-001</b></p><a name=\"prov-abrechnungskontext-mi-001\"> </a><a name=\"hcprov-abrechnungskontext-mi-001\"> </a><p>Provenance for: </p><ul><li><a href=\"Patient-pat-mi-001.html\">Anonymous Patient Male, DoB: 1958-04-22 ( https://example.org/fhir/sid/patienten-pseudonym#P21-MI-001)</a></li><li><a href=\"Encounter-enc-mi-001.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP); period = 2026-03-01 08:42:00+0100 --&gt; 2026-03-15 14:30:00+0100</a></li><li><a href=\"Condition-cond-mi-001-hd-i21.html\">Condition Akuter transmuraler Myokardinfarkt der Vorderwand</a></li><li><a href=\"Condition-cond-mi-001-nd-i10.html\">Condition Essentielle Hypertonie, nicht näher bezeichnet</a></li><li><a href=\"Procedure-proc-mi-001-ptca.html\">Procedure Perkutan-transluminale Gefäßintervention an Herz und Koronargefäßen: Einlegen eines beschichteten Stents in Koronargefäße: Ein Stent</a></li></ul><p>Summary</p><table class=\"grid\"><tr><td>Occurrence</td><td>2026-03-01 08:42:00+0100 --&gt; 2026-03-15 14:30:00+0100</td></tr><tr><td>Recorded</td><td>2026-03-16 03:12:00+0100</td></tr><tr><td>Policy</td><td><ul><li><a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=https://www.gesetze-im-internet.de/khentgg/__21.html\">https://www.gesetze-im-internet.de/khentgg/__21.html</a></li><li><a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=https://www.gesetze-im-internet.de/sgb_5/__301.html\">https://www.gesetze-im-internet.de/sgb_5/__301.html</a></li></ul></td></tr><tr><td>Activity</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-DataOperation CREATE}\">create</span></td></tr></table><p><b>Agents</b></p><table class=\"grid\"><tr><td><b>Type</b></td><td><b>who</b></td></tr><tr><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/provenance-participant-type assembler}\">Assembler</span></td><td><a href=\"Device-etl-p21-fhir-v142.html\">Device: status = active; manufacturer = Universitätsklinikum Beispielstadt – DIZ-IT; note = Transformiert den KIS-DRG-Aufbereitungsstand (gleicher Stand, aus dem auch §21-CSV und §301-DTA gespeist werden) in FHIR R4 nach MII-KDM-Profilen.</a></td></tr><tr><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/provenance-participant-type performer}\">Performer</span></td><td><a href=\"Organization-org-ukb.html\">Organization Universitätsklinikum Beispielstadt</a></td></tr></table></div>"
+      },
+      "target" : [{
+        "reference" : "Patient/pat-mi-001"
+      },
+      {
+        "reference" : "Encounter/enc-mi-001"
+      },
+      {
+        "reference" : "Condition/cond-mi-001-hd-i21"
+      },
+      {
+        "reference" : "Condition/cond-mi-001-nd-i10"
+      },
+      {
+        "reference" : "Procedure/proc-mi-001-ptca"
+      }],
+      "occurredPeriod" : {
+        "start" : "2026-03-01T08:42:00+01:00",
+        "end" : "2026-03-15T14:30:00+01:00"
+      },
+      "recorded" : "2026-03-16T03:12:00+01:00",
+      "policy" : ["https://www.gesetze-im-internet.de/khentgg/__21.html",
+      "https://www.gesetze-im-internet.de/sgb_5/__301.html"],
+      "reason" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+          "code" : "HPAYMT",
+          "display" : "Payment"
+        }]
+      }],
+      "activity" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+          "code" : "CREATE",
+          "display" : "create"
+        }]
+      },
+      "agent" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+            "code" : "assembler",
+            "display" : "Assembler"
+          }]
+        },
+        "who" : {
+          "reference" : "Device/etl-p21-fhir-v142"
+        }
+      },
+      {
+        "type" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+            "code" : "performer",
+            "display" : "Performer"
+          }]
+        },
+        "who" : {
+          "reference" : "Organization/org-ukb"
+        }
+      }],
+      "entity" : [{
+        "role" : "source",
+        "what" : {
+          "reference" : "DocumentReference/kis-drg-aufbereitung-2026-03-15"
+        }
+      }]
+    }
+  }]
+}

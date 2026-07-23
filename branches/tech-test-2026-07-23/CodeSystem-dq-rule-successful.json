@@ -1,0 +1,116 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "dq-rule-successful",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem dq-rule-successful</b></p><a name=\"dq-rule-successful\"> </a><a name=\"hcdq-rule-successful\"> </a><p><b>Properties</b></p><p><b>This code system defines the following properties for its concepts</b></p><table class=\"grid\"><tr><td><b>Name</b></td><td><b>Code</b></td><td><b>Type</b></td><td><b>Description</b></td></tr><tr><td>error-message</td><td>error-message</td><td>string</td><td>Fehlermeldung im Fall des Anschlagens der Regel.</td></tr></table><p><b>Concepts</b></p><p>This  code system <code>http://mii.de/CodeSystem/dq-rule-successful</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">OP-1<a name=\"dq-rule-successful-OP-1\"> </a></td><td>Surgery has to be after admission.</td></tr><tr><td style=\"white-space:nowrap\">OP-2<a name=\"dq-rule-successful-OP-2\"> </a></td><td>Surgery appointment is required.</td></tr><tr><td style=\"white-space:nowrap\">Discharge-1<a name=\"dq-rule-successful-Discharge-1\"> </a></td><td>Discharge has to be at least 2 days after surgery.</td></tr><tr><td style=\"white-space:nowrap\">DosisMedic-1<a name=\"dq-rule-successful-DosisMedic-1\"> </a></td><td>Dosis of medication is a required item.</td></tr><tr><td style=\"white-space:nowrap\">DosisMedic-2<a name=\"dq-rule-successful-DosisMedic-2\"> </a></td><td>Dosis of medication has to be between 50 and 250 mmol.</td></tr></table></div>"
+  },
+  "url" : "http://mii.de/CodeSystem/dq-rule-successful",
+  "version" : "0.2.0-rc.1",
+  "name" : "DQ_Rule_Successful",
+  "status" : "draft",
+  "date" : "2026-07-23T11:57:36+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "content" : "complete",
+  "count" : 5,
+  "property" : [{
+    "code" : "error-message",
+    "description" : "Fehlermeldung im Fall des Anschlagens der Regel.",
+    "type" : "string"
+  }],
+  "concept" : [{
+    "code" : "OP-1",
+    "display" : "Surgery has to be after admission.",
+    "property" : [{
+      "code" : "rule-type",
+      "valueCode" : "after"
+    },
+    {
+      "code" : "comperator",
+      "valueCoding" : {
+        "system" : "http://trial.info/dq",
+        "code" : "Admission"
+      }
+    }]
+  },
+  {
+    "code" : "OP-2",
+    "display" : "Surgery appointment is required.",
+    "property" : [{
+      "code" : "rule-type",
+      "valueCode" : "required"
+    }]
+  },
+  {
+    "code" : "Discharge-1",
+    "display" : "Discharge has to be at least 2 days after surgery.",
+    "property" : [{
+      "code" : "rule-type",
+      "valueCode" : "after"
+    },
+    {
+      "code" : "comperator",
+      "valueCoding" : {
+        "system" : "http://trial.info/dq",
+        "code" : "OP"
+      }
+    },
+    {
+      "code" : "min",
+      "valueDecimal" : 2
+    }]
+  },
+  {
+    "code" : "DosisMedic-1",
+    "display" : "Dosis of medication is a required item.",
+    "property" : [{
+      "code" : "rule-type",
+      "valueCode" : "required"
+    },
+    {
+      "code" : "comperator",
+      "valueCoding" : {
+        "system" : "http://trial.info/dq",
+        "code" : "Medication"
+      }
+    },
+    {
+      "code" : "value",
+      "valueString" : "eq 1"
+    }]
+  },
+  {
+    "code" : "DosisMedic-2",
+    "display" : "Dosis of medication has to be between 50 and 250 mmol.",
+    "property" : [{
+      "code" : "rule-type",
+      "valueCode" : "range"
+    },
+    {
+      "code" : "comperator",
+      "valueCoding" : {
+        "system" : "http://trial.info/dq",
+        "code" : "UnitMedication"
+      }
+    },
+    {
+      "code" : "value",
+      "valueString" : "mmol"
+    },
+    {
+      "code" : "min",
+      "valueDecimal" : 50
+    },
+    {
+      "code" : "max",
+      "valueDecimal" : 250
+    }]
+  }]
+}

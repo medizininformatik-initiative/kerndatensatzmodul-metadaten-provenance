@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="org-ukb"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Organization org-ukb</b></p><a name="org-ukb"> </a><a name="hcorg-ukb"> </a><p><b>identifier</b>: <code>http://fhir.de/NamingSystem/arge-ik/iknr</code>/260100000</p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/organization-type prov}">Healthcare Provider</span></p><p><b>name</b>: Universitätsklinikum Beispielstadt</p></div>
+  </text>
+  <identifier>
+    <system value="http://fhir.de/NamingSystem/arge-ik/iknr"/>
+    <value value="260100000"/>
+  </identifier>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/organization-type"/>
+      <code value="prov"/>
+      <display value="Healthcare Provider"/>
+    </coding>
+  </type>
+  <name value="Universitätsklinikum Beispielstadt"/>
+</Organization>

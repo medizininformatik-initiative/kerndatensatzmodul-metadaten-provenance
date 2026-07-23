@@ -1,0 +1,1153 @@
+{
+  "date" : "Thu, 23 Jul, 2026 11:57:36 +0000",
+  "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
+  "files" : [{
+    "name" : "/fsh-generated/resources/ImplementationGuide-mii-ig-metadaten-provenance-de-v2026.json",
+    "size" : 14923,
+    "processes" : [{
+      "activity" : "load",
+      "start" : 108,
+      "length" : 12
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 108,
+      "length" : 10
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 108,
+      "length" : 87
+    },
+    {
+      "activity" : "validate",
+      "start" : 116,
+      "length" : 9491
+    },
+    {
+      "activity" : "checkConformanceResources3",
+      "start" : 125,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 131,
+      "length" : 79
+    },
+    {
+      "activity" : "generate2",
+      "start" : 133,
+      "length" : 116
+    },
+    {
+      "activity" : "generate2",
+      "start" : 135,
+      "length" : 1
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 143,
+      "length" : 4
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Bundle-bundle-abrechnungskontext-mi-001.json",
+    "size" : 11785,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 107,
+      "length" : 8
+    },
+    {
+      "activity" : "load",
+      "start" : 107,
+      "length" : 39
+    },
+    {
+      "activity" : "load",
+      "start" : 108,
+      "length" : 1
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 108,
+      "length" : 3
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 108,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 108,
+      "length" : 2320
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 125,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 125,
+      "length" : 4030
+    },
+    {
+      "activity" : "generate1",
+      "start" : 131,
+      "length" : 26
+    },
+    {
+      "activity" : "generate2",
+      "start" : 133,
+      "length" : 73
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/CodeSystem-Greifswald-OBC-DQ-Framework.json",
+    "size" : 8478,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 107,
+      "length" : 4
+    },
+    {
+      "activity" : "load",
+      "start" : 107,
+      "length" : 11
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 108,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 111,
+      "length" : 14
+    },
+    {
+      "activity" : "validate",
+      "start" : 113,
+      "length" : 108
+    },
+    {
+      "activity" : "generate1",
+      "start" : 131,
+      "length" : 25
+    },
+    {
+      "activity" : "generate2",
+      "start" : 133,
+      "length" : 112
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 143,
+      "length" : 2
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 154,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/CodeSystem-dq-rule-successful.json",
+    "size" : 2524,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 107,
+      "length" : 3
+    },
+    {
+      "activity" : "load",
+      "start" : 107,
+      "length" : 8
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 108,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 111,
+      "length" : 6
+    },
+    {
+      "activity" : "validate",
+      "start" : 113,
+      "length" : 772
+    },
+    {
+      "activity" : "generate1",
+      "start" : 131,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 134,
+      "length" : 58
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/CodeSystem-mii-cs-datenquellsystem.json",
+    "size" : 4454,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 107,
+      "length" : 3
+    },
+    {
+      "activity" : "load",
+      "start" : 108,
+      "length" : 6
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 111,
+      "length" : 7
+    },
+    {
+      "activity" : "validate",
+      "start" : 113,
+      "length" : 39
+    },
+    {
+      "activity" : "generate1",
+      "start" : 131,
+      "length" : 12
+    },
+    {
+      "activity" : "generate2",
+      "start" : 134,
+      "length" : 55
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 143,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/CodeSystem-mii-cs-provenance-prozedur-herkunft.json",
+    "size" : 1711,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 107,
+      "length" : 3
+    },
+    {
+      "activity" : "load",
+      "start" : 108,
+      "length" : 4
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 108,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 111,
+      "length" : 3
+    },
+    {
+      "activity" : "validate",
+      "start" : 113,
+      "length" : 20
+    },
+    {
+      "activity" : "checkConformanceResources3",
+      "start" : 125,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 131,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 134,
+      "length" : 36
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Condition-cond-mi-001-hd-i21.json",
+    "size" : 990,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 107,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 111,
+      "length" : 3
+    },
+    {
+      "activity" : "validate",
+      "start" : 129,
+      "length" : 18
+    },
+    {
+      "activity" : "generate1",
+      "start" : 131,
+      "length" : 6
+    },
+    {
+      "activity" : "generate2",
+      "start" : 134,
+      "length" : 18
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Condition-cond-mi-001-nd-i10.json",
+    "size" : 989,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 107,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 111,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 129,
+      "length" : 10
+    },
+    {
+      "activity" : "generate1",
+      "start" : 131,
+      "length" : 5
+    },
+    {
+      "activity" : "generate2",
+      "start" : 134,
+      "length" : 10
+    },
+    {
+      "activity" : "generateExampleZip",
+      "start" : 143,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Device-etl-p21-fhir-v142.json",
+    "size" : 511,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 107,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 111,
+      "length" : 3
+    },
+    {
+      "activity" : "validate",
+      "start" : 129,
+      "length" : 4
+    },
+    {
+      "activity" : "generate1",
+      "start" : 131,
+      "length" : 3
+    },
+    {
+      "activity" : "generate2",
+      "start" : 134,
+      "length" : 4
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Device-src-ikarus-kis-ukb.json",
+    "size" : 805,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 107,
+      "length" : 3
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 111,
+      "length" : 2
+    },
+    {
+      "activity" : "validate",
+      "start" : 129,
+      "length" : 7
+    },
+    {
+      "activity" : "generate1",
+      "start" : 131,
+      "length" : 5
+    },
+    {
+      "activity" : "generate2",
+      "start" : 134,
+      "length" : 7
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/DocumentReference-kis-drg-aufbereitung-2026-03-15.json",
+    "size" : 1226,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 107,
+      "length" : 3
+    },
+    {
+      "activity" : "loadDepInfo",
+      "start" : 108,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 111,
+      "length" : 362
+    },
+    {
+      "activity" : "validate",
+      "start" : 129,
+      "length" : 10
+    },
+    {
+      "activity" : "generate1",
+      "start" : 131,
+      "length" : 6
+    },
+    {
+      "activity" : "generate2",
+      "start" : 134,
+      "length" : 9
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Encounter-enc-mi-001.json",
+    "size" : 636,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 107,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 111,
+      "length" : 2
+    },
+    {
+      "activity" : "validate",
+      "start" : 129,
+      "length" : 9
+    },
+    {
+      "activity" : "generate1",
+      "start" : 131,
+      "length" : 4
+    },
+    {
+      "activity" : "generate2",
+      "start" : 134,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Observation-dq-test-1.json",
+    "size" : 633,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 107,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 111,
+      "length" : 3
+    },
+    {
+      "activity" : "validate",
+      "start" : 129,
+      "length" : 1423
+    },
+    {
+      "activity" : "generate1",
+      "start" : 131,
+      "length" : 3
+    },
+    {
+      "activity" : "generate2",
+      "start" : 134,
+      "length" : 11
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Organization-org-ukb.json",
+    "size" : 450,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 107,
+      "length" : 1
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 108,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 111,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 131,
+      "length" : 4
+    },
+    {
+      "activity" : "generate1",
+      "start" : 131,
+      "length" : 3
+    },
+    {
+      "activity" : "generate2",
+      "start" : 134,
+      "length" : 3
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Patient-mighty-m.json",
+    "size" : 193,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 107,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 111,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 131,
+      "length" : 2
+    },
+    {
+      "activity" : "generate1",
+      "start" : 131,
+      "length" : 3
+    },
+    {
+      "activity" : "generate2",
+      "start" : 134,
+      "length" : 3
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Patient-pat-mi-001.json",
+    "size" : 234,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 107,
+      "length" : 2
+    },
+    {
+      "activity" : "validate",
+      "start" : 131,
+      "length" : 3
+    },
+    {
+      "activity" : "generate1",
+      "start" : 131,
+      "length" : 4
+    },
+    {
+      "activity" : "generate2",
+      "start" : 134,
+      "length" : 2
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Procedure-proc-mi-001-ptca.json",
+    "size" : 559,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 107,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 111,
+      "length" : 2
+    },
+    {
+      "activity" : "validate",
+      "start" : 131,
+      "length" : 6
+    },
+    {
+      "activity" : "generate1",
+      "start" : 131,
+      "length" : 4
+    },
+    {
+      "activity" : "generate2",
+      "start" : 134,
+      "length" : 11
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Provenance-mii-exa-provenance-abrechnung-import.json",
+    "size" : 1258,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 107,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 111,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 131,
+      "length" : 10
+    },
+    {
+      "activity" : "generate1",
+      "start" : 131,
+      "length" : 5
+    },
+    {
+      "activity" : "generate2",
+      "start" : 134,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Provenance-mii-exa-provenance-deduplizierung.json",
+    "size" : 1402,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 107,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 111,
+      "length" : 2
+    },
+    {
+      "activity" : "validate",
+      "start" : 131,
+      "length" : 13
+    },
+    {
+      "activity" : "generate1",
+      "start" : 131,
+      "length" : 5
+    },
+    {
+      "activity" : "generate2",
+      "start" : 134,
+      "length" : 9
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Provenance-mii-exa-provenance-obds-import-diagnose.json",
+    "size" : 1482,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 107,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 111,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 131,
+      "length" : 10
+    },
+    {
+      "activity" : "generate1",
+      "start" : 131,
+      "length" : 6
+    },
+    {
+      "activity" : "generate2",
+      "start" : 134,
+      "length" : 6
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Provenance-mii-exa-provenance-obds-import-tumorkonferenz.json",
+    "size" : 1498,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 107,
+      "length" : 1
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 108,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 111,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 131,
+      "length" : 10
+    },
+    {
+      "activity" : "generate1",
+      "start" : 131,
+      "length" : 4
+    },
+    {
+      "activity" : "generate2",
+      "start" : 134,
+      "length" : 5
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Provenance-mii-exa-provenance-obds-import.json",
+    "size" : 1452,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 107,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 111,
+      "length" : 2
+    },
+    {
+      "activity" : "validate",
+      "start" : 131,
+      "length" : 10
+    },
+    {
+      "activity" : "generate1",
+      "start" : 131,
+      "length" : 5
+    },
+    {
+      "activity" : "generate2",
+      "start" : 134,
+      "length" : 5
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Provenance-prov-abrechnungskontext-mi-001.json",
+    "size" : 1886,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 107,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 111,
+      "length" : 3
+    },
+    {
+      "activity" : "validate",
+      "start" : 131,
+      "length" : 15
+    },
+    {
+      "activity" : "generate1",
+      "start" : 131,
+      "length" : 6
+    },
+    {
+      "activity" : "generate2",
+      "start" : 134,
+      "length" : 17
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/SearchParameter-mii-sp-provenance-reason.json",
+    "size" : 1041,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 107,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 108,
+      "length" : 12
+    },
+    {
+      "activity" : "load",
+      "start" : 108,
+      "length" : 3
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 111,
+      "length" : 5
+    },
+    {
+      "activity" : "validate",
+      "start" : 116,
+      "length" : 42
+    },
+    {
+      "activity" : "generate1",
+      "start" : 131,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 134,
+      "length" : 5
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 143,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-mii-pr-provenance-prozedur-herkunft.json",
+    "size" : 5919,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 107,
+      "length" : 4
+    },
+    {
+      "activity" : "load",
+      "start" : 108,
+      "length" : 8
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 108,
+      "length" : 42
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 108,
+      "length" : 1
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 108,
+      "length" : 2
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 111,
+      "length" : 75
+    },
+    {
+      "activity" : "validate",
+      "start" : 114,
+      "length" : 1382
+    },
+    {
+      "activity" : "checkConformanceResources",
+      "start" : 125,
+      "length" : 1
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 125,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 131,
+      "length" : 86
+    },
+    {
+      "activity" : "generate2",
+      "start" : 134,
+      "length" : 882
+    },
+    {
+      "activity" : "generate2",
+      "start" : 135,
+      "length" : 692
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 143,
+      "length" : 7
+    },
+    {
+      "activity" : "scanProfilesForR5",
+      "start" : 154,
+      "length" : 1
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 154,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ValueSet-mii-vs-provenance-prozedur-herkunft.json",
+    "size" : 1054,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 107,
+      "length" : 2
+    },
+    {
+      "activity" : "load",
+      "start" : 108,
+      "length" : 4
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 111,
+      "length" : 605
+    },
+    {
+      "activity" : "validate",
+      "start" : 113,
+      "length" : 22
+    },
+    {
+      "activity" : "generate1",
+      "start" : 131,
+      "length" : 8
+    },
+    {
+      "activity" : "generate2",
+      "start" : 135,
+      "length" : 118
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 143,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ValueSet-primary.json",
+    "size" : 482,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 107,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 108,
+      "length" : 3
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 112,
+      "length" : 4
+    },
+    {
+      "activity" : "validate",
+      "start" : 114,
+      "length" : 11
+    },
+    {
+      "activity" : "checkConformanceResources3",
+      "start" : 125,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 131,
+      "length" : 6
+    },
+    {
+      "activity" : "generate2",
+      "start" : 135,
+      "length" : 81
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/ValueSet-procedure-intent-vs.json",
+    "size" : 853,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 107,
+      "length" : 1
+    },
+    {
+      "activity" : "load",
+      "start" : 108,
+      "length" : 3
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 112,
+      "length" : 728
+    },
+    {
+      "activity" : "validate",
+      "start" : 114,
+      "length" : 753
+    },
+    {
+      "activity" : "generate1",
+      "start" : 131,
+      "length" : 7
+    },
+    {
+      "activity" : "generate2",
+      "start" : 135,
+      "length" : 406
+    }]
+  },
+  {
+    "name" : "/fsh-generated/includes/fsh-link-references.md",
+    "size" : 1835,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 135,
+      "length" : 2
+    }]
+  },
+  {
+    "name" : "/fsh-generated/includes/menu.xml",
+    "size" : 2635
+  },
+  {
+    "name" : "/input/pagecontent/vergleich.md",
+    "size" : 3299
+  },
+  {
+    "name" : "/input/pagecontent/anwendungsbeispiel-validierung.md",
+    "size" : 1
+  },
+  {
+    "name" : "/input/pagecontent/isik.md",
+    "size" : 3373
+  },
+  {
+    "name" : "/input/pagecontent/usecase-katalog.md",
+    "size" : 1224
+  },
+  {
+    "name" : "/input/pagecontent/ansatz-fhir-provenance.md",
+    "size" : 3992,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 135,
+      "length" : 3
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/anwendungsbeispiel-datenqualitaet.md",
+    "size" : 5132,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 135,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/anwendungsbeispiel-deduplizierung.md",
+    "size" : 34244,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 135,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/anwendungsbeispiel-abrechnungskontext.md",
+    "size" : 26381,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 135,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/ansatz-us-core-provenance.md",
+    "size" : 3900
+  },
+  {
+    "name" : "/input/pagecontent/technische-grundlagen.md",
+    "size" : 6105,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 135,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/dq-framework.md",
+    "size" : 11166,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 135,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/index.md",
+    "size" : 4284
+  },
+  {
+    "name" : "/input/pagecontent/ansatz-metatag.md",
+    "size" : 11096
+  },
+  {
+    "name" : "/input/pagecontent/motivation.md",
+    "size" : 3981
+  },
+  {
+    "name" : "/input/pagecontent/anwendungsbeispiel-pseudonymisierung.md",
+    "size" : 4197
+  },
+  {
+    "name" : "/template/config",
+    "size" : 0
+  },
+  {
+    "name" : "/template/config/_config.yml",
+    "size" : 140
+  },
+  {
+    "name" : "/input/images",
+    "size" : 0
+  },
+  {
+    "name" : "/input/images/Abrechnungskontext_Prov_Graph.png",
+    "size" : 54545
+  },
+  {
+    "name" : "/input/images/Deduplizierung_Onko_OP.png",
+    "size" : 119781
+  },
+  {
+    "name" : "/temp/pages/_includes/artifacts.xml",
+    "size" : 15636,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 135,
+      "length" : 1
+    }]
+  }]
+}

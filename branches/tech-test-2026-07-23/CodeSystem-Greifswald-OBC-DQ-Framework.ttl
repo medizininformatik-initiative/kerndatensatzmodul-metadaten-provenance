@@ -1,0 +1,214 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/CodeSystem/Greifswald-OBC-DQ-Framework> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "Greifswald-OBC-DQ-Framework"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem Greifswald-OBC-DQ-Framework</b></p><a name=\"Greifswald-OBC-DQ-Framework\"> </a><a name=\"hcGreifswald-OBC-DQ-Framework\"> </a><p>This case-insensitive code system <code>https://www.medizininformatik-initiative.de/fhir/core/modul-meta/CodeSystem/greifswald-obc-dq-framework</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">https://dataquality.qihs.uni-greifswald.de/#DQI-1001<a name=\"Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-1001\"> </a></td><td>Unexpected data elements</td><td>The observed set of available data elements does not match the expected set.</td></tr><tr><td style=\"white-space:nowrap\">https://dataquality.qihs.uni-greifswald.de/#DQI-1002<a name=\"Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-1002\"> </a></td><td>Unexpected data records</td><td>The observed set of available data records does not match the expected set.</td></tr><tr><td style=\"white-space:nowrap\">https://dataquality.qihs.uni-greifswald.de/#DQI-1003<a name=\"Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-1003\"> </a></td><td>Duplicates</td><td>The same data elements or data records appear multiple times.</td></tr><tr><td style=\"white-space:nowrap\">https://dataquality.qihs.uni-greifswald.de/#DQI-1004<a name=\"Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-1004\"> </a></td><td>Data record mismatch</td><td>Data records from different data sets do not match as expected.</td></tr><tr><td style=\"white-space:nowrap\">https://dataquality.qihs.uni-greifswald.de/#DQI-1005<a name=\"Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-1005\"> </a></td><td>Data element mismatch</td><td>Data elements from different data sets do not match as expected.</td></tr><tr><td style=\"white-space:nowrap\">https://dataquality.qihs.uni-greifswald.de/#DQI-1006<a name=\"Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-1006\"> </a></td><td>Data type mismatch</td><td>The observed data type does not match the expected data type.</td></tr><tr><td style=\"white-space:nowrap\">https://dataquality.qihs.uni-greifswald.de/#DQI-1007<a name=\"Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-1007\"> </a></td><td>Inhomogeneous value formats</td><td>The observed data values have inhomogeneous format across different data fields.</td></tr><tr><td style=\"white-space:nowrap\">https://dataquality.qihs.uni-greifswald.de/#DQI-1008<a name=\"Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-1008\"> </a></td><td>Uncertain missingness status</td><td>System indicated missing values (e.g. NA/./Null …) appear where a qualified missing code is expected.</td></tr><tr><td style=\"white-space:nowrap\">https://dataquality.qihs.uni-greifswald.de/#DQI-2001<a name=\"Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-2001\"> </a></td><td>Missing values</td><td>Data fields without a measurement value.</td></tr><tr><td style=\"white-space:nowrap\">https://dataquality.qihs.uni-greifswald.de/#DQI-2002<a name=\"Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-2002\"> </a></td><td>Non-response rate</td><td>The proportion of eligible observational units for which no information could be obtained.</td></tr><tr><td style=\"white-space:nowrap\">https://dataquality.qihs.uni-greifswald.de/#DQI-2003<a name=\"Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-2003\"> </a></td><td>Refusal rate</td><td>The proportion of eligible individuals who refuse to give the information sought.</td></tr><tr><td style=\"white-space:nowrap\">https://dataquality.qihs.uni-greifswald.de/#DQI-2004<a name=\"Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-2004\"> </a></td><td>Drop-out rate</td><td>The proportion of all participants who only partially complete the study and prematurely abandon it.</td></tr><tr><td style=\"white-space:nowrap\">https://dataquality.qihs.uni-greifswald.de/#DQI-2005<a name=\"Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-2005\"> </a></td><td>Missing due to specified reason</td><td>Information in a data collection that is missing due to a specified reason.</td></tr><tr><td style=\"white-space:nowrap\">https://dataquality.qihs.uni-greifswald.de/#DQI-3001<a name=\"Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-3001\"> </a></td><td>Inadmissible numerical values</td><td>Observed numerical data values are not admissible according to the allowed ranges.</td></tr><tr><td style=\"white-space:nowrap\">https://dataquality.qihs.uni-greifswald.de/#DQI-3002<a name=\"Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-3002\"> </a></td><td>Inadmissible time-date values</td><td>Observed time-date values are not admissible according to the allowed time and date ranges.</td></tr><tr><td style=\"white-space:nowrap\">https://dataquality.qihs.uni-greifswald.de/#DQI-3003<a name=\"Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-3003\"> </a></td><td>Inadmissible categorical values</td><td>Observed categorical data values are not admissible according to the allowed categories.</td></tr><tr><td style=\"white-space:nowrap\">https://dataquality.qihs.uni-greifswald.de/#DQI-3004<a name=\"Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-3004\"> </a></td><td>Inadmissible standardized vocabulary</td><td>Data values are not admissible according to the reference vocabulary.</td></tr><tr><td style=\"white-space:nowrap\">https://dataquality.qihs.uni-greifswald.de/#DQI-3005<a name=\"Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-3005\"> </a></td><td>Inadmissible precision</td><td>The precision of observed numerical data values does not match the expected precision.</td></tr><tr><td style=\"white-space:nowrap\">https://dataquality.qihs.uni-greifswald.de/#DQI-3006<a name=\"Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-3006\"> </a></td><td>Uncertain numerical values</td><td>Observed numerical values are uncertain or improbable because they are outside the expected ranges.</td></tr><tr><td style=\"white-space:nowrap\">https://dataquality.qihs.uni-greifswald.de/#DQI-3007<a name=\"Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-3007\"> </a></td><td>Uncertain time-date values</td><td>Observed time-date values are uncertain or improbable because they are outside the expected ranges.</td></tr><tr><td style=\"white-space:nowrap\">https://dataquality.qihs.uni-greifswald.de/#DQI-3008<a name=\"Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-3008\"> </a></td><td>Logical contradictions</td><td>Different data values appear in logically impossible combinations.</td></tr><tr><td style=\"white-space:nowrap\">https://dataquality.qihs.uni-greifswald.de/#DQI-3009<a name=\"Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-3009\"> </a></td><td>Empirical contradictions</td><td>Different data values appear in combinations deemed impossible based on empirical reasoning.</td></tr><tr><td style=\"white-space:nowrap\">https://dataquality.qihs.uni-greifswald.de/#DQI-4001<a name=\"Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-4001\"> </a></td><td>Univariate outliers</td><td>Numerical data values deviate markedly from others in a univariate analysis.</td></tr><tr><td style=\"white-space:nowrap\">https://dataquality.qihs.uni-greifswald.de/#DQI-4002<a name=\"Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-4002\"> </a></td><td>Multivariate outliers</td><td>Numerical data values deviate markedly from others in a multivariate analysis.</td></tr><tr><td style=\"white-space:nowrap\">https://dataquality.qihs.uni-greifswald.de/#DQI-4003<a name=\"Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-4003\"> </a></td><td>Unexpected locations</td><td>Observed location parameters differ from expected location parameters.</td></tr><tr><td style=\"white-space:nowrap\">https://dataquality.qihs.uni-greifswald.de/#DQI-4004<a name=\"Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-4004\"> </a></td><td>Unexpected shape</td><td>The observed shape of a distribution differs from the expected shape.</td></tr><tr><td style=\"white-space:nowrap\">https://dataquality.qihs.uni-greifswald.de/#DQI-4005<a name=\"Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-4005\"> </a></td><td>Unexpected scale</td><td>Observed scale parameters differ from expected scale parameters.</td></tr><tr><td style=\"white-space:nowrap\">https://dataquality.qihs.uni-greifswald.de/#DQI-4006<a name=\"Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-4006\"> </a></td><td>Unexpected proportions</td><td>Observed proportions differ from expected proportions.</td></tr><tr><td style=\"white-space:nowrap\">https://dataquality.qihs.uni-greifswald.de/#DQI-4007<a name=\"Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-4007\"> </a></td><td>Unexpected association strength</td><td>The observed strength of an association deviates from the expected strength of the association.</td></tr><tr><td style=\"white-space:nowrap\">https://dataquality.qihs.uni-greifswald.de/#DQI-4008<a name=\"Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-4008\"> </a></td><td>Unexpected association direction</td><td>The observed direction of an association (e.g. negative, positive) deviates from the expected direction.</td></tr><tr><td style=\"white-space:nowrap\">https://dataquality.qihs.uni-greifswald.de/#DQI-4009<a name=\"Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-4009\"> </a></td><td>Unexpected association form</td><td>The observed form of an association (e.g. linear, quadratic, exponential...) deviates from the expected form.</td></tr><tr><td style=\"white-space:nowrap\">https://dataquality.qihs.uni-greifswald.de/#DQI-4010<a name=\"Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-4010\"> </a></td><td>Inter-Class reliability</td><td>Differences between classes (e.g. examiners) when measuring the same or similar objects under specified conditions.</td></tr><tr><td style=\"white-space:nowrap\">https://dataquality.qihs.uni-greifswald.de/#DQI-4011<a name=\"Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-4011\"> </a></td><td>Intra-Class reliability</td><td>Differences within classes (e.g. examiners) when measuring the same or similar objects under specified conditions.</td></tr><tr><td style=\"white-space:nowrap\">https://dataquality.qihs.uni-greifswald.de/#DQI-4012<a name=\"Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-4012\"> </a></td><td>Disagreement with gold standard</td><td>Differences with a gold standard when measuring the same or similar objects under specified conditions.</td></tr></table></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "https://www.medizininformatik-initiative.de/fhir/core/modul-meta/CodeSystem/greifswald-obc-dq-framework"] ;
+  fhir:CodeSystem.version [ fhir:value "0.2.0-rc.1"] ;
+  fhir:CodeSystem.name [ fhir:value "Greifswald_OBC_DQ_Framework"] ;
+  fhir:CodeSystem.title [ fhir:value "Greifswald OBC DQ-Framework"] ;
+  fhir:CodeSystem.status [ fhir:value "active"] ;
+  fhir:CodeSystem.date [ fhir:value "2026-07-23T11:57:36+00:00"^^xsd:dateTime] ;
+  fhir:CodeSystem.publisher [ fhir:value "Medizininformatik Initiative"] ;
+  fhir:CodeSystem.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "Medizininformatik Initiative" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.medizininformatik-initiative.de/" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "Data Quality Framework by COS."] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "false"^^xsd:boolean] ;
+  fhir:CodeSystem.compositional [ fhir:value "false"^^xsd:boolean] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.count [ fhir:value "34"^^xsd:nonNegativeInteger] ;
+  fhir:CodeSystem.concept [
+     fhir:index 0 ;
+     fhir:CodeSystem.concept.code [ fhir:value "https://dataquality.qihs.uni-greifswald.de/#DQI-1001" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Unexpected data elements" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "The observed set of available data elements does not match the expected set." ]
+  ], [
+     fhir:index 1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "https://dataquality.qihs.uni-greifswald.de/#DQI-1002" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Unexpected data records" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "The observed set of available data records does not match the expected set." ]
+  ], [
+     fhir:index 2 ;
+     fhir:CodeSystem.concept.code [ fhir:value "https://dataquality.qihs.uni-greifswald.de/#DQI-1003" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Duplicates" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "The same data elements or data records appear multiple times." ]
+  ], [
+     fhir:index 3 ;
+     fhir:CodeSystem.concept.code [ fhir:value "https://dataquality.qihs.uni-greifswald.de/#DQI-1004" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Data record mismatch" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Data records from different data sets do not match as expected." ]
+  ], [
+     fhir:index 4 ;
+     fhir:CodeSystem.concept.code [ fhir:value "https://dataquality.qihs.uni-greifswald.de/#DQI-1005" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Data element mismatch" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Data elements from different data sets do not match as expected." ]
+  ], [
+     fhir:index 5 ;
+     fhir:CodeSystem.concept.code [ fhir:value "https://dataquality.qihs.uni-greifswald.de/#DQI-1006" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Data type mismatch" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "The observed data type does not match the expected data type." ]
+  ], [
+     fhir:index 6 ;
+     fhir:CodeSystem.concept.code [ fhir:value "https://dataquality.qihs.uni-greifswald.de/#DQI-1007" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Inhomogeneous value formats" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "The observed data values have inhomogeneous format across different data fields." ]
+  ], [
+     fhir:index 7 ;
+     fhir:CodeSystem.concept.code [ fhir:value "https://dataquality.qihs.uni-greifswald.de/#DQI-1008" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Uncertain missingness status" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "System indicated missing values (e.g. NA/./Null …) appear where a qualified missing code is expected." ]
+  ], [
+     fhir:index 8 ;
+     fhir:CodeSystem.concept.code [ fhir:value "https://dataquality.qihs.uni-greifswald.de/#DQI-2001" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Missing values" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Data fields without a measurement value." ]
+  ], [
+     fhir:index 9 ;
+     fhir:CodeSystem.concept.code [ fhir:value "https://dataquality.qihs.uni-greifswald.de/#DQI-2002" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Non-response rate" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "The proportion of eligible observational units for which no information could be obtained." ]
+  ], [
+     fhir:index 10 ;
+     fhir:CodeSystem.concept.code [ fhir:value "https://dataquality.qihs.uni-greifswald.de/#DQI-2003" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Refusal rate" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "The proportion of eligible individuals who refuse to give the information sought." ]
+  ], [
+     fhir:index 11 ;
+     fhir:CodeSystem.concept.code [ fhir:value "https://dataquality.qihs.uni-greifswald.de/#DQI-2004" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Drop-out rate" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "The proportion of all participants who only partially complete the study and prematurely abandon it." ]
+  ], [
+     fhir:index 12 ;
+     fhir:CodeSystem.concept.code [ fhir:value "https://dataquality.qihs.uni-greifswald.de/#DQI-2005" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Missing due to specified reason" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Information in a data collection that is missing due to a specified reason." ]
+  ], [
+     fhir:index 13 ;
+     fhir:CodeSystem.concept.code [ fhir:value "https://dataquality.qihs.uni-greifswald.de/#DQI-3001" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Inadmissible numerical values" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Observed numerical data values are not admissible according to the allowed ranges." ]
+  ], [
+     fhir:index 14 ;
+     fhir:CodeSystem.concept.code [ fhir:value "https://dataquality.qihs.uni-greifswald.de/#DQI-3002" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Inadmissible time-date values" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Observed time-date values are not admissible according to the allowed time and date ranges." ]
+  ], [
+     fhir:index 15 ;
+     fhir:CodeSystem.concept.code [ fhir:value "https://dataquality.qihs.uni-greifswald.de/#DQI-3003" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Inadmissible categorical values" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Observed categorical data values are not admissible according to the allowed categories." ]
+  ], [
+     fhir:index 16 ;
+     fhir:CodeSystem.concept.code [ fhir:value "https://dataquality.qihs.uni-greifswald.de/#DQI-3004" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Inadmissible standardized vocabulary" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Data values are not admissible according to the reference vocabulary." ]
+  ], [
+     fhir:index 17 ;
+     fhir:CodeSystem.concept.code [ fhir:value "https://dataquality.qihs.uni-greifswald.de/#DQI-3005" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Inadmissible precision" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "The precision of observed numerical data values does not match the expected precision." ]
+  ], [
+     fhir:index 18 ;
+     fhir:CodeSystem.concept.code [ fhir:value "https://dataquality.qihs.uni-greifswald.de/#DQI-3006" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Uncertain numerical values" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Observed numerical values are uncertain or improbable because they are outside the expected ranges." ]
+  ], [
+     fhir:index 19 ;
+     fhir:CodeSystem.concept.code [ fhir:value "https://dataquality.qihs.uni-greifswald.de/#DQI-3007" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Uncertain time-date values" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Observed time-date values are uncertain or improbable because they are outside the expected ranges." ]
+  ], [
+     fhir:index 20 ;
+     fhir:CodeSystem.concept.code [ fhir:value "https://dataquality.qihs.uni-greifswald.de/#DQI-3008" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Logical contradictions" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Different data values appear in logically impossible combinations." ]
+  ], [
+     fhir:index 21 ;
+     fhir:CodeSystem.concept.code [ fhir:value "https://dataquality.qihs.uni-greifswald.de/#DQI-3009" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Empirical contradictions" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Different data values appear in combinations deemed impossible based on empirical reasoning." ]
+  ], [
+     fhir:index 22 ;
+     fhir:CodeSystem.concept.code [ fhir:value "https://dataquality.qihs.uni-greifswald.de/#DQI-4001" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Univariate outliers" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Numerical data values deviate markedly from others in a univariate analysis." ]
+  ], [
+     fhir:index 23 ;
+     fhir:CodeSystem.concept.code [ fhir:value "https://dataquality.qihs.uni-greifswald.de/#DQI-4002" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Multivariate outliers" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Numerical data values deviate markedly from others in a multivariate analysis." ]
+  ], [
+     fhir:index 24 ;
+     fhir:CodeSystem.concept.code [ fhir:value "https://dataquality.qihs.uni-greifswald.de/#DQI-4003" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Unexpected locations" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Observed location parameters differ from expected location parameters." ]
+  ], [
+     fhir:index 25 ;
+     fhir:CodeSystem.concept.code [ fhir:value "https://dataquality.qihs.uni-greifswald.de/#DQI-4004" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Unexpected shape" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "The observed shape of a distribution differs from the expected shape." ]
+  ], [
+     fhir:index 26 ;
+     fhir:CodeSystem.concept.code [ fhir:value "https://dataquality.qihs.uni-greifswald.de/#DQI-4005" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Unexpected scale" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Observed scale parameters differ from expected scale parameters." ]
+  ], [
+     fhir:index 27 ;
+     fhir:CodeSystem.concept.code [ fhir:value "https://dataquality.qihs.uni-greifswald.de/#DQI-4006" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Unexpected proportions" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Observed proportions differ from expected proportions." ]
+  ], [
+     fhir:index 28 ;
+     fhir:CodeSystem.concept.code [ fhir:value "https://dataquality.qihs.uni-greifswald.de/#DQI-4007" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Unexpected association strength" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "The observed strength of an association deviates from the expected strength of the association." ]
+  ], [
+     fhir:index 29 ;
+     fhir:CodeSystem.concept.code [ fhir:value "https://dataquality.qihs.uni-greifswald.de/#DQI-4008" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Unexpected association direction" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "The observed direction of an association (e.g. negative, positive) deviates from the expected direction." ]
+  ], [
+     fhir:index 30 ;
+     fhir:CodeSystem.concept.code [ fhir:value "https://dataquality.qihs.uni-greifswald.de/#DQI-4009" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Unexpected association form" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "The observed form of an association (e.g. linear, quadratic, exponential...) deviates from the expected form." ]
+  ], [
+     fhir:index 31 ;
+     fhir:CodeSystem.concept.code [ fhir:value "https://dataquality.qihs.uni-greifswald.de/#DQI-4010" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Inter-Class reliability" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Differences between classes (e.g. examiners) when measuring the same or similar objects under specified conditions." ]
+  ], [
+     fhir:index 32 ;
+     fhir:CodeSystem.concept.code [ fhir:value "https://dataquality.qihs.uni-greifswald.de/#DQI-4011" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Intra-Class reliability" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Differences within classes (e.g. examiners) when measuring the same or similar objects under specified conditions." ]
+  ], [
+     fhir:index 33 ;
+     fhir:CodeSystem.concept.code [ fhir:value "https://dataquality.qihs.uni-greifswald.de/#DQI-4012" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Disagreement with gold standard" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Differences with a gold standard when measuring the same or similar objects under specified conditions." ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/CodeSystem/Greifswald-OBC-DQ-Framework.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,29 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "primary",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet primary</b></p><a name=\"primary\"> </a><a name=\"hcprimary\"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include all codes defined in <a href=\"CodeSystem-Greifswald-OBC-DQ-Framework.html\"><code>https://www.medizininformatik-initiative.de/fhir/core/modul-meta/CodeSystem/greifswald-obc-dq-framework</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;0.2.0-rc.1</span></li><li>Include all codes defined in <a href=\"CodeSystem-dq-rule-successful.html\"><code>http://mii.de/CodeSystem/dq-rule-successful</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;0.2.0-rc.1</span></li></ul></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/ValueSet/primary",
+  "version" : "0.2.0-rc.1",
+  "name" : "Alle_DQ_Indikatoren_VS",
+  "status" : "draft",
+  "date" : "2026-07-23T11:57:36+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "https://www.medizininformatik-initiative.de/fhir/core/modul-meta/CodeSystem/greifswald-obc-dq-framework"
+    },
+    {
+      "system" : "http://mii.de/CodeSystem/dq-rule-successful"
+    }]
+  }
+}

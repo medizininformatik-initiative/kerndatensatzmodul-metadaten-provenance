@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Technische Grundlagen - MII IG Kerndatensatz-Modul Metadaten Provenance v0.2.0-rc.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"3"}
+    h3,h4,h5,h6{--heading-prefix:"3"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Metadaten Provenance</span>
+            <br/>
+            <span style="display:inline-block;">0.2.0-rc.1 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Hintergrund
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="motivation.html">Motivation</a>
+      </li>
+      <li>
+        <a href="technische-grundlagen.html">Technische Grundlagen</a>
+      </li>
+      <li>
+        <a href="isik.html">ISiK (gematik)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Ansätze
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="ansatz-metatag.html">Meta.tag (Taskforce)</a>
+      </li>
+      <li>
+        <a href="ansatz-fhir-provenance.html">FHIR Provenance (BZKF)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Anwendungsbeispiele
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="anwendungsbeispiel-deduplizierung.html">Deduplizierung Onkologie-OP</a>
+      </li>
+      <li>
+        <a href="anwendungsbeispiel-datenqualitaet.html">Datenqualitätsprüfung</a>
+      </li>
+      <li>
+        <a href="anwendungsbeispiel-abrechnungskontext.html">Abrechnungskontext (KHEntgG, SGB V)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Datenqualität
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="dq-framework.html">DQ-Framework</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="usecase-katalog.html">Use Cases</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Technische Grundlagen</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Metadaten Provenance - Local Development build (v0.2.0-rc.1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Technische Grundlagen</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#bemerkung-zur-terminologischen-abgrenzung" id="markdown-toc-bemerkung-zur-terminologischen-abgrenzung">Bemerkung zur terminologischen Abgrenzung</a></li>
+  <li><a href="#dublin-core-dc" id="markdown-toc-dublin-core-dc">Dublin Core (DC)</a></li>
+  <li><a href="#w3c-prov" id="markdown-toc-w3c-prov">W3C PROV</a></li>
+  <li><a href="#fhir-metamodell-und-fhir-provenance-ressource" id="markdown-toc-fhir-metamodell-und-fhir-provenance-ressource">FHIR Metamodell und FHIR Provenance Ressource</a></li>
+  <li><a href="#zusammenfassung" id="markdown-toc-zusammenfassung">Zusammenfassung</a></li>
+</ul>
+
+</div>
+<p>Der folgende Abschnitt zählt relevante Standards und Initiativen auf, welche Einfluss auf die Entwicklung des Provenancekonzepts genommen haben. Die Verwendung existierender Standards ist nicht nur wissenschaftliche Best Practice, sondern stellt auch eine minimale Interoperabilität mit Daten aus anderen Repositorien sicher.</p>
+
+<h3 id="bemerkung-zur-terminologischen-abgrenzung">Bemerkung zur terminologischen Abgrenzung</h3>
+
+<p>Die Abgrenzung von Daten und Metadaten ist nicht trivial und existierende Unterscheidungen sind nicht unumstritten. Dasselbe gilt auch für Provenance-Metadaten als Subtyp von Metadaten. Während die Einstufung von Provenance als Subklasse von Metadaten selbst mehrheitlich unstrittig ist, ist die Abgrenzung zwischen Provenance-Merkmal und anderweitigem Metadatum schwierig und wird im Rahmen dieses Konzepts großzügig interpretiert.</p>
+
+<h3 id="dublin-core-dc">Dublin Core (DC)</h3>
+
+<p>Unter Dublin Core, genauer Dublin Core Metadata Element Set (ISO 15836-1), wird eine Sammlung von initial 15 Merkmalen verstanden, die 1995 als einer der ersten nicht-technischen Standards abgestimmt wurde, um Metadaten in Webseiten (und anderen Web-Ressourcen) auszeichnen zu können. 2012 wurde eine Aktualisierung des Standards unter dem Namen DCMI Metadata Terms (DCTERMS, ISO 15836-2) vorgenommen. DCTERMS teilt die Metadaten in Kategorien/Hierarchien ein, definiert zusätzliche Merkmale (u.a. Provenance) und legt für einzelne Elemente Schemas und Datentypen fest. Aufgrund seiner Einfachheit und breiten Anwendbarkeit wird Dublin Core als einer der wenigen Metadatenstandards durchgängig benutzt.</p>
+
+<h3 id="w3c-prov">W3C PROV</h3>
+
+<p>W3C PROV ist ein Standard zur Beschreibung von Provenance-Information für das WWW und geht damit über die Beschreibung von Webseiten deutlich hinaus. Mit PROV lassen sich prinzipiell alle Dinge beschreiben, denen man eine Identifikationsnummer geben kann (physisch vorhanden, virtuell oder imaginär). PROV ist ein domänenunabhängiges Top-Level-Modell und basiert im Wesentlichen auf drei Konzepten:</p>
+
+<ul>
+  <li><strong>Entität</strong> – Dinge, die beschrieben werden sollen</li>
+  <li><strong>Aktivität</strong> – Handlung, die Entitäten erzeugt, benutzt oder verändert</li>
+  <li><strong>Agent</strong> – Person, Organisation oder Software, die eine Form von Verantwortung für die Erzeugung, Benutzung oder Veränderungen einer Entität im Rahmen einer Aktivität haben</li>
+</ul>
+
+<p>Wichtiger Unterschied zu Dublin Core ist die notwendige Behandlung von Aktivitäten, was das Modell ausdrucksstärker, aber auch komplexer macht.</p>
+
+<p>PROV wurde 2013 standardisiert und bietet neben dem Datenmodell viele weitere Komponenten wie eine Ontologie, ein XML-Schema, eine Abfragesprache und ein Mapping nach Dublin Core. W3C PROV ist der Goldstandard im Bereich der wissenschaftlichen Provenance.</p>
+
+<h3 id="fhir-metamodell-und-fhir-provenance-ressource">FHIR Metamodell und FHIR Provenance Ressource</h3>
+
+<p>Provenance wurde seit Jahrzehnten in praktisch allen HL7-Standards bedacht und gelebt. Dementsprechend nimmt das Thema auch bei FHIR eine zentrale Rolle ein. Allerdings werden Provenance-Daten in FHIR nicht zentral gehalten, sondern an verschiedenen Stellen verteilt gespeichert. Hintergrund ist die Verwendung des <strong>5Ws-Patterns</strong> als ein zentrales Entwicklungsmuster in FHIR. "5Ws" steht für <em>Who – What – When – Where – Why</em> und bedeutet übertragen, dass alle FHIR-Ressourcen diese "W"-Fragen (falls anwendbar) beantworten müssen. Dadurch werden wichtige Provenance-Attribute durchgängig adressiert.</p>
+
+<p>Provenance (im breiteren Verständnis) ist mindestens in 5 verschiedenen Ebenen realisierbar:</p>
+
+<h4 id="ebene-1-spezifische-attribute-der-fhir-ressourcen">Ebene 1: Spezifische Attribute der FHIR-Ressourcen</h4>
+
+<p>Die wichtigste und weitverbreitetste Ebene. FHIR Observations haben neben einem konkreten Wert bspw. optionale Attribute für Status, Kategorie oder Publikationszeit. Damit lassen sich die meisten klinisch relevanten Provenance-Informationen erfassen. Vorteilhaft ist insbesondere die normierte Kodierung der einzelnen Attribute.</p>
+
+<h4 id="ebene-2-auditevent">Ebene 2: AuditEvent</h4>
+
+<p>Die FHIR-Ressource <code class="language-plaintext highlighter-rouge">AuditEvent</code> deckt spezifische sicherheitsrelevante Aktionen ab. Sie überschneidet sich inhaltlich in einigen Punkten mit Provenance, da sie auch Updates von Werten behandelt, ist aber auch keine vollständige Untermenge, da sie bspw. auch Login-Versuche in ein Informationssystem unterstützt.</p>
+
+<h4 id="ebene-3-fhir-provenance-ressource">Ebene 3: FHIR Provenance Ressource</h4>
+
+<p>Die FHIR-Ressource <code class="language-plaintext highlighter-rouge">Provenance</code> erlaubt generische Provenance-Aussagen und basiert auf dem Standard W3C PROV. Sie wird von manchen FHIR-Ressourcen explizit adressiert (siehe <code class="language-plaintext highlighter-rouge">MedicationAdministration.eventHistory</code>), erfährt aber bislang <strong>keine breite praktische Verwendung</strong>. Daher ist ihre Best-Practice-Anwendung noch unklar. Prinzipiell wäre es auch möglich, Attribute aus anderen Ressourcen (siehe Ebene 1) zu duplizieren, um einen zusätzlichen Datenstrom für bestimmte Softwaresysteme zu generieren.</p>
+
+<h4 id="ebene-4-meta-element">Ebene 4: Meta-Element</h4>
+
+<p>Der FHIR-Datentyp <code class="language-plaintext highlighter-rouge">Meta</code> ist Teil der abstrakten FHIR-Basisklasse <code class="language-plaintext highlighter-rouge">Resource</code> und somit Teil aller FHIR-Ressourcen. Die Elemente in Meta sind teilweise sehr spezifisch (z.B. Profilkonformität), teilweise sehr generisch. Insbesondere die Möglichkeit, beliebige Tags als codierte Begriffe aus einem kontrollierten Vokabular zu verwenden, bietet Optionen zur Abbildung von Provenance.</p>
+
+<h4 id="ebene-5-extensions">Ebene 5: Extensions</h4>
+
+<p>FHIR erlaubt die Definition eigener Erweiterungen, um lokale Konventionen durchzusetzen. Extensions können Provenance-Informationen enthalten, die dann jedoch nicht breit verwertbar sind. Daher ist dies die am wenigsten empfehlenswerte Variante.</p>
+
+<h3 id="zusammenfassung">Zusammenfassung</h3>
+
+<blockquote>
+  <p>Zusammenfassend lässt sich feststellen: FHIR Provenance ist nicht gleich W3C PROV. FHIR bildet die meisten Merkmale in eigenen Attributen ab. Je nachdem, ob man Auditlogs als Teil von Provenance sieht, steht hierfür eine weitere Ressource zur Verfügung. Nur für den nicht anderweitig spezifizierbaren Rest steht die FHIR Provenance Ressource zur Verfügung – die Erwartung der FHIR-Community ist, dass diese Ressource selten genutzt wird. Zusätzlich ist auch die FHIR-Provenance-Ressource an verschiedene HL7-Vokabulare gebunden und kann nicht völlig frei modelliert werden.</p>
+</blockquote>
+
+<p><em>Quelle: MII Taskforce Metadaten, Konzeptpapier v1.0, 13.07.2025 (Matthias Löbe et al.)</em></p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  Package mii-ig-metadaten-provenance-de-v2026#0.2.0-rc.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jul 23, 2026 11:57+0000">2026-07-23</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

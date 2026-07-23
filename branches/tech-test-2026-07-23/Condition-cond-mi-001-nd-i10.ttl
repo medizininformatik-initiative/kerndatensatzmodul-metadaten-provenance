@@ -1,0 +1,62 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Condition/cond-mi-001-nd-i10> a fhir:Condition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "cond-mi-001-nd-i10"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Condition cond-mi-001-nd-i10</b></p><a name=\"cond-mi-001-nd-i10\"> </a><a name=\"hccond-mi-001-nd-i10\"> </a><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/diagnosis-role billing}\">Billing</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm I10.90}\">Essentielle Hypertonie, nicht näher bezeichnet</span></p><p><b>subject</b>: <a href=\"Patient-pat-mi-001.html\">Anonymous Patient Male, DoB: 1958-04-22 ( https://example.org/fhir/sid/patienten-pseudonym#P21-MI-001)</a></p><p><b>encounter</b>: <a href=\"Encounter-enc-mi-001.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP); period = 2026-03-01 08:42:00+0100 --&gt; 2026-03-15 14:30:00+0100</a></p><p><b>recordedDate</b>: 2026-03-15</p></div>"
+  ] ;
+  fhir:Condition.clinicalStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-clinical" ] ;
+       fhir:Coding.code [ fhir:value "active" ]
+     ]
+  ] ;
+  fhir:Condition.verificationStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-ver-status" ] ;
+       fhir:Coding.code [ fhir:value "confirmed" ]
+     ]
+  ] ;
+  fhir:Condition.category [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/diagnosis-role" ] ;
+       fhir:Coding.code [ fhir:value "billing" ] ;
+       fhir:Coding.display [ fhir:value "Billing" ]
+     ]
+  ] ;
+  fhir:Condition.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/bfarm/icd-10-gm" ] ;
+       fhir:Coding.code [ fhir:value "I10.90" ] ;
+       fhir:Coding.display [ fhir:value "Essentielle Hypertonie, nicht näher bezeichnet" ]
+     ]
+  ] ;
+  fhir:Condition.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Patient/pat-mi-001> ;
+     fhir:Reference.reference [ fhir:value "Patient/pat-mi-001" ]
+  ] ;
+  fhir:Condition.encounter [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Encounter/enc-mi-001> ;
+     fhir:Reference.reference [ fhir:value "Encounter/enc-mi-001" ]
+  ] ;
+  fhir:Condition.recordedDate [ fhir:value "2026-03-15"^^xsd:date] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Condition/cond-mi-001-nd-i10.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

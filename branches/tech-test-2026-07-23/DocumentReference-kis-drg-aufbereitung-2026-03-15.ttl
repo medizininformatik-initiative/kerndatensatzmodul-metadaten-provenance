@@ -1,0 +1,65 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/DocumentReference/kis-drg-aufbereitung-2026-03-15> a fhir:DocumentReference ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "kis-drg-aufbereitung-2026-03-15"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: DocumentReference kis-drg-aufbereitung-2026-03-15</b></p><a name=\"kis-drg-aufbereitung-2026-03-15\"> </a><a name=\"hckis-drg-aufbereitung-2026-03-15\"> </a><p><b>identifier</b>: <code>https://example.org/fhir/sid/kis-drg-aufbereitung</code>/UKB-260100000-enc-mi-001-2026-03-15</p><p><b>status</b>: Current</p><p><b>type</b>: <span title=\"Codes:{http://loinc.org 11506-3}\">Subsequent evaluation note</span></p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActReason HPAYMT}\">Payment</span></p><p><b>date</b>: 2026-03-15 23:00:00+0100</p><p><b>author</b>: </p><ul><li><a href=\"Organization-org-ukb.html\">Organization Universitätsklinikum Beispielstadt</a></li><li><a href=\"Device-src-ikarus-kis-ukb.html\">Device: status = active; manufacturer = Ikarus Healthcare GmbH (fiktiv); modelNumber = Ikarus-KIS 2025.1; type = Sekundärsystem; note = Fiktiver KIS-Hersteller. Der Name spielt auf die Mythologie an (Ikarus = Sohn des Dedalus) und ist NICHT mit einem realen Produkt assoziiert.</a></li></ul><p><b>description</b>: Gemeinsamer DRG-Aufbereitungsstand (Codierung + Grouping). Schwester-Outputs: §21-CSV (Lieferung an InEK Q1/2027), §301-DTA (innerhalb von 3 Werktagen an Krankenkasse), FHIR-Bundle (zeitnah ins DIZ).</p><blockquote><p><b>content</b></p><h3>Attachments</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ContentType</b></td><td><b>Title</b></td></tr><tr><td style=\"display: none\">*</td><td>application/octet-stream</td><td>KIS-DRG-Aufbereitungsstand UKB enc-mi-001 (2026-03-15)</td></tr></table></blockquote></div>"
+  ] ;
+  fhir:DocumentReference.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "https://example.org/fhir/sid/kis-drg-aufbereitung" ] ;
+     fhir:Identifier.value [ fhir:value "UKB-260100000-enc-mi-001-2026-03-15" ]
+  ] ;
+  fhir:DocumentReference.status [ fhir:value "current"] ;
+  fhir:DocumentReference.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a loinc:11506-3 ;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+       fhir:Coding.code [ fhir:value "11506-3" ] ;
+       fhir:Coding.display [ fhir:value "Subsequent evaluation note" ]
+     ]
+  ] ;
+  fhir:DocumentReference.category [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActReason" ] ;
+       fhir:Coding.code [ fhir:value "HPAYMT" ] ;
+       fhir:Coding.display [ fhir:value "Payment" ]
+     ]
+  ] ;
+  fhir:DocumentReference.date [ fhir:value "2026-03-15T23:00:00+01:00"^^xsd:dateTime] ;
+  fhir:DocumentReference.author [
+     fhir:index 0 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Organization/org-ukb> ;
+     fhir:Reference.reference [ fhir:value "Organization/org-ukb" ]
+  ], [
+     fhir:index 1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Device/src-ikarus-kis-ukb> ;
+     fhir:Reference.reference [ fhir:value "Device/src-ikarus-kis-ukb" ]
+  ] ;
+  fhir:DocumentReference.description [ fhir:value "Gemeinsamer DRG-Aufbereitungsstand (Codierung + Grouping). Schwester-Outputs: §21-CSV (Lieferung an InEK Q1/2027), §301-DTA (innerhalb von 3 Werktagen an Krankenkasse), FHIR-Bundle (zeitnah ins DIZ)."] ;
+  fhir:DocumentReference.content [
+     fhir:index 0 ;
+     fhir:DocumentReference.content.attachment [
+       fhir:Attachment.contentType [ fhir:value "application/octet-stream" ] ;
+       fhir:Attachment.title [ fhir:value "KIS-DRG-Aufbereitungsstand UKB enc-mi-001 (2026-03-15)" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/DocumentReference/kis-drg-aufbereitung-2026-03-15.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

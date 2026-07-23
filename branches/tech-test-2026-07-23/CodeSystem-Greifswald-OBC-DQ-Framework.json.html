@@ -1,0 +1,499 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Greifswald OBC DQ-Framework - JSON Representation - MII IG Kerndatensatz-Modul Metadaten Provenance v0.2.0-rc.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"12.7"}
+    h3,h4,h5,h6{--heading-prefix:"12.7"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Metadaten Provenance</span>
+            <br/>
+            <span style="display:inline-block;">0.2.0-rc.1 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Hintergrund
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="motivation.html">Motivation</a>
+      </li>
+      <li>
+        <a href="technische-grundlagen.html">Technische Grundlagen</a>
+      </li>
+      <li>
+        <a href="isik.html">ISiK (gematik)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Ansätze
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="ansatz-metatag.html">Meta.tag (Taskforce)</a>
+      </li>
+      <li>
+        <a href="ansatz-fhir-provenance.html">FHIR Provenance (BZKF)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Anwendungsbeispiele
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="anwendungsbeispiel-deduplizierung.html">Deduplizierung Onkologie-OP</a>
+      </li>
+      <li>
+        <a href="anwendungsbeispiel-datenqualitaet.html">Datenqualitätsprüfung</a>
+      </li>
+      <li>
+        <a href="anwendungsbeispiel-abrechnungskontext.html">Abrechnungskontext (KHEntgG, SGB V)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Datenqualität
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="dq-framework.html">DQ-Framework</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="usecase-katalog.html">Use Cases</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Greifswald OBC DQ-Framework</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div style="counter-reset: section 8" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Metadaten Provenance - Local Development build (v0.2.0-rc.1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="CodeSystem-Greifswald-OBC-DQ-Framework.html">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="CodeSystem-Greifswald-OBC-DQ-Framework.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li class="active">
+      <a href="#">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="CodeSystem-Greifswald-OBC-DQ-Framework.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+<h2 id="root">: Greifswald OBC DQ-Framework - JSON Representation</h2>
+
+  <table class="colsi">
+    <tr>
+
+      <td colspan="2">
+        
+          Active
+          
+            as of 2026-07-23
+          
+        
+      </td>
+
+    </tr>
+  </table>
+
+
+<p><a href="CodeSystem-Greifswald-OBC-DQ-Framework.json" no-download="true">Raw json</a> | <a href="CodeSystem-Greifswald-OBC-DQ-Framework.json" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code style="white-space: pre; text-wrap: nowrap;">{
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem">resourceType</a>" : "CodeSystem",
+  "<a href="http://hl7.org/fhir/R4/resource.html#CodeSystem.id">id</a>" : "Greifswald-OBC-DQ-Framework",
+  "<a href="http://hl7.org/fhir/R4/domainresource.html#CodeSystem.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: CodeSystem Greifswald-OBC-DQ-Framework&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;Greifswald-OBC-DQ-Framework\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcGreifswald-OBC-DQ-Framework\&quot;&gt; &lt;/a&gt;&lt;p&gt;This case-insensitive code system &lt;code&gt;https://www.medizininformatik-initiative.de/fhir/core/modul-meta/CodeSystem/greifswald-obc-dq-framework&lt;/code&gt; defines the following codes:&lt;/p&gt;&lt;table class=\&quot;codes\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;https://dataquality.qihs.uni-greifswald.de/#DQI-1001&lt;a name=\&quot;Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-1001\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Unexpected data elements&lt;/td&gt;&lt;td&gt;The observed set of available data elements does not match the expected set.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;https://dataquality.qihs.uni-greifswald.de/#DQI-1002&lt;a name=\&quot;Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-1002\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Unexpected data records&lt;/td&gt;&lt;td&gt;The observed set of available data records does not match the expected set.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;https://dataquality.qihs.uni-greifswald.de/#DQI-1003&lt;a name=\&quot;Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-1003\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Duplicates&lt;/td&gt;&lt;td&gt;The same data elements or data records appear multiple times.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;https://dataquality.qihs.uni-greifswald.de/#DQI-1004&lt;a name=\&quot;Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-1004\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Data record mismatch&lt;/td&gt;&lt;td&gt;Data records from different data sets do not match as expected.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;https://dataquality.qihs.uni-greifswald.de/#DQI-1005&lt;a name=\&quot;Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-1005\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Data element mismatch&lt;/td&gt;&lt;td&gt;Data elements from different data sets do not match as expected.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;https://dataquality.qihs.uni-greifswald.de/#DQI-1006&lt;a name=\&quot;Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-1006\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Data type mismatch&lt;/td&gt;&lt;td&gt;The observed data type does not match the expected data type.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;https://dataquality.qihs.uni-greifswald.de/#DQI-1007&lt;a name=\&quot;Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-1007\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Inhomogeneous value formats&lt;/td&gt;&lt;td&gt;The observed data values have inhomogeneous format across different data fields.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;https://dataquality.qihs.uni-greifswald.de/#DQI-1008&lt;a name=\&quot;Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-1008\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Uncertain missingness status&lt;/td&gt;&lt;td&gt;System indicated missing values (e.g. NA/./Null …) appear where a qualified missing code is expected.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;https://dataquality.qihs.uni-greifswald.de/#DQI-2001&lt;a name=\&quot;Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-2001\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Missing values&lt;/td&gt;&lt;td&gt;Data fields without a measurement value.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;https://dataquality.qihs.uni-greifswald.de/#DQI-2002&lt;a name=\&quot;Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-2002\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Non-response rate&lt;/td&gt;&lt;td&gt;The proportion of eligible observational units for which no information could be obtained.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;https://dataquality.qihs.uni-greifswald.de/#DQI-2003&lt;a name=\&quot;Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-2003\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Refusal rate&lt;/td&gt;&lt;td&gt;The proportion of eligible individuals who refuse to give the information sought.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;https://dataquality.qihs.uni-greifswald.de/#DQI-2004&lt;a name=\&quot;Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-2004\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Drop-out rate&lt;/td&gt;&lt;td&gt;The proportion of all participants who only partially complete the study and prematurely abandon it.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;https://dataquality.qihs.uni-greifswald.de/#DQI-2005&lt;a name=\&quot;Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-2005\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Missing due to specified reason&lt;/td&gt;&lt;td&gt;Information in a data collection that is missing due to a specified reason.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;https://dataquality.qihs.uni-greifswald.de/#DQI-3001&lt;a name=\&quot;Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-3001\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Inadmissible numerical values&lt;/td&gt;&lt;td&gt;Observed numerical data values are not admissible according to the allowed ranges.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;https://dataquality.qihs.uni-greifswald.de/#DQI-3002&lt;a name=\&quot;Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-3002\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Inadmissible time-date values&lt;/td&gt;&lt;td&gt;Observed time-date values are not admissible according to the allowed time and date ranges.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;https://dataquality.qihs.uni-greifswald.de/#DQI-3003&lt;a name=\&quot;Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-3003\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Inadmissible categorical values&lt;/td&gt;&lt;td&gt;Observed categorical data values are not admissible according to the allowed categories.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;https://dataquality.qihs.uni-greifswald.de/#DQI-3004&lt;a name=\&quot;Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-3004\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Inadmissible standardized vocabulary&lt;/td&gt;&lt;td&gt;Data values are not admissible according to the reference vocabulary.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;https://dataquality.qihs.uni-greifswald.de/#DQI-3005&lt;a name=\&quot;Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-3005\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Inadmissible precision&lt;/td&gt;&lt;td&gt;The precision of observed numerical data values does not match the expected precision.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;https://dataquality.qihs.uni-greifswald.de/#DQI-3006&lt;a name=\&quot;Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-3006\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Uncertain numerical values&lt;/td&gt;&lt;td&gt;Observed numerical values are uncertain or improbable because they are outside the expected ranges.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;https://dataquality.qihs.uni-greifswald.de/#DQI-3007&lt;a name=\&quot;Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-3007\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Uncertain time-date values&lt;/td&gt;&lt;td&gt;Observed time-date values are uncertain or improbable because they are outside the expected ranges.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;https://dataquality.qihs.uni-greifswald.de/#DQI-3008&lt;a name=\&quot;Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-3008\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Logical contradictions&lt;/td&gt;&lt;td&gt;Different data values appear in logically impossible combinations.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;https://dataquality.qihs.uni-greifswald.de/#DQI-3009&lt;a name=\&quot;Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-3009\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Empirical contradictions&lt;/td&gt;&lt;td&gt;Different data values appear in combinations deemed impossible based on empirical reasoning.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;https://dataquality.qihs.uni-greifswald.de/#DQI-4001&lt;a name=\&quot;Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-4001\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Univariate outliers&lt;/td&gt;&lt;td&gt;Numerical data values deviate markedly from others in a univariate analysis.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;https://dataquality.qihs.uni-greifswald.de/#DQI-4002&lt;a name=\&quot;Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-4002\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Multivariate outliers&lt;/td&gt;&lt;td&gt;Numerical data values deviate markedly from others in a multivariate analysis.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;https://dataquality.qihs.uni-greifswald.de/#DQI-4003&lt;a name=\&quot;Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-4003\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Unexpected locations&lt;/td&gt;&lt;td&gt;Observed location parameters differ from expected location parameters.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;https://dataquality.qihs.uni-greifswald.de/#DQI-4004&lt;a name=\&quot;Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-4004\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Unexpected shape&lt;/td&gt;&lt;td&gt;The observed shape of a distribution differs from the expected shape.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;https://dataquality.qihs.uni-greifswald.de/#DQI-4005&lt;a name=\&quot;Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-4005\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Unexpected scale&lt;/td&gt;&lt;td&gt;Observed scale parameters differ from expected scale parameters.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;https://dataquality.qihs.uni-greifswald.de/#DQI-4006&lt;a name=\&quot;Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-4006\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Unexpected proportions&lt;/td&gt;&lt;td&gt;Observed proportions differ from expected proportions.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;https://dataquality.qihs.uni-greifswald.de/#DQI-4007&lt;a name=\&quot;Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-4007\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Unexpected association strength&lt;/td&gt;&lt;td&gt;The observed strength of an association deviates from the expected strength of the association.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;https://dataquality.qihs.uni-greifswald.de/#DQI-4008&lt;a name=\&quot;Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-4008\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Unexpected association direction&lt;/td&gt;&lt;td&gt;The observed direction of an association (e.g. negative, positive) deviates from the expected direction.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;https://dataquality.qihs.uni-greifswald.de/#DQI-4009&lt;a name=\&quot;Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-4009\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Unexpected association form&lt;/td&gt;&lt;td&gt;The observed form of an association (e.g. linear, quadratic, exponential...) deviates from the expected form.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;https://dataquality.qihs.uni-greifswald.de/#DQI-4010&lt;a name=\&quot;Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-4010\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Inter-Class reliability&lt;/td&gt;&lt;td&gt;Differences between classes (e.g. examiners) when measuring the same or similar objects under specified conditions.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;https://dataquality.qihs.uni-greifswald.de/#DQI-4011&lt;a name=\&quot;Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-4011\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Intra-Class reliability&lt;/td&gt;&lt;td&gt;Differences within classes (e.g. examiners) when measuring the same or similar objects under specified conditions.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;https://dataquality.qihs.uni-greifswald.de/#DQI-4012&lt;a name=\&quot;Greifswald-OBC-DQ-Framework-https.58.47.47dataquality.46qihs.46uni-greifswald.46de.47.35DQI-4012\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Disagreement with gold standard&lt;/td&gt;&lt;td&gt;Differences with a gold standard when measuring the same or similar objects under specified conditions.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
+  },
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.url">url</a>" : "https://www.medizininformatik-initiative.de/fhir/core/modul-meta/CodeSystem/greifswald-obc-dq-framework",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.version">version</a>" : "0.2.0-rc.1",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.name">name</a>" : "Greifswald_OBC_DQ_Framework",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.title">title</a>" : "Greifswald OBC DQ-Framework",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.status">status</a>" : "active",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.date">date</a>" : "2026-07-23T11:57:36+00:00",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.publisher">publisher</a>" : "Medizininformatik Initiative",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.contact">contact</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a>" : "Medizininformatik Initiative",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "url",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "https://www.medizininformatik-initiative.de/"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.description">description</a>" : "Data Quality Framework by COS.",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.caseSensitive">caseSensitive</a>" : false,
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.compositional">compositional</a>" : false,
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.content">content</a>" : "complete",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.count">count</a>" : 34,
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "https://dataquality.qihs.uni-greifswald.de/#DQI-1001",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Unexpected data elements",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "The observed set of available data elements does not match the expected set."
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "https://dataquality.qihs.uni-greifswald.de/#DQI-1002",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Unexpected data records",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "The observed set of available data records does not match the expected set."
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "https://dataquality.qihs.uni-greifswald.de/#DQI-1003",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Duplicates",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "The same data elements or data records appear multiple times."
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "https://dataquality.qihs.uni-greifswald.de/#DQI-1004",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Data record mismatch",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Data records from different data sets do not match as expected."
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "https://dataquality.qihs.uni-greifswald.de/#DQI-1005",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Data element mismatch",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Data elements from different data sets do not match as expected."
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "https://dataquality.qihs.uni-greifswald.de/#DQI-1006",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Data type mismatch",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "The observed data type does not match the expected data type."
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "https://dataquality.qihs.uni-greifswald.de/#DQI-1007",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Inhomogeneous value formats",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "The observed data values have inhomogeneous format across different data fields."
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "https://dataquality.qihs.uni-greifswald.de/#DQI-1008",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Uncertain missingness status",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "System indicated missing values (e.g. NA/./Null …) appear where a qualified missing code is expected."
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "https://dataquality.qihs.uni-greifswald.de/#DQI-2001",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Missing values",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Data fields without a measurement value."
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "https://dataquality.qihs.uni-greifswald.de/#DQI-2002",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Non-response rate",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "The proportion of eligible observational units for which no information could be obtained."
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "https://dataquality.qihs.uni-greifswald.de/#DQI-2003",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Refusal rate",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "The proportion of eligible individuals who refuse to give the information sought."
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "https://dataquality.qihs.uni-greifswald.de/#DQI-2004",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Drop-out rate",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "The proportion of all participants who only partially complete the study and prematurely abandon it."
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "https://dataquality.qihs.uni-greifswald.de/#DQI-2005",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Missing due to specified reason",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Information in a data collection that is missing due to a specified reason."
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "https://dataquality.qihs.uni-greifswald.de/#DQI-3001",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Inadmissible numerical values",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Observed numerical data values are not admissible according to the allowed ranges."
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "https://dataquality.qihs.uni-greifswald.de/#DQI-3002",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Inadmissible time-date values",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Observed time-date values are not admissible according to the allowed time and date ranges."
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "https://dataquality.qihs.uni-greifswald.de/#DQI-3003",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Inadmissible categorical values",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Observed categorical data values are not admissible according to the allowed categories."
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "https://dataquality.qihs.uni-greifswald.de/#DQI-3004",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Inadmissible standardized vocabulary",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Data values are not admissible according to the reference vocabulary."
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "https://dataquality.qihs.uni-greifswald.de/#DQI-3005",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Inadmissible precision",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "The precision of observed numerical data values does not match the expected precision."
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "https://dataquality.qihs.uni-greifswald.de/#DQI-3006",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Uncertain numerical values",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Observed numerical values are uncertain or improbable because they are outside the expected ranges."
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "https://dataquality.qihs.uni-greifswald.de/#DQI-3007",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Uncertain time-date values",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Observed time-date values are uncertain or improbable because they are outside the expected ranges."
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "https://dataquality.qihs.uni-greifswald.de/#DQI-3008",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Logical contradictions",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Different data values appear in logically impossible combinations."
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "https://dataquality.qihs.uni-greifswald.de/#DQI-3009",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Empirical contradictions",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Different data values appear in combinations deemed impossible based on empirical reasoning."
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "https://dataquality.qihs.uni-greifswald.de/#DQI-4001",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Univariate outliers",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Numerical data values deviate markedly from others in a univariate analysis."
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "https://dataquality.qihs.uni-greifswald.de/#DQI-4002",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Multivariate outliers",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Numerical data values deviate markedly from others in a multivariate analysis."
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "https://dataquality.qihs.uni-greifswald.de/#DQI-4003",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Unexpected locations",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Observed location parameters differ from expected location parameters."
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "https://dataquality.qihs.uni-greifswald.de/#DQI-4004",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Unexpected shape",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "The observed shape of a distribution differs from the expected shape."
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "https://dataquality.qihs.uni-greifswald.de/#DQI-4005",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Unexpected scale",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Observed scale parameters differ from expected scale parameters."
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "https://dataquality.qihs.uni-greifswald.de/#DQI-4006",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Unexpected proportions",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Observed proportions differ from expected proportions."
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "https://dataquality.qihs.uni-greifswald.de/#DQI-4007",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Unexpected association strength",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "The observed strength of an association deviates from the expected strength of the association."
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "https://dataquality.qihs.uni-greifswald.de/#DQI-4008",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Unexpected association direction",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "The observed direction of an association (e.g. negative, positive) deviates from the expected direction."
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "https://dataquality.qihs.uni-greifswald.de/#DQI-4009",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Unexpected association form",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "The observed form of an association (e.g. linear, quadratic, exponential...) deviates from the expected form."
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "https://dataquality.qihs.uni-greifswald.de/#DQI-4010",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Inter-Class reliability",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Differences between classes (e.g. examiners) when measuring the same or similar objects under specified conditions."
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "https://dataquality.qihs.uni-greifswald.de/#DQI-4011",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Intra-Class reliability",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Differences within classes (e.g. examiners) when measuring the same or similar objects under specified conditions."
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "https://dataquality.qihs.uni-greifswald.de/#DQI-4012",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "Disagreement with gold standard",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "Differences with a gold standard when measuring the same or similar objects under specified conditions."
+    }
+  ]
+}</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  Package mii-ig-metadaten-provenance-de-v2026#0.2.0-rc.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jul 23, 2026 11:57+0000">2026-07-23</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

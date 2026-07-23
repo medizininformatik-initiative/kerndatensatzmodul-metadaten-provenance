@@ -1,0 +1,37 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Device/etl-p21-fhir-v142> a fhir:Device ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "etl-p21-fhir-v142"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Device etl-p21-fhir-v142</b></p><a name=\"etl-p21-fhir-v142\"> </a><a name=\"hcetl-p21-fhir-v142\"> </a><p><b>status</b>: Active</p><p><b>manufacturer</b>: Universitätsklinikum Beispielstadt – DIZ-IT</p><h3>DeviceNames</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Name</b></td><td><b>Type</b></td></tr><tr><td style=\"display: none\">*</td><td>p21-to-fhir ETL-Pipeline</td><td>User Friendly name</td></tr></table><h3>Versions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td></tr><tr><td style=\"display: none\">*</td><td>1.4.2</td></tr></table><p><b>note</b>: </p><blockquote><div><p>Transformiert den KIS-DRG-Aufbereitungsstand (gleicher Stand, aus dem auch §21-CSV und §301-DTA gespeist werden) in FHIR R4 nach MII-KDM-Profilen.</p>\n</div></blockquote></div>"
+  ] ;
+  fhir:Device.status [ fhir:value "active"] ;
+  fhir:Device.manufacturer [ fhir:value "Universitätsklinikum Beispielstadt – DIZ-IT"] ;
+  fhir:Device.deviceName [
+     fhir:index 0 ;
+     fhir:Device.deviceName.name [ fhir:value "p21-to-fhir ETL-Pipeline" ] ;
+     fhir:Device.deviceName.type [ fhir:value "user-friendly-name" ]
+  ] ;
+  fhir:Device.version [
+     fhir:index 0 ;
+     fhir:Device.version.value [ fhir:value "1.4.2" ]
+  ] ;
+  fhir:Device.note [
+     fhir:index 0 ;
+     fhir:Annotation.text [ fhir:value "Transformiert den KIS-DRG-Aufbereitungsstand (gleicher Stand, aus dem auch §21-CSV und §301-DTA gespeist werden) in FHIR R4 nach MII-KDM-Profilen." ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Device/etl-p21-fhir-v142.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

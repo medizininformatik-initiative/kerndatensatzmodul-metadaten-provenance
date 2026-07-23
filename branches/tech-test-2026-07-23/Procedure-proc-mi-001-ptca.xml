@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Procedure xmlns="http://hl7.org/fhir">
+  <id value="proc-mi-001-ptca"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Procedure proc-mi-001-ptca</b></p><a name="proc-mi-001-ptca"> </a><a name="hcproc-mi-001-ptca"> </a><p><b>status</b>: Completed</p><p><b>code</b>: <span title="Codes:{http://fhir.de/CodeSystem/bfarm/ops 8-837.k0}">Perkutan-transluminale Gefäßintervention an Herz und Koronargefäßen: Einlegen eines beschichteten Stents in Koronargefäße: Ein Stent</span></p><p><b>subject</b>: <a href="Patient-pat-mi-001.html">Anonymous Patient Male, DoB: 1958-04-22 ( https://example.org/fhir/sid/patienten-pseudonym#P21-MI-001)</a></p><p><b>encounter</b>: <a href="Encounter-enc-mi-001.html">Encounter: status = finished; class = inpatient encounter (ActCode#IMP); period = 2026-03-01 08:42:00+0100 --&gt; 2026-03-15 14:30:00+0100</a></p><p><b>performed</b>: 2026-03-01 11:18:00+0100</p></div>
+  </text>
+  <status value="completed"/>
+  <code>
+    <coding>
+      <system value="http://fhir.de/CodeSystem/bfarm/ops"/>
+      <code value="8-837.k0"/>
+      <display value="Perkutan-transluminale Gefäßintervention an Herz und Koronargefäßen: Einlegen eines beschichteten Stents in Koronargefäße: Ein Stent"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/pat-mi-001"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/enc-mi-001"/>
+  </encounter>
+  <performedDateTime value="2026-03-01T11:18:00+01:00"/>
+</Procedure>

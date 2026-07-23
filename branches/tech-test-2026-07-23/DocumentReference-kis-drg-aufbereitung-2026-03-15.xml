@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DocumentReference xmlns="http://hl7.org/fhir">
+  <id value="kis-drg-aufbereitung-2026-03-15"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: DocumentReference kis-drg-aufbereitung-2026-03-15</b></p><a name="kis-drg-aufbereitung-2026-03-15"> </a><a name="hckis-drg-aufbereitung-2026-03-15"> </a><p><b>identifier</b>: <code>https://example.org/fhir/sid/kis-drg-aufbereitung</code>/UKB-260100000-enc-mi-001-2026-03-15</p><p><b>status</b>: Current</p><p><b>type</b>: <span title="Codes:{http://loinc.org 11506-3}">Subsequent evaluation note</span></p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ActReason HPAYMT}">Payment</span></p><p><b>date</b>: 2026-03-15 23:00:00+0100</p><p><b>author</b>: </p><ul><li><a href="Organization-org-ukb.html">Organization Universitätsklinikum Beispielstadt</a></li><li><a href="Device-src-ikarus-kis-ukb.html">Device: status = active; manufacturer = Ikarus Healthcare GmbH (fiktiv); modelNumber = Ikarus-KIS 2025.1; type = Sekundärsystem; note = Fiktiver KIS-Hersteller. Der Name spielt auf die Mythologie an (Ikarus = Sohn des Dedalus) und ist NICHT mit einem realen Produkt assoziiert.</a></li></ul><p><b>description</b>: Gemeinsamer DRG-Aufbereitungsstand (Codierung + Grouping). Schwester-Outputs: §21-CSV (Lieferung an InEK Q1/2027), §301-DTA (innerhalb von 3 Werktagen an Krankenkasse), FHIR-Bundle (zeitnah ins DIZ).</p><blockquote><p><b>content</b></p><h3>Attachments</h3><table class="grid"><tr><td style="display: none">-</td><td><b>ContentType</b></td><td><b>Title</b></td></tr><tr><td style="display: none">*</td><td>application/octet-stream</td><td>KIS-DRG-Aufbereitungsstand UKB enc-mi-001 (2026-03-15)</td></tr></table></blockquote></div>
+  </text>
+  <identifier>
+    <system value="https://example.org/fhir/sid/kis-drg-aufbereitung"/>
+    <value value="UKB-260100000-enc-mi-001-2026-03-15"/>
+  </identifier>
+  <status value="current"/>
+  <type>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="11506-3"/>
+      <display value="Subsequent evaluation note"/>
+    </coding>
+  </type>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HPAYMT"/>
+      <display value="Payment"/>
+    </coding>
+  </category>
+  <date value="2026-03-15T23:00:00+01:00"/>
+  <author>
+    <reference value="Organization/org-ukb"/>
+  </author>
+  <author>
+    <reference value="Device/src-ikarus-kis-ukb"/>
+  </author>
+  <description value="Gemeinsamer DRG-Aufbereitungsstand (Codierung + Grouping). Schwester-Outputs: §21-CSV (Lieferung an InEK Q1/2027), §301-DTA (innerhalb von 3 Werktagen an Krankenkasse), FHIR-Bundle (zeitnah ins DIZ)."/>
+  <content>
+    <attachment>
+      <contentType value="application/octet-stream"/>
+      <title value="KIS-DRG-Aufbereitungsstand UKB enc-mi-001 (2026-03-15)"/>
+    </attachment>
+  </content>
+</DocumentReference>

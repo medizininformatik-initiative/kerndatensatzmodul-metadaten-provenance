@@ -1,0 +1,70 @@
+[{
+  "id" : "dq-rule-successful",
+  "type" : "CodeSystem",
+  "url" : "http://mii.de/CodeSystem/dq-rule-successful",
+  "version" : "0.2.0-rc.1",
+  "name" : "DQ_Rule_Successful"
+},
+{
+  "id" : "Greifswald-OBC-DQ-Framework",
+  "type" : "CodeSystem",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/core/modul-meta/CodeSystem/greifswald-obc-dq-framework",
+  "version" : "0.2.0-rc.1",
+  "name" : "Greifswald_OBC_DQ_Framework"
+},
+{
+  "id" : "mii-cs-datenquellsystem",
+  "type" : "CodeSystem",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/CodeSystem/mii-cs-datenquellsystem",
+  "version" : "0.2.0-rc.1",
+  "name" : "MII_CS_Datenquellsystem"
+},
+{
+  "id" : "mii-cs-provenance-prozedur-herkunft",
+  "type" : "CodeSystem",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/CodeSystem/mii-cs-provenance-prozedur-herkunft",
+  "version" : "0.2.0-rc.1",
+  "name" : "MII_CS_Provenance_Prozedur_Herkunft"
+},
+{
+  "id" : "mii-ig-metadaten-provenance-de-v2026",
+  "type" : "ImplementationGuide",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/ImplementationGuide/mii-ig-metadaten-provenance-de-v2026",
+  "version" : "0.2.0-rc.1",
+  "name" : "MII_IG_Metadaten_Provenance_DE"
+},
+{
+  "id" : "mii-sp-provenance-reason",
+  "type" : "SearchParameter",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/SearchParameter/provenance-reason",
+  "version" : "0.2.0-rc.1",
+  "name" : "MII_SP_Provenance_Reason"
+},
+{
+  "id" : "mii-pr-provenance-prozedur-herkunft",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/StructureDefinition/mii-pr-provenance-prozedur-herkunft",
+  "version" : "0.2.0-rc.1",
+  "name" : "MII_PR_Provenance_Prozedur_Herkunft"
+},
+{
+  "id" : "mii-vs-provenance-prozedur-herkunft",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/ValueSet/mii-vs-provenance-prozedur-herkunft",
+  "version" : "0.2.0-rc.1",
+  "name" : "MII_VS_Provenance_Prozedur_Herkunft"
+},
+{
+  "id" : "primary",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/ValueSet/primary",
+  "version" : "0.2.0-rc.1",
+  "name" : "Alle_DQ_Indikatoren_VS"
+},
+{
+  "id" : "procedure-intent-vs",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/ValueSet/procedure-intent-vs",
+  "version" : "0.2.0-rc.1",
+  "name" : "ProcedureIntentVS"
+}]

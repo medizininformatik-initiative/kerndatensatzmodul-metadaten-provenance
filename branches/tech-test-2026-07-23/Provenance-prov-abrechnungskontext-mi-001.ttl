@@ -1,0 +1,109 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Provenance/prov-abrechnungskontext-mi-001> a fhir:Provenance ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "prov-abrechnungskontext-mi-001"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Provenance prov-abrechnungskontext-mi-001</b></p><a name=\"prov-abrechnungskontext-mi-001\"> </a><a name=\"hcprov-abrechnungskontext-mi-001\"> </a><p>Provenance for: </p><ul><li><a href=\"Patient-pat-mi-001.html\">Anonymous Patient Male, DoB: 1958-04-22 ( https://example.org/fhir/sid/patienten-pseudonym#P21-MI-001)</a></li><li><a href=\"Encounter-enc-mi-001.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP); period = 2026-03-01 08:42:00+0100 --&gt; 2026-03-15 14:30:00+0100</a></li><li><a href=\"Condition-cond-mi-001-hd-i21.html\">Condition Akuter transmuraler Myokardinfarkt der Vorderwand</a></li><li><a href=\"Condition-cond-mi-001-nd-i10.html\">Condition Essentielle Hypertonie, nicht näher bezeichnet</a></li><li><a href=\"Procedure-proc-mi-001-ptca.html\">Procedure Perkutan-transluminale Gefäßintervention an Herz und Koronargefäßen: Einlegen eines beschichteten Stents in Koronargefäße: Ein Stent</a></li></ul><p>Summary</p><table class=\"grid\"><tr><td>Occurrence</td><td>2026-03-01 08:42:00+0100 --&gt; 2026-03-15 14:30:00+0100</td></tr><tr><td>Recorded</td><td>2026-03-16 03:12:00+0100</td></tr><tr><td>Policy</td><td><ul><li><a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=https://www.gesetze-im-internet.de/khentgg/__21.html\">https://www.gesetze-im-internet.de/khentgg/__21.html</a></li><li><a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=https://www.gesetze-im-internet.de/sgb_5/__301.html\">https://www.gesetze-im-internet.de/sgb_5/__301.html</a></li></ul></td></tr><tr><td>Activity</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-DataOperation CREATE}\">create</span></td></tr></table><p><b>Agents</b></p><table class=\"grid\"><tr><td><b>Type</b></td><td><b>who</b></td></tr><tr><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/provenance-participant-type assembler}\">Assembler</span></td><td><a href=\"Device-etl-p21-fhir-v142.html\">Device: status = active; manufacturer = Universitätsklinikum Beispielstadt – DIZ-IT; note = Transformiert den KIS-DRG-Aufbereitungsstand (gleicher Stand, aus dem auch §21-CSV und §301-DTA gespeist werden) in FHIR R4 nach MII-KDM-Profilen.</a></td></tr><tr><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/provenance-participant-type performer}\">Performer</span></td><td><a href=\"Organization-org-ukb.html\">Organization Universitätsklinikum Beispielstadt</a></td></tr></table></div>"
+  ] ;
+  fhir:Provenance.target [
+     fhir:index 0 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Patient/pat-mi-001> ;
+     fhir:Reference.reference [ fhir:value "Patient/pat-mi-001" ]
+  ], [
+     fhir:index 1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Encounter/enc-mi-001> ;
+     fhir:Reference.reference [ fhir:value "Encounter/enc-mi-001" ]
+  ], [
+     fhir:index 2 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Condition/cond-mi-001-hd-i21> ;
+     fhir:Reference.reference [ fhir:value "Condition/cond-mi-001-hd-i21" ]
+  ], [
+     fhir:index 3 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Condition/cond-mi-001-nd-i10> ;
+     fhir:Reference.reference [ fhir:value "Condition/cond-mi-001-nd-i10" ]
+  ], [
+     fhir:index 4 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Procedure/proc-mi-001-ptca> ;
+     fhir:Reference.reference [ fhir:value "Procedure/proc-mi-001-ptca" ]
+  ] ;
+  fhir:Provenance.occurredPeriod [
+     fhir:Period.start [ fhir:value "2026-03-01T08:42:00+01:00"^^xsd:dateTime ] ;
+     fhir:Period.end [ fhir:value "2026-03-15T14:30:00+01:00"^^xsd:dateTime ]
+  ] ;
+  fhir:Provenance.recorded [ fhir:value "2026-03-16T03:12:00+01:00"^^xsd:dateTime] ;
+  fhir:Provenance.policy [
+     fhir:value "https://www.gesetze-im-internet.de/khentgg/__21.html" ;
+     fhir:index 0
+  ], [
+     fhir:value "https://www.gesetze-im-internet.de/sgb_5/__301.html" ;
+     fhir:index 1
+  ] ;
+  fhir:Provenance.reason [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActReason" ] ;
+       fhir:Coding.code [ fhir:value "HPAYMT" ] ;
+       fhir:Coding.display [ fhir:value "Payment" ]
+     ]
+  ] ;
+  fhir:Provenance.activity [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-DataOperation" ] ;
+       fhir:Coding.code [ fhir:value "CREATE" ] ;
+       fhir:Coding.display [ fhir:value "create" ]
+     ]
+  ] ;
+  fhir:Provenance.agent [
+     fhir:index 0 ;
+     fhir:Provenance.agent.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/provenance-participant-type" ] ;
+         fhir:Coding.code [ fhir:value "assembler" ] ;
+         fhir:Coding.display [ fhir:value "Assembler" ]
+       ]
+     ] ;
+     fhir:Provenance.agent.who [
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Device/etl-p21-fhir-v142> ;
+       fhir:Reference.reference [ fhir:value "Device/etl-p21-fhir-v142" ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:Provenance.agent.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/provenance-participant-type" ] ;
+         fhir:Coding.code [ fhir:value "performer" ] ;
+         fhir:Coding.display [ fhir:value "Performer" ]
+       ]
+     ] ;
+     fhir:Provenance.agent.who [
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Organization/org-ukb> ;
+       fhir:Reference.reference [ fhir:value "Organization/org-ukb" ]
+     ]
+  ] ;
+  fhir:Provenance.entity [
+     fhir:index 0 ;
+     fhir:Provenance.entity.role [ fhir:value "source" ] ;
+     fhir:Provenance.entity.what [
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/DocumentReference/kis-drg-aufbereitung-2026-03-15> ;
+       fhir:Reference.reference [ fhir:value "DocumentReference/kis-drg-aufbereitung-2026-03-15" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Provenance/prov-abrechnungskontext-mi-001.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Device xmlns="http://hl7.org/fhir">
+  <id value="src-ikarus-kis-ukb"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Device src-ikarus-kis-ukb</b></p><a name="src-ikarus-kis-ukb"> </a><a name="hcsrc-ikarus-kis-ukb"> </a><p><b>status</b>: Active</p><p><b>manufacturer</b>: Ikarus Healthcare GmbH (fiktiv)</p><h3>DeviceNames</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Name</b></td><td><b>Type</b></td></tr><tr><td style="display: none">*</td><td>Ikarus-KIS — Subsystem Abrechnung</td><td>User Friendly name</td></tr></table><p><b>modelNumber</b>: Ikarus-KIS 2025.1</p><p><b>type</b>: <span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/CodeSystem/mii-cs-datenquellsystem Sekundaersystem}">Sekundärsystem</span></p><p><b>owner</b>: <a href="Organization-org-ukb.html">Organization Universitätsklinikum Beispielstadt</a></p><p><b>note</b>: </p><blockquote><div><p>Fiktiver KIS-Hersteller. Der Name spielt auf die Mythologie an (Ikarus = Sohn des Dedalus) und ist NICHT mit einem realen Produkt assoziiert.</p>
+</div></blockquote></div>
+  </text>
+  <status value="active"/>
+  <manufacturer value="Ikarus Healthcare GmbH (fiktiv)"/>
+  <deviceName>
+    <name value="Ikarus-KIS — Subsystem Abrechnung"/>
+    <type value="user-friendly-name"/>
+  </deviceName>
+  <modelNumber value="Ikarus-KIS 2025.1"/>
+  <type>
+    <coding>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/CodeSystem/mii-cs-datenquellsystem"/>
+      <code value="Sekundaersystem"/>
+      <display value="Sekundärsystem"/>
+    </coding>
+  </type>
+  <owner>
+    <reference value="Organization/org-ukb"/>
+  </owner>
+  <note>
+    <text value="Fiktiver KIS-Hersteller. Der Name spielt auf die Mythologie an (Ikarus = Sohn des Dedalus) und ist NICHT mit einem realen Produkt assoziiert."/>
+  </note>
+</Device>

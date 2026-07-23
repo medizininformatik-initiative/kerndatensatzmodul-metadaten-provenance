@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="cond-mi-001-nd-i10"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Condition cond-mi-001-nd-i10</b></p><a name="cond-mi-001-nd-i10"> </a><a name="hccond-mi-001-nd-i10"> </a><p><b>clinicalStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}">Active</span></p><p><b>verificationStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}">Confirmed</span></p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/diagnosis-role billing}">Billing</span></p><p><b>code</b>: <span title="Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm I10.90}">Essentielle Hypertonie, nicht näher bezeichnet</span></p><p><b>subject</b>: <a href="Patient-pat-mi-001.html">Anonymous Patient Male, DoB: 1958-04-22 ( https://example.org/fhir/sid/patienten-pseudonym#P21-MI-001)</a></p><p><b>encounter</b>: <a href="Encounter-enc-mi-001.html">Encounter: status = finished; class = inpatient encounter (ActCode#IMP); period = 2026-03-01 08:42:00+0100 --&gt; 2026-03-15 14:30:00+0100</a></p><p><b>recordedDate</b>: 2026-03-15</p></div>
+  </text>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+      <code value="active"/>
+    </coding>
+  </clinicalStatus>
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+      <code value="confirmed"/>
+    </coding>
+  </verificationStatus>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/diagnosis-role"/>
+      <code value="billing"/>
+      <display value="Billing"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://fhir.de/CodeSystem/bfarm/icd-10-gm"/>
+      <code value="I10.90"/>
+      <display value="Essentielle Hypertonie, nicht näher bezeichnet"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/pat-mi-001"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/enc-mi-001"/>
+  </encounter>
+  <recordedDate value="2026-03-15"/>
+</Condition>

@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Ansatz 1: Meta.tag (Taskforce Metadaten) - MII IG Kerndatensatz-Modul Metadaten Provenance v0.2.0-rc.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"5"}
+    h3,h4,h5,h6{--heading-prefix:"5"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Metadaten Provenance</span>
+            <br/>
+            <span style="display:inline-block;">0.2.0-rc.1 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Hintergrund
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="motivation.html">Motivation</a>
+      </li>
+      <li>
+        <a href="technische-grundlagen.html">Technische Grundlagen</a>
+      </li>
+      <li>
+        <a href="isik.html">ISiK (gematik)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Ansätze
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="ansatz-metatag.html">Meta.tag (Taskforce)</a>
+      </li>
+      <li>
+        <a href="ansatz-fhir-provenance.html">FHIR Provenance (BZKF)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Anwendungsbeispiele
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="anwendungsbeispiel-deduplizierung.html">Deduplizierung Onkologie-OP</a>
+      </li>
+      <li>
+        <a href="anwendungsbeispiel-datenqualitaet.html">Datenqualitätsprüfung</a>
+      </li>
+      <li>
+        <a href="anwendungsbeispiel-abrechnungskontext.html">Abrechnungskontext (KHEntgG, SGB V)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Datenqualität
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="dq-framework.html">DQ-Framework</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="usecase-katalog.html">Use Cases</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Ansatz 1: Meta.tag (Taskforce Metadaten)</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Metadaten Provenance - Local Development build (v0.2.0-rc.1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Ansatz 1: Meta.tag (Taskforce Metadaten)</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#überblick" id="markdown-toc-überblick">Überblick</a></li>
+  <li><a href="#vokabulare-zur-inhaltlichen-beschreibung" id="markdown-toc-vokabulare-zur-inhaltlichen-beschreibung">Vokabulare zur inhaltlichen Beschreibung</a></li>
+  <li><a href="#technische-implementierung-in-metatag" id="markdown-toc-technische-implementierung-in-metatag">Technische Implementierung in Meta.tag</a></li>
+  <li><a href="#beispiel" id="markdown-toc-beispiel">Beispiel</a></li>
+  <li><a href="#verhalten-von-metatag-auf-fhir-servern" id="markdown-toc-verhalten-von-metatag-auf-fhir-servern">Verhalten von Meta.tag auf FHIR-Servern</a></li>
+  <li><a href="#vorteile" id="markdown-toc-vorteile">Vorteile</a></li>
+  <li><a href="#limitierungen" id="markdown-toc-limitierungen">Limitierungen</a></li>
+  <li><a href="#bezug-zum-mii-kerndatensatz" id="markdown-toc-bezug-zum-mii-kerndatensatz">Bezug zum MII-Kerndatensatz</a></li>
+  <li><a href="#ausblick" id="markdown-toc-ausblick">Ausblick</a></li>
+</ul>
+
+</div>
+<h3 id="überblick">Überblick</h3>
+
+<p>Das Provenancekonzept der MII Taskforce Metadaten (Löbe et al., Juli 2025) beschreibt Lösungsvorschläge für Anwendungsfälle, die sich nicht durch dedizierte Elemente der FHIR-Ressourcen abbilden lassen (siehe <a href="technische-grundlagen.html">Ebene 1 der Technischen Grundlagen</a>). Provenance-Implementierungen in der MII sollen nie dazu führen, dass Informationen nicht in den spezifisch dafür vorgesehenen Ressourcen, Elementen oder Attributen hinterlegt werden.</p>
+
+<p>Im Vordergrund steht ein leichtgewichtiger Entwurf als einfach nutzbares Modell, der zeitnah und mit geringen Ressourcen in den DIZ umgesetzt und später erweitert werden kann. Er fokussiert auf HL7 FHIR als Austauschformat des MII-Kerndatensatzes (MII-KDS), berücksichtigt aber bei der Spezifikation die prinzipielle Anwendbarkeit von Datenmodell und Wertelisten in anderen Formaten zwecks internationaler Interoperabilität.</p>
+
+<h3 id="vokabulare-zur-inhaltlichen-beschreibung">Vokabulare zur inhaltlichen Beschreibung</h3>
+
+<p>Zentrales Ziel des Konzepts ist es, aus der Community geäußerte Bedarfe an Provenance-Informationen gleichförmig in der MII abzubilden. Dazu werden disjunkte Vokabulare erarbeitet und zentral gepflegt. Es werden nur solche Vokabulare angelegt, für die mindestens ein Datenhalter Bedarf sieht und eine Implementierung plant. Der Anwendungsfall jedes Vokabulars wird klar beschrieben. Die Entwicklung erfolgt in einem webbasierten, kollaborativen Werkzeug mit minimalem Audit Trail (WebProtege). Die technische Bereitstellung soll längerfristig über die MII-Infrastrukturen (Terminologieserver) erfolgen.</p>
+
+<p>Aktuell sind folgende Vokabulare im Entwurf:</p>
+
+<h4 id="gruppe-datencharakteristik">Gruppe Datencharakteristik</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Vokabular</th>
+      <th>Beschreibung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Datenklasse</td>
+      <td>Schutzklasse der Daten</td>
+    </tr>
+    <tr>
+      <td>Datenentstehung</td>
+      <td>Berechnete oder extrahierte Datumswerte</td>
+    </tr>
+    <tr>
+      <td>Datenerhebungskontext</td>
+      <td>Forschung, Versorgung, Abrechnung</td>
+    </tr>
+    <tr>
+      <td>Datenkategorie</td>
+      <td>Grob nach Einteilung der KDS-Module</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="gruppe-datenquelle">Gruppe Datenquelle</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Vokabular</th>
+      <th>Beschreibung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Datenlieferant</td>
+      <td>Erbringer der Daten (z.B. Organisationseinheit)</td>
+    </tr>
+    <tr>
+      <td>Datenbereitstellungsweg</td>
+      <td>Technische Bereitstellung</td>
+    </tr>
+    <tr>
+      <td>Datenquellformat</td>
+      <td>Format der Quelldaten</td>
+    </tr>
+    <tr>
+      <td>Datenquellmodell</td>
+      <td>Informationsmodellschema (z.B. OMOP)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="gruppe-datenqualität-und-kuration">Gruppe Datenqualität und Kuration</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Vokabular</th>
+      <th>Beschreibung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Datenqualitätsannotation</td>
+      <td>Qualitätshinweise</td>
+    </tr>
+    <tr>
+      <td>Datenqualitätsprüfung</td>
+      <td>Erfolgreich/fehlgeschlagen</td>
+    </tr>
+    <tr>
+      <td>Datenqualitätsstufe</td>
+      <td>Qualitätsniveau</td>
+    </tr>
+    <tr>
+      <td>Validierung</td>
+      <td>Validierungsergebnis</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="gruppe-datenquellsystem">Gruppe Datenquellsystem</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Vokabular</th>
+      <th>Beschreibung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Datenquellsystemart</td>
+      <td>Primärsystem oder Sekundärsystem</td>
+    </tr>
+    <tr>
+      <td>Datenquellsystemhersteller</td>
+      <td>Akteur</td>
+    </tr>
+    <tr>
+      <td>Datenquellsystemname</td>
+      <td>Umgangsname (z.B. REDCap)</td>
+    </tr>
+    <tr>
+      <td>Datenquellsystemtyp</td>
+      <td>LIMS, PDMS, etc.</td>
+    </tr>
+    <tr>
+      <td>Datenquellsystemversion</td>
+      <td>Versionsinformation</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="gruppe-datentransformationssystem">Gruppe Datentransformationssystem</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Vokabular</th>
+      <th>Beschreibung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Datentransformationssystemhersteller</td>
+      <td>Hersteller</td>
+    </tr>
+    <tr>
+      <td>Datentransformationssystemname</td>
+      <td>Name</td>
+    </tr>
+    <tr>
+      <td>Datentransformationssystemtyp</td>
+      <td>Typ</td>
+    </tr>
+    <tr>
+      <td>Datentransformationssystemversion</td>
+      <td>Version</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="gruppe-organisation">Gruppe Organisation</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Vokabular</th>
+      <th>Beschreibung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Organisation</td>
+      <td>Platzhalter bis Erweiterungsmodul Strukturdaten</td>
+    </tr>
+    <tr>
+      <td>Organisationseinheit</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Projekt</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="technische-implementierung-in-metatag">Technische Implementierung in Meta.tag</h3>
+
+<p>Das Element <code class="language-plaintext highlighter-rouge">meta</code> ist Teil der abstrakten Ressource <code class="language-plaintext highlighter-rouge">Resource</code> und Bestandteil aller FHIR-Ressourcen. Somit steht es in allen FHIR-Ressourcen und Profilen gleichförmig zur Verfügung. Der Datentyp <code class="language-plaintext highlighter-rouge">Meta</code> enthält 6 Attribute, von denen 3 für Provenance prinzipiell in Frage kommen:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribut</th>
+      <th>Kardinalität</th>
+      <th>Typ</th>
+      <th>Bewertung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">source</code></td>
+      <td>0..1</td>
+      <td>uri</td>
+      <td>URI des Quellsystems. In der FHIR-Spezifikation explizit als Provenance bezeichnet. Für dieses Konzept jedoch <strong>nicht vorgesehen</strong>, da es nur einmal vorkommen kann und URIs lokal manuell verwaltet werden müssen.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">security</code></td>
+      <td>0..*</td>
+      <td>Coding</td>
+      <td>Sicherheits-/Vertraulichkeitsauszeichnung. Liegt im Bereich dieses Konzepts (Datenklasse), die genaue Abgrenzung (z.B. zwischen "normal" und "restricted") muss noch in den MII-Gremien abgestimmt werden.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">tag</code></td>
+      <td>0..*</td>
+      <td>Coding</td>
+      <td>Tags (Schlagwörter) aus einem kontrollierten Vokabular. Werden laut Spezifikation verwendet, um Ressourcen mit Prozessen und Arbeitsabläufen zu verknüpfen. <strong>Bevorzugter Mechanismus dieses Konzepts.</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Das Konzept basiert im Wesentlichen auf der Nutzung von <code class="language-plaintext highlighter-rouge">Meta.tag</code>. Einer Ressource (und über die Nutzung von <code class="language-plaintext highlighter-rouge">Bundle</code> auch Gruppen von Ressourcen) können beliebig viele Schlagwörter aus beliebig vielen Vokabularen (CodeSystems) zugeordnet werden. Dies erlaubt die notwendige Freiheit, beliebige Aussagen über Ressourcen treffen zu können, die aber auf zentral abgestimmte Vokabulare referenzieren. Tags interferieren nicht mit der normativen Semantik der FHIR-Ressourcen.</p>
+
+<h3 id="beispiel">Beispiel</h3>
+
+<p>Das folgende Minimalbeispiel in FSH zeigt die Umsetzung an einem Patienten "John Anyperson", für den mit dem Tag "success" aus dem abgestimmten Vokabular "Validation Outcome Code System" ausgesagt wird, dass eine Validierung erfolgreich war. Die eigentliche Aussage erfordert nur <strong>1 Zeile Code</strong>.</p>
+
+<pre><code class="language-fsh">CodeSystem:  ValidationOutcomeCS
+Id:          mii-cs-validation-outcomes-add
+Title:       "Validation Outcome Code System"
+Description: "For demonstration, additional codes needed."
+* ^url = "http://www.medizininformatik-initiative.de/fhir/ValueSet/mii-cs-validation-outcomes"
+* #success "Success"
+* #not-done "Not done"
+
+Instance: PatientExample
+InstanceOf: Patient
+Description: "Example of Patient"
+* name.family = "Anyperson"
+* name.given[0] = "John"
+* gender = #male
+* birthDate = "1951-01-20"
+* meta.tag[0] = ValidationOutcomeCS#success "Validierung erfolgreich"
+</code></pre>
+
+<h3 id="verhalten-von-metatag-auf-fhir-servern">Verhalten von Meta.tag auf FHIR-Servern</h3>
+
+<p>Für die praktische Umsetzung des Meta.tag-Ansatzes in den DIZ ist das Verhalten der eingesetzten FHIR-Server relevant. Die folgende Übersicht bezieht sich auf die in der MII verbreiteten Server-Implementierungen.</p>
+
+<h4 id="tag-persistenz-bei-updates-fhir-spezifikation">Tag-Persistenz bei Updates (FHIR-Spezifikation)</h4>
+
+<p>Die FHIR-Spezifikation schreibt vor, dass Tags bei einem Update einer Ressource <strong>automatisch in die neue Version übernommen</strong> werden, auch wenn sie im Update-Request nicht explizit enthalten sind. Dieses Verhalten stellt sicher, dass einmal gesetzte Provenance-Tags nicht versehentlich verloren gehen. Clients können dieses Verhalten über den HTTP-Header <code class="language-plaintext highlighter-rouge">X-Meta-Snapshot-Mode: TAG</code> übersteuern – in diesem Fall werden nur die im Request enthaltenen Tags übernommen.</p>
+
+<h4 id="suche-über-den-_tag-parameter">Suche über den <code class="language-plaintext highlighter-rouge">_tag</code>-Parameter</h4>
+
+<p>Der Suchparameter <code class="language-plaintext highlighter-rouge">_tag</code> ist ein Standard-FHIR-Suchparameter, der auf allen FHIR-Ressourcentypen definiert ist. Die Syntax lautet:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/Patient?_tag=http://example.org/cs|code
+</code></pre></div></div>
+
+<p>Damit lassen sich alle Ressourcen finden, die mit einem bestimmten Tag ausgezeichnet sind – eine zentrale Voraussetzung für die Nutzbarkeit des Meta.tag-Ansatzes.</p>
+
+<h4 id="hapi-fhir--smile-cdr">HAPI FHIR / Smile CDR</h4>
+
+<p>HAPI FHIR bietet drei Speichermodi für Tags (konfigurierbar über <code class="language-plaintext highlighter-rouge">Tag Storage Mode</code>):</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Modus</th>
+      <th>Verhalten</th>
+      <th>Suchbar</th>
+      <th>Geeignet für</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>NON_VERSIONED</strong> (Standard)</td>
+      <td>Tags werden in dedizierten Datenbanktabellen gespeichert, eine Kollektion für alle Versionen einer Ressource. Hinzufügen/Entfernen eines Tags betrifft <strong>alle Versionen</strong>.</td>
+      <td>Ja</td>
+      <td>Wenige, gemeinsam genutzte Tags über viele Ressourcen</td>
+    </tr>
+    <tr>
+      <td><strong>VERSIONED</strong></td>
+      <td>Separate Tag-Kollektion pro Ressourcenversion. Änderungen betreffen nur die jeweilige Version.</td>
+      <td>Ja</td>
+      <td>Versionsspezifische Tag-Nachverfolgung</td>
+    </tr>
+    <tr>
+      <td><strong>INLINE</strong></td>
+      <td>Tags werden direkt im Ressourcen-Body gespeichert.</td>
+      <td><strong>Nein</strong> (außer bei manuell angelegtem SearchParameter)</td>
+      <td>Hohe Kardinalität, viele einzigartige Tags</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Wichtig für DIZ-Implementierungen:</strong> Im Standard-Modus (NON_VERSIONED) wird die Eindeutigkeit eines Tags nur über <code class="language-plaintext highlighter-rouge">system</code> + <code class="language-plaintext highlighter-rouge">code</code> bestimmt – das <code class="language-plaintext highlighter-rouge">display</code>-Feld hat keinen Einfluss. Im INLINE-Modus funktioniert die <code class="language-plaintext highlighter-rouge">_tag</code>-Suche nicht ohne zusätzliche Konfiguration.</p>
+
+<h4 id="blaze-samply">Blaze (Samply)</h4>
+
+<p>Blaze unterstützt laut Dokumentation alle FHIR R4 Suchparameter, einschließlich <code class="language-plaintext highlighter-rouge">_tag</code>. Die genauen Speicher- und Persistenzmechanismen für Tags sind in der aktuellen Dokumentation nicht im Detail beschrieben. Die tatsächlichen Fähigkeiten können über das CapabilityStatement (<code class="language-plaintext highlighter-rouge">/fhir/metadata</code>) abgefragt werden.</p>
+
+<p><em>Quellen: <a href="https://smilecdr.com/docs/fhir_repository/tags_profiles_and_labels.html">Smile CDR: Tags, Profiles, and Security Labels</a>, <a href="https://docs.oracle.com/en/industries/health-sciences/healthcare-data-repository/8.2/fhir-guide/tag-retention.html">Oracle FHIR: Tag Retention</a>, <a href="https://samply.github.io/blaze/">Samply Blaze</a></em></p>
+
+<h3 id="vorteile">Vorteile</h3>
+
+<ul>
+  <li>Einfache Implementierbarkeit</li>
+  <li>Bestehende ETL-Strecken können sukzessive geändert werden und erzeugen bis dahin keine "invaliden" MII-FHIR-Strukturen</li>
+  <li>Existierende Daten können mit minimalem Aufwand ergänzt werden</li>
+  <li>Geringer Aufwand verglichen mit zusätzlichen Ressourcen wie FHIR Provenance oder Extensions</li>
+  <li>Bestehende Implementierungsleitfäden der MII-Module bleiben gültig</li>
+  <li>Keine Performanzprobleme durch steigende Ressourcenzahl, keine Ausleitungsprobleme durch abhängige Ressourcen</li>
+  <li>Umsetzung kann priorisiert in überschaubaren Schritten erfolgen</li>
+</ul>
+
+<h3 id="limitierungen">Limitierungen</h3>
+
+<ul>
+  <li>Keine Nutzung des Ressourcentyps FHIR Provenance, der inhaltlich für solche Anwendungen vorgesehen ist – damit limitierte Nützlichkeit im internationalen Kontext. Es steht den Datenhaltern aber frei, solche Ressourcen zusätzlich zu erzeugen.</li>
+  <li>Limitierte Mächtigkeit: keine komplexen Aussagen mit mehreren Entitäten</li>
+  <li>Keine ValueSets aus mehreren CodeSystems zusammensetzbar</li>
+  <li>Keine normativen Pflichtfelder in v1.0</li>
+</ul>
+
+<h3 id="bezug-zum-mii-kerndatensatz">Bezug zum MII-Kerndatensatz</h3>
+
+<p>Der Kerndatensatz der MII ist modular aufgebaut mit Basismodulen (verpflichtend) und Erweiterungsmodulen (konditional). Das vorliegende Konzept in Version 1.0 enthält keine besonderen Verpflichtungen für einzelne Module oder Modularten und erzeugt auch keine Abhängigkeiten der Informationsmodelle. Das bedeutet im Besonderen, dass es <strong>keine Pflichtfelder</strong> gibt. Obwohl das Fehlen von Pflichtfeldern häufig dazu führt, dass die Informationen nicht ausgezeichnet werden, sah die Taskforce die größere Gefahr in einer zeitlich langwierigen Konsentierung der Pflichtfelder.</p>
+
+<h3 id="ausblick">Ausblick</h3>
+
+<p>Das Konzept ist bislang nur prototypisch getestet und bedarf der Rückmeldung aus den implementierenden Datenintegrationszentren, um die Passförmigkeit für aktuelle Bedarfe und nötige Weiterentwicklungen abschätzen zu können. Die Taskforce Metadaten plant, eine verbesserte <strong>Version 2.0 in 12 Monaten</strong> abzustimmen und bereitzustellen. In dieser Version können dann auch Pflichtauszeichnungen (konditional für bestimmte Anwendungsfälle) enthalten sein. Spätere Versionen des Konzepts werden den Weg über die FHIR Provenance Ressource ausführen.</p>
+
+<p><em>Quelle: MII Taskforce Metadaten, Konzeptpapier v1.0, 13.07.2025 (Matthias Löbe et al.)</em></p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  Package mii-ig-metadaten-provenance-de-v2026#0.2.0-rc.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jul 23, 2026 11:57+0000">2026-07-23</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

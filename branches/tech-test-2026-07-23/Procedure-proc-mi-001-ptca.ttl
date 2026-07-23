@@ -1,0 +1,40 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Procedure/proc-mi-001-ptca> a fhir:Procedure ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "proc-mi-001-ptca"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Procedure proc-mi-001-ptca</b></p><a name=\"proc-mi-001-ptca\"> </a><a name=\"hcproc-mi-001-ptca\"> </a><p><b>status</b>: Completed</p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/ops 8-837.k0}\">Perkutan-transluminale Gefäßintervention an Herz und Koronargefäßen: Einlegen eines beschichteten Stents in Koronargefäße: Ein Stent</span></p><p><b>subject</b>: <a href=\"Patient-pat-mi-001.html\">Anonymous Patient Male, DoB: 1958-04-22 ( https://example.org/fhir/sid/patienten-pseudonym#P21-MI-001)</a></p><p><b>encounter</b>: <a href=\"Encounter-enc-mi-001.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP); period = 2026-03-01 08:42:00+0100 --&gt; 2026-03-15 14:30:00+0100</a></p><p><b>performed</b>: 2026-03-01 11:18:00+0100</p></div>"
+  ] ;
+  fhir:Procedure.status [ fhir:value "completed"] ;
+  fhir:Procedure.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/bfarm/ops" ] ;
+       fhir:Coding.code [ fhir:value "8-837.k0" ] ;
+       fhir:Coding.display [ fhir:value "Perkutan-transluminale Gefäßintervention an Herz und Koronargefäßen: Einlegen eines beschichteten Stents in Koronargefäße: Ein Stent" ]
+     ]
+  ] ;
+  fhir:Procedure.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Patient/pat-mi-001> ;
+     fhir:Reference.reference [ fhir:value "Patient/pat-mi-001" ]
+  ] ;
+  fhir:Procedure.encounter [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Encounter/enc-mi-001> ;
+     fhir:Reference.reference [ fhir:value "Encounter/enc-mi-001" ]
+  ] ;
+  fhir:Procedure.performedDateTime [ fhir:value "2026-03-01T11:18:00+01:00"^^xsd:dateTime] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Procedure/proc-mi-001-ptca.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

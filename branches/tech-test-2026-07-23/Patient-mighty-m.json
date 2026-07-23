@@ -1,0 +1,14 @@
+{
+  "resourceType" : "Patient",
+  "id" : "mighty-m",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient mighty-m</b></p><a name=\"mighty-m\"> </a><a name=\"hcmighty-m\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Mighty M  Male, DoB: 1982-02-05</p><hr/></div>"
+  },
+  "name" : [{
+    "family" : "M",
+    "given" : ["Mighty"]
+  }],
+  "gender" : "male",
+  "birthDate" : "1982-02-05"
+}

@@ -1,0 +1,139 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/CodeSystem/dq-rule-successful> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "dq-rule-successful"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem dq-rule-successful</b></p><a name=\"dq-rule-successful\"> </a><a name=\"hcdq-rule-successful\"> </a><p><b>Properties</b></p><p><b>This code system defines the following properties for its concepts</b></p><table class=\"grid\"><tr><td><b>Name</b></td><td><b>Code</b></td><td><b>Type</b></td><td><b>Description</b></td></tr><tr><td>error-message</td><td>error-message</td><td>string</td><td>Fehlermeldung im Fall des Anschlagens der Regel.</td></tr></table><p><b>Concepts</b></p><p>This  code system <code>http://mii.de/CodeSystem/dq-rule-successful</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">OP-1<a name=\"dq-rule-successful-OP-1\"> </a></td><td>Surgery has to be after admission.</td></tr><tr><td style=\"white-space:nowrap\">OP-2<a name=\"dq-rule-successful-OP-2\"> </a></td><td>Surgery appointment is required.</td></tr><tr><td style=\"white-space:nowrap\">Discharge-1<a name=\"dq-rule-successful-Discharge-1\"> </a></td><td>Discharge has to be at least 2 days after surgery.</td></tr><tr><td style=\"white-space:nowrap\">DosisMedic-1<a name=\"dq-rule-successful-DosisMedic-1\"> </a></td><td>Dosis of medication is a required item.</td></tr><tr><td style=\"white-space:nowrap\">DosisMedic-2<a name=\"dq-rule-successful-DosisMedic-2\"> </a></td><td>Dosis of medication has to be between 50 and 250 mmol.</td></tr></table></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "http://mii.de/CodeSystem/dq-rule-successful"] ;
+  fhir:CodeSystem.version [ fhir:value "0.2.0-rc.1"] ;
+  fhir:CodeSystem.name [ fhir:value "DQ_Rule_Successful"] ;
+  fhir:CodeSystem.status [ fhir:value "draft"] ;
+  fhir:CodeSystem.date [ fhir:value "2026-07-23T11:57:36+00:00"^^xsd:dateTime] ;
+  fhir:CodeSystem.publisher [ fhir:value "Medizininformatik Initiative"] ;
+  fhir:CodeSystem.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "Medizininformatik Initiative" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.medizininformatik-initiative.de/" ]
+     ]
+  ] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.count [ fhir:value "5"^^xsd:nonNegativeInteger] ;
+  fhir:CodeSystem.property [
+     fhir:index 0 ;
+     fhir:CodeSystem.property.code [ fhir:value "error-message" ] ;
+     fhir:CodeSystem.property.description [ fhir:value "Fehlermeldung im Fall des Anschlagens der Regel." ] ;
+     fhir:CodeSystem.property.type [ fhir:value "string" ]
+  ] ;
+  fhir:CodeSystem.concept [
+     fhir:index 0 ;
+     fhir:CodeSystem.concept.code [ fhir:value "OP-1" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Surgery has to be after admission." ] ;
+     fhir:CodeSystem.concept.property [
+       fhir:index 0 ;
+       fhir:CodeSystem.concept.property.code [ fhir:value "rule-type" ] ;
+       fhir:CodeSystem.concept.property.valueCode [ fhir:value "after" ]
+     ], [
+       fhir:index 1 ;
+       fhir:CodeSystem.concept.property.code [ fhir:value "comperator" ] ;
+       fhir:CodeSystem.concept.property.valueCoding [
+         fhir:Coding.system [ fhir:value "http://trial.info/dq" ] ;
+         fhir:Coding.code [ fhir:value "Admission" ]
+       ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "OP-2" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Surgery appointment is required." ] ;
+     fhir:CodeSystem.concept.property [
+       fhir:index 0 ;
+       fhir:CodeSystem.concept.property.code [ fhir:value "rule-type" ] ;
+       fhir:CodeSystem.concept.property.valueCode [ fhir:value "required" ]
+     ]
+  ], [
+     fhir:index 2 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Discharge-1" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Discharge has to be at least 2 days after surgery." ] ;
+     fhir:CodeSystem.concept.property [
+       fhir:index 0 ;
+       fhir:CodeSystem.concept.property.code [ fhir:value "rule-type" ] ;
+       fhir:CodeSystem.concept.property.valueCode [ fhir:value "after" ]
+     ], [
+       fhir:index 1 ;
+       fhir:CodeSystem.concept.property.code [ fhir:value "comperator" ] ;
+       fhir:CodeSystem.concept.property.valueCoding [
+         fhir:Coding.system [ fhir:value "http://trial.info/dq" ] ;
+         fhir:Coding.code [ fhir:value "OP" ]
+       ]
+     ], [
+       fhir:index 2 ;
+       fhir:CodeSystem.concept.property.code [ fhir:value "min" ] ;
+       fhir:CodeSystem.concept.property.valueDecimal [ fhir:value "2"^^xsd:decimal ]
+     ]
+  ], [
+     fhir:index 3 ;
+     fhir:CodeSystem.concept.code [ fhir:value "DosisMedic-1" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Dosis of medication is a required item." ] ;
+     fhir:CodeSystem.concept.property [
+       fhir:index 0 ;
+       fhir:CodeSystem.concept.property.code [ fhir:value "rule-type" ] ;
+       fhir:CodeSystem.concept.property.valueCode [ fhir:value "required" ]
+     ], [
+       fhir:index 1 ;
+       fhir:CodeSystem.concept.property.code [ fhir:value "comperator" ] ;
+       fhir:CodeSystem.concept.property.valueCoding [
+         fhir:Coding.system [ fhir:value "http://trial.info/dq" ] ;
+         fhir:Coding.code [ fhir:value "Medication" ]
+       ]
+     ], [
+       fhir:index 2 ;
+       fhir:CodeSystem.concept.property.code [ fhir:value "value" ] ;
+       fhir:CodeSystem.concept.property.valueString [ fhir:value "eq 1" ]
+     ]
+  ], [
+     fhir:index 4 ;
+     fhir:CodeSystem.concept.code [ fhir:value "DosisMedic-2" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Dosis of medication has to be between 50 and 250 mmol." ] ;
+     fhir:CodeSystem.concept.property [
+       fhir:index 0 ;
+       fhir:CodeSystem.concept.property.code [ fhir:value "rule-type" ] ;
+       fhir:CodeSystem.concept.property.valueCode [ fhir:value "range" ]
+     ], [
+       fhir:index 1 ;
+       fhir:CodeSystem.concept.property.code [ fhir:value "comperator" ] ;
+       fhir:CodeSystem.concept.property.valueCoding [
+         fhir:Coding.system [ fhir:value "http://trial.info/dq" ] ;
+         fhir:Coding.code [ fhir:value "UnitMedication" ]
+       ]
+     ], [
+       fhir:index 2 ;
+       fhir:CodeSystem.concept.property.code [ fhir:value "value" ] ;
+       fhir:CodeSystem.concept.property.valueString [ fhir:value "mmol" ]
+     ], [
+       fhir:index 3 ;
+       fhir:CodeSystem.concept.property.code [ fhir:value "min" ] ;
+       fhir:CodeSystem.concept.property.valueDecimal [ fhir:value "50"^^xsd:decimal ]
+     ], [
+       fhir:index 4 ;
+       fhir:CodeSystem.concept.property.code [ fhir:value "max" ] ;
+       fhir:CodeSystem.concept.property.valueDecimal [ fhir:value "250"^^xsd:decimal ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/CodeSystem/dq-rule-successful.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

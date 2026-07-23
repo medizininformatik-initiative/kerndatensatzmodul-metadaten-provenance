@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Provenance xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-provenance-abrechnung-import"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/StructureDefinition/mii-pr-provenance-prozedur-herkunft|0.2.0-rc.1"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Provenance mii-exa-provenance-abrechnung-import</b></p><a name="mii-exa-provenance-abrechnung-import"> </a><a name="hcmii-exa-provenance-abrechnung-import"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-provenance-prozedur-herkunft.html">MII PR Provenance Ressourcen-Herkunft</a> version: 0.2.0-rc.1</p></div><p>Provenance for <a href="https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Procedure/op-1">Procedure/op-1</a></p><p>Summary</p><table class="grid"><tr><td>Recorded</td><td>2025-03-13 08:15:00+0100</td></tr><tr><td>Activity</td><td><span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/CodeSystem/mii-cs-provenance-prozedur-herkunft abrechnung}">Abrechnungsprozedur</span></td></tr></table><p><b>Agents</b></p><table class="grid"><tr><td><b>Type</b></td><td><b>who</b></td></tr><tr><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/provenance-participant-type assembler}">Assembler</span></td><td>KIS-ETL-Strecke (DIZ)</td></tr></table></div>
+  </text>
+  <target>
+    <reference value="Procedure/op-1"/>
+  </target>
+  <recorded value="2025-03-13T08:15:00+01:00"/>
+  <activity>
+    <coding>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/CodeSystem/mii-cs-provenance-prozedur-herkunft"/>
+      <code value="abrechnung"/>
+      <display value="Abrechnungsprozedur"/>
+    </coding>
+  </activity>
+  <agent>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/provenance-participant-type"/>
+        <code value="assembler"/>
+        <display value="Assembler"/>
+      </coding>
+    </type>
+    <who>
+      <display value="KIS-ETL-Strecke (DIZ)"/>
+    </who>
+  </agent>
+  <entity>
+    <role value="source"/>
+    <what>
+      <identifier>
+        <system value="https://example.org/fhir/identifiers/fall-nummer"/>
+        <value value="2025-KH-00472"/>
+      </identifier>
+      <display value="Abrechnungsfall"/>
+    </what>
+  </entity>
+</Provenance>

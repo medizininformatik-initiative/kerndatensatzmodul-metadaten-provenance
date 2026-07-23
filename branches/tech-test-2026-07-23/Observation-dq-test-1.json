@@ -1,0 +1,33 @@
+{
+  "resourceType" : "Observation",
+  "id" : "dq-test-1",
+  "meta" : {
+    "tag" : [{
+      "system" : "http://mii.de/CodeSystem/dq-rule-successful",
+      "code" : "DosisMedic-1"
+    },
+    {
+      "system" : "http://mii.de/CodeSystem/dq-rule-successful",
+      "code" : "DosisMedic-2"
+    }]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation dq-test-1</b></p><a name=\"dq-test-1\"> </a><a name=\"hcdq-test-1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Tags: <a href=\"CodeSystem-dq-rule-successful.html\">Dosis of medication is a required item. (Details: DQ_Rule_Successful code DosisMedic-1 = 'Dosis of medication is a required item.')</a>, <a href=\"CodeSystem-dq-rule-successful.html\">Dosis of medication has to be between 50 and 250 mmol. (Details: DQ_Rule_Successful code DosisMedic-2 = 'Dosis of medication has to be between 50 and 250 mmol.')</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://purl.bioontology.org/ontology/SNOMEDCT/ 398232005}\">Drug dose</span></p><p><b>subject</b>: <a href=\"Patient-mighty-m.html\">Mighty M  Male, DoB: 1982-02-05</a></p><p><b>value</b>: 90 mmol</p></div>"
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "http://purl.bioontology.org/ontology/SNOMEDCT/",
+      "code" : "398232005"
+    }],
+    "text" : "Drug dose"
+  },
+  "subject" : {
+    "reference" : "Patient/mighty-m"
+  },
+  "valueQuantity" : {
+    "value" : 90,
+    "unit" : "mmol"
+  }
+}

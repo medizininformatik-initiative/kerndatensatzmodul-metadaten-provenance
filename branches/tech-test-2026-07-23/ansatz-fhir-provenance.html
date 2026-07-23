@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Ansatz 2: FHIR Provenance Ressource (BZKF) - MII IG Kerndatensatz-Modul Metadaten Provenance v0.2.0-rc.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"6"}
+    h3,h4,h5,h6{--heading-prefix:"6"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Metadaten Provenance</span>
+            <br/>
+            <span style="display:inline-block;">0.2.0-rc.1 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Hintergrund
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="motivation.html">Motivation</a>
+      </li>
+      <li>
+        <a href="technische-grundlagen.html">Technische Grundlagen</a>
+      </li>
+      <li>
+        <a href="isik.html">ISiK (gematik)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Ansätze
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="ansatz-metatag.html">Meta.tag (Taskforce)</a>
+      </li>
+      <li>
+        <a href="ansatz-fhir-provenance.html">FHIR Provenance (BZKF)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Anwendungsbeispiele
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="anwendungsbeispiel-deduplizierung.html">Deduplizierung Onkologie-OP</a>
+      </li>
+      <li>
+        <a href="anwendungsbeispiel-datenqualitaet.html">Datenqualitätsprüfung</a>
+      </li>
+      <li>
+        <a href="anwendungsbeispiel-abrechnungskontext.html">Abrechnungskontext (KHEntgG, SGB V)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Datenqualität
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="dq-framework.html">DQ-Framework</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="usecase-katalog.html">Use Cases</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Ansatz 2: FHIR Provenance Ressource (BZKF)</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Metadaten Provenance - Local Development build (v0.2.0-rc.1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Ansatz 2: FHIR Provenance Ressource (BZKF)</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#konzept" id="markdown-toc-konzept">Konzept</a></li>
+  <li><a href="#implementierungsbeispiel" id="markdown-toc-implementierungsbeispiel">Implementierungsbeispiel</a></li>
+  <li><a href="#elemente-im-detail" id="markdown-toc-elemente-im-detail">Elemente im Detail</a></li>
+  <li><a href="#designentscheidungen" id="markdown-toc-designentscheidungen">Designentscheidungen</a></li>
+  <li><a href="#vorteile" id="markdown-toc-vorteile">Vorteile</a></li>
+  <li><a href="#limitierungen" id="markdown-toc-limitierungen">Limitierungen</a></li>
+</ul>
+
+</div>
+<h3 id="konzept">Konzept</h3>
+
+<p>Die BZKF-Implementierung <a href="https://github.com/bzkf/obds-to-fhir">obds-to-fhir</a> (Christian Gulden, BZKF/Erlangen) nutzt die FHIR Provenance Ressource zur Dokumentation der ETL-Transformation von oBDS-XML-Meldungen zu MII-KDS-konformen FHIR-Ressourcen. Für jede erzeugte Ressource wird eine Provenance-Instanz generiert, die den Transformationsprozess nachvollziehbar macht.</p>
+
+<h3 id="implementierungsbeispiel">Implementierungsbeispiel</h3>
+
+<p>Das folgende Beispiel stammt aus dem <a href="https://github.com/bzkf/obds-to-fhir/blob/8213b51f/mappings/src/test/java/snapshots/io/github/bzkf/obdstofhir/mapper/mii/ProvenanceMapperTest.map_withGivenResources_shouldCreateValidProvenanceResource.approved.fhir.json">ProvenanceMapperTest</a> der obds-to-fhir ETL-Strecke:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Provenance"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"715fbde8..."</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"target"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w"> </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Condition/any"</span><span class="w"> </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"occurredDateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2000-01-01T11:11:11Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"recorded"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2000-01-01T11:11:11Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"activity"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://terminology.hl7.org/CodeSystem/v3-DataOperation"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CREATE"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"create"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"agent"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://terminology.hl7.org/CodeSystem/provenance-participant-type"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"assembler"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Assembler"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"role"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://terminology.hl7.org/CodeSystem/v3-ParticipationType"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AUT"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"author"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"who"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://bzkf.github.io/obds-to-fhir/identifiers/obds-to-fhir-device-id"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"obds-to-fhir-0.0.0-test"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"entity"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"source"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"what"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://bzkf.github.io/obds-to-fhir/identifiers/obds-meldung-id"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="elemente-im-detail">Elemente im Detail</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Element</th>
+      <th>Wert</th>
+      <th>Bedeutung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">target</code></td>
+      <td>Referenz auf erzeugte Ressource</td>
+      <td>Die FHIR-Ressource, die durch die Transformation entstanden ist</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">activity</code></td>
+      <td><code class="language-plaintext highlighter-rouge">v3-DataOperation#CREATE</code></td>
+      <td>Art der Datenoperation (CREATE, UPDATE, etc.)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">agent.type</code></td>
+      <td><code class="language-plaintext highlighter-rouge">provenance-participant-type#assembler</code></td>
+      <td>Das ETL-Tool hat die Ressource zusammengesetzt</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">agent.role</code></td>
+      <td><code class="language-plaintext highlighter-rouge">v3-ParticipationType#AUT</code></td>
+      <td>Das Tool ist Autor der FHIR-Repräsentation</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">agent.who</code></td>
+      <td>Identifier des ETL-Tools</td>
+      <td>Identifikation über Systemname und Version</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">entity.role</code></td>
+      <td><code class="language-plaintext highlighter-rouge">source</code></td>
+      <td>Quelldaten</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">entity.what</code></td>
+      <td>oBDS-Meldungs-ID</td>
+      <td>Die ursprüngliche oBDS-Meldung als Identifier (keine FHIR-Referenz)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="designentscheidungen">Designentscheidungen</h3>
+
+<ul>
+  <li><strong>Standard-Terminologien</strong>: Nutzung von HL7-Vokabularen (<code class="language-plaintext highlighter-rouge">v3-DataOperation</code>, <code class="language-plaintext highlighter-rouge">provenance-participant-type</code>, <code class="language-plaintext highlighter-rouge">v3-ParticipationType</code>) statt eigener CodeSystems</li>
+  <li><strong>Identifier statt Referenzen</strong>: <code class="language-plaintext highlighter-rouge">entity.what</code> und <code class="language-plaintext highlighter-rouge">agent.who</code> nutzen Identifier statt FHIR-Referenzen, da oBDS-Quellmeldungen und das ETL-Tool keine FHIR-Ressourcen auf dem Zielserver sind</li>
+  <li><strong>1:1-Beziehung</strong>: Pro erzeugter FHIR-Ressource wird eine Provenance-Instanz generiert</li>
+  <li><strong>ETL-Fokus</strong>: Die Provenance dokumentiert den Transformationsprozess, nicht die klinische Datenherkunft</li>
+</ul>
+
+<h3 id="vorteile">Vorteile</h3>
+
+<ul>
+  <li>Nutzung der dafür vorgesehenen FHIR-Ressource</li>
+  <li>Internationale Interoperabilität durch W3C PROV-Kompatibilität</li>
+  <li>Komplexe Aussagen mit mehreren Entitäten und Agenten möglich</li>
+  <li>Vollständige Transformationskette dokumentierbar</li>
+  <li>Standardisierte Terminologien für Aktivitäten und Rollen</li>
+</ul>
+
+<h3 id="limitierungen">Limitierungen</h3>
+
+<ul>
+  <li>Erzeugt zusätzliche Ressourcen (Speicher, Performance)</li>
+  <li>ETL-Strecke muss angepasst werden</li>
+  <li>Abhängige Ressourcen bei Datenausleitung</li>
+  <li>Best Practices noch nicht breit etabliert</li>
+</ul>
+
+<p><em>Quelle: <a href="https://github.com/bzkf/obds-to-fhir">bzkf/obds-to-fhir</a>, Christian Gulden (BZKF/Erlangen)</em></p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  Package mii-ig-metadaten-provenance-de-v2026#0.2.0-rc.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jul 23, 2026 11:57+0000">2026-07-23</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

@@ -1,0 +1,46 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "mii-cs-provenance-prozedur-herkunft",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablecodesystem"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-provenance-prozedur-herkunft</b></p><a name=\"mii-cs-provenance-prozedur-herkunft\"> </a><a name=\"hcmii-cs-provenance-prozedur-herkunft\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/uv/crmi/STU2/StructureDefinition-shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/CodeSystem/mii-cs-provenance-prozedur-herkunft</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">obds-import<a name=\"mii-cs-provenance-prozedur-herkunft-obds-import\"> </a></td><td>Import aus oBDS-Melderegister</td><td>Die Prozedur wurde aus dem onkologischen Basisdatensatz (oBDS) via Krebsregistermeldung reimportiert.</td></tr><tr><td style=\"white-space:nowrap\">abrechnung<a name=\"mii-cs-provenance-prozedur-herkunft-abrechnung\"> </a></td><td>Abrechnungsprozedur</td><td>Die Prozedur stammt aus dem Abrechnungssystem (KIS/Routinedaten) des Krankenhauses.</td></tr><tr><td style=\"white-space:nowrap\">deduplizierung<a name=\"mii-cs-provenance-prozedur-herkunft-deduplizierung\"> </a></td><td>Deduplizierung/Zusammenführung</td><td>Die Prozedur ist das Ergebnis einer Deduplizierung/Zusammenführung von Daten aus unterschiedlichen Quellen.</td></tr></table></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/CodeSystem/mii-cs-provenance-prozedur-herkunft",
+  "version" : "0.2.0-rc.1",
+  "name" : "MII_CS_Provenance_Prozedur_Herkunft",
+  "title" : "MII CS Provenance Prozedur Herkunft",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-07-23T11:57:36+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de/"
+    }]
+  }],
+  "description" : "CodeSystem für die Herkunft onkologischer Prozeduren zur Unterscheidung von Datenquellen und Deduplizierungsstatus.",
+  "caseSensitive" : true,
+  "valueSet" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/ValueSet/mii-vs-provenance-prozedur-herkunft",
+  "content" : "complete",
+  "count" : 3,
+  "concept" : [{
+    "code" : "obds-import",
+    "display" : "Import aus oBDS-Melderegister",
+    "definition" : "Die Prozedur wurde aus dem onkologischen Basisdatensatz (oBDS) via Krebsregistermeldung reimportiert."
+  },
+  {
+    "code" : "abrechnung",
+    "display" : "Abrechnungsprozedur",
+    "definition" : "Die Prozedur stammt aus dem Abrechnungssystem (KIS/Routinedaten) des Krankenhauses."
+  },
+  {
+    "code" : "deduplizierung",
+    "display" : "Deduplizierung/Zusammenführung",
+    "definition" : "Die Prozedur ist das Ergebnis einer Deduplizierung/Zusammenführung von Daten aus unterschiedlichen Quellen."
+  }]
+}

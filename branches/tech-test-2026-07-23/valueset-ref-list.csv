@@ -1,0 +1,5 @@
+URL,Version,Status,OIDs,Name,Title,Description,Uses,Used,Sources
+http://hl7.org/fhir/ValueSet/provenance-agent-type,4.0.1,draft,"2.16.840.1.113883.4.642.3.1003",ProvenanceParticipantType,Provenance participant type,"The type of participation a provenance participant.","StructureDefinition/mii-pr-provenance-prozedur-herkunft","THO"
+https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/ValueSet/mii-vs-provenance-prozedur-herkunft,0.2.0-rc.1,draft,,MII_VS_Provenance_Prozedur_Herkunft,MII VS Provenance Prozedur Herkunft,"Value Set für die Herkunft onkologischer Prozeduren zur Unterscheidung von Datenquellen und Deduplizierungsstatus.","StructureDefinition/mii-pr-provenance-prozedur-herkunft","Internal"
+https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/ValueSet/primary,0.2.0-rc.1,draft,,Alle_DQ_Indikatoren_VS,,"",,"Internal"
+https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/ValueSet/procedure-intent-vs,0.2.0-rc.1,draft,,ProcedureIntentVS,Procedure Intent Value Set,"The purpose of a procedure.",,"SCT"

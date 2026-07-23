@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Motivation und Problemstellung - MII IG Kerndatensatz-Modul Metadaten Provenance v0.2.0-rc.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"2"}
+    h3,h4,h5,h6{--heading-prefix:"2"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">MII IG Kerndatensatz-Modul Metadaten Provenance</span>
+            <br/>
+            <span style="display:inline-block;">0.2.0-rc.1 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Hintergrund
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="motivation.html">Motivation</a>
+      </li>
+      <li>
+        <a href="technische-grundlagen.html">Technische Grundlagen</a>
+      </li>
+      <li>
+        <a href="isik.html">ISiK (gematik)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Ansätze
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="ansatz-metatag.html">Meta.tag (Taskforce)</a>
+      </li>
+      <li>
+        <a href="ansatz-fhir-provenance.html">FHIR Provenance (BZKF)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Anwendungsbeispiele
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="anwendungsbeispiel-deduplizierung.html">Deduplizierung Onkologie-OP</a>
+      </li>
+      <li>
+        <a href="anwendungsbeispiel-datenqualitaet.html">Datenqualitätsprüfung</a>
+      </li>
+      <li>
+        <a href="anwendungsbeispiel-abrechnungskontext.html">Abrechnungskontext (KHEntgG, SGB V)</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Datenqualität
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="dq-framework.html">DQ-Framework</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="usecase-katalog.html">Use Cases</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Motivation und Problemstellung</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">MII IG Kerndatensatz-Modul Metadaten Provenance - Local Development build (v0.2.0-rc.1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Motivation und Problemstellung</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#motivation" id="markdown-toc-motivation">Motivation</a></li>
+  <li><a href="#problematik" id="markdown-toc-problematik">Problematik</a></li>
+  <li><a href="#herausforderung-einfachheit-vs-vollständigkeit" id="markdown-toc-herausforderung-einfachheit-vs-vollständigkeit">Herausforderung: Einfachheit vs. Vollständigkeit</a></li>
+</ul>
+
+</div>
+<h3 id="motivation">Motivation</h3>
+
+<p>Versorgungsdaten unterscheiden sich in vielen Punkten von prospektiven Datensammlungen, die klinische Forscher gewohnt sind. Diese Unterschiede müssen ausgedrückt werden können, um korrekte statistische Auswertungen zu ermöglichen. Beispiele sind:</p>
+
+<ul>
+  <li>Fehlende Daten aufgrund systemischer Restriktionen (zeitliche oder örtliche Nichtverfügbarkeit)</li>
+  <li>Mehrfache Dateninstanzen desselben Datums wegen multipler Speicherung (Laborinformationssystem, KIS, Kommunikationsserver)</li>
+  <li>Widersprüchliche Daten durch verschiedene Transformationsprozesse (Diagnosen in klinischer Dokumentation vs. § 21 Datensatz)</li>
+  <li>Unterschiedlich aktuelle Daten (vorläufige Meldungen, Korrekturen, Ausschlüsse, Vidierung)</li>
+  <li>Daten, deren Aussage durch bestimmte Attribute modifiziert oder gar negiert wird (z.B. Ausschlussdiagnosen)</li>
+  <li>Daten, die bei Transformationsprozessen bearbeitet worden und sich von den Quellsystemen unterscheiden, bspw. durch Kurations-, Pseudonymisierungs-, Anonymisierungs- oder Minimierungsverfahren</li>
+</ul>
+
+<h3 id="problematik">Problematik</h3>
+
+<p>Medizinische Daten können bekanntermaßen komplex, groß, schnelllebig und heterogen sein. Im klinischen Alltag werden sie von unterschiedlichen Akteuren mit Hilfe unterschiedlicher Informationssysteme und mit unterschiedlichem Verwendungsziel erhoben. Sollen sie für Zwecke der Forschung genutzt werden, müssen bestimmte Anforderungen an einen Datensatz im Hinblick auf Zugreifbarkeit, Qualität und Vertrauenswürdigkeit erfüllt werden. Datennutzungsprojekte, die Daten aus verschiedenen Quellen über komplexe Verarbeitungsketten zusammenführen, benötigen für die einzelnen Datenpunkte eine Auszeichnung des Kontexts, in dem sie erhoben wurden und der Veränderungen, die in einzelnen Zwischenschritten vorgenommen werden.</p>
+
+<p>Gerade beim Verstehen und Nachvollziehen von Ergebnissen aus wissenschaftlichen Publikationen stellen sich häufig Fragen wie:</p>
+
+<ul>
+  <li>Welche Gruppe hat die Daten verantwortlich erhoben? Expertise? Wem gehören sie?</li>
+  <li>Mit welcher Zielsetzung wurden sie erhoben? Forschung, Behandlung, administrative Belange?</li>
+  <li>Welche Messmethoden wurden verwendet? Gemessen, gefragt, geschätzt, errechnet?</li>
+  <li>Wo kommen die Daten her? Welche Werkzeuge wurden zur Generierung des Datensatzes bzw. der statistischen Ergebnisse genutzt?</li>
+  <li>Wann wurde der Datensatz erzeugt? Welche Änderungen gab es an den Originaldaten?</li>
+  <li>Welche Abhängigkeiten von anderen Daten gibt es?</li>
+  <li>Wurden die Daten kuratiert oder Datenqualitätschecks angewendet?</li>
+  <li>Wurden die Daten im Zuge der Ausleitung geprüft oder verändert, um Anforderungen wie Datensparsamkeit, Datenschutz oder syntaktischer Korrektheit sicherzustellen?</li>
+</ul>
+
+<p>Viele der Antworten auf solche Fragen lassen sich im Nachhinein nicht mehr oder nur mit gewaltigem Aufwand erbringen. Es ist daher von großer Bedeutung, wichtige Parameter frühzeitig zu erfassen.</p>
+
+<p>Auf der anderen Seite lässt sich leicht erkennen, dass es eine Vielzahl theoretisch interessanter Parameter geben könnte und der Aufwand der Erfassung aller möglichen Parameter vom Datenproduzenten nicht leistbar ist. Daher ist eine Konsolidierung und Konsentierung der benötigten Merkmale nach realem Bedarf erforderlich.</p>
+
+<h3 id="herausforderung-einfachheit-vs-vollständigkeit">Herausforderung: Einfachheit vs. Vollständigkeit</h3>
+
+<p>Eine weitere wichtige Anforderung besteht in der Harmonisierung der Ausprägung der Merkmale. Es ist erwartbar, dass beispielsweise die Verpflichtung zur Erfassung der Herkunft in einem gleichnamigen Merkmal eine Vielzahl verschiedener Interpretationen und Ausprägungen hervorbringen würde, die schwer vergleichbar und nicht maschinell interpretierbar wären.</p>
+
+<p>Zusammenfassend ergibt sich daraus die Herausforderung, zwischen einem <strong>einfachen, intuitiv handhabbaren</strong> (aber eventuell ausdrucksbeschränktem) Vokabular und einem <strong>sehr detaillierten, kompletten</strong> Vokabular, welches aber schwer zu erlernen und implementieren ist, zu entscheiden.</p>
+
+<p><em>Quelle: MII Taskforce Metadaten, Konzeptpapier v1.0, 13.07.2025 (Matthias Löbe et al.)</em></p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/">Medizininformatik Initiative</a>.  Package mii-ig-metadaten-provenance-de-v2026#0.2.0-rc.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jul 23, 2026 11:57+0000">2026-07-23</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

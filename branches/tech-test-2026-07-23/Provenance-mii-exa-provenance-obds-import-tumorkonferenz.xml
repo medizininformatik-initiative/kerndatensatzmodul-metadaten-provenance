@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Provenance xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-provenance-obds-import-tumorkonferenz"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/StructureDefinition/mii-pr-provenance-prozedur-herkunft|0.2.0-rc.1"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Provenance mii-exa-provenance-obds-import-tumorkonferenz</b></p><a name="mii-exa-provenance-obds-import-tumorkonferenz"> </a><a name="hcmii-exa-provenance-obds-import-tumorkonferenz"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-provenance-prozedur-herkunft.html">MII PR Provenance Ressourcen-Herkunft</a> version: 0.2.0-rc.1</p></div><p>Provenance for <a href="https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/CarePlan/tumorkonferenz-brustkrebs">CarePlan/tumorkonferenz-brustkrebs</a></p><p>Summary</p><table class="grid"><tr><td>Recorded</td><td>2025-06-12 14:31:00+0200</td></tr><tr><td>Activity</td><td><span title="Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/CodeSystem/mii-cs-provenance-prozedur-herkunft obds-import}">Import aus oBDS-Melderegister</span></td></tr></table><p><b>Agents</b></p><table class="grid"><tr><td><b>Type</b></td><td><b>who</b></td></tr><tr><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/provenance-participant-type assembler}">Assembler</span></td><td>obds-to-fhir ETL (Identifier: <code>https://bzkf.github.io/obds-to-fhir/identifiers/obds-to-fhir-device-id</code>/obds-to-fhir-2.1.0)</td></tr></table></div>
+  </text>
+  <target>
+    <reference value="CarePlan/tumorkonferenz-brustkrebs"/>
+  </target>
+  <recorded value="2025-06-12T14:31:00+02:00"/>
+  <activity>
+    <coding>
+      <system value="https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/CodeSystem/mii-cs-provenance-prozedur-herkunft"/>
+      <code value="obds-import"/>
+      <display value="Import aus oBDS-Melderegister"/>
+    </coding>
+  </activity>
+  <agent>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/provenance-participant-type"/>
+        <code value="assembler"/>
+        <display value="Assembler"/>
+      </coding>
+    </type>
+    <who>
+      <identifier>
+        <system value="https://bzkf.github.io/obds-to-fhir/identifiers/obds-to-fhir-device-id"/>
+        <value value="obds-to-fhir-2.1.0"/>
+      </identifier>
+      <display value="obds-to-fhir ETL"/>
+    </who>
+  </agent>
+  <entity>
+    <role value="source"/>
+    <what>
+      <identifier>
+        <system value="https://bzkf.github.io/obds-to-fhir/identifiers/obds-meldung-id"/>
+        <value value="2025-M-00891"/>
+      </identifier>
+      <display value="oBDS-Meldung Tumorkonferenz-Beschluss"/>
+    </what>
+  </entity>
+</Provenance>

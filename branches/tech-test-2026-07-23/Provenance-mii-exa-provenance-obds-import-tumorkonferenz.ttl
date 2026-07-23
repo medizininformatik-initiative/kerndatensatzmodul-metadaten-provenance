@@ -1,0 +1,72 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Provenance/mii-exa-provenance-obds-import-tumorkonferenz> a fhir:Provenance ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mii-exa-provenance-obds-import-tumorkonferenz"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/StructureDefinition/mii-pr-provenance-prozedur-herkunft|0.2.0-rc.1" ;
+       fhir:index 0 ;
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/StructureDefinition/mii-pr-provenance-prozedur-herkunft|0.2.0-rc.1>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Provenance mii-exa-provenance-obds-import-tumorkonferenz</b></p><a name=\"mii-exa-provenance-obds-import-tumorkonferenz\"> </a><a name=\"hcmii-exa-provenance-obds-import-tumorkonferenz\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-provenance-prozedur-herkunft.html\">MII PR Provenance Ressourcen-Herkunft</a> version: 0.2.0-rc.1</p></div><p>Provenance for <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/CarePlan/tumorkonferenz-brustkrebs\">CarePlan/tumorkonferenz-brustkrebs</a></p><p>Summary</p><table class=\"grid\"><tr><td>Recorded</td><td>2025-06-12 14:31:00+0200</td></tr><tr><td>Activity</td><td><span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/CodeSystem/mii-cs-provenance-prozedur-herkunft obds-import}\">Import aus oBDS-Melderegister</span></td></tr></table><p><b>Agents</b></p><table class=\"grid\"><tr><td><b>Type</b></td><td><b>who</b></td></tr><tr><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/provenance-participant-type assembler}\">Assembler</span></td><td>obds-to-fhir ETL (Identifier: <code>https://bzkf.github.io/obds-to-fhir/identifiers/obds-to-fhir-device-id</code>/obds-to-fhir-2.1.0)</td></tr></table></div>"
+  ] ;
+  fhir:Provenance.target [
+     fhir:index 0 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/CarePlan/tumorkonferenz-brustkrebs> ;
+     fhir:Reference.reference [ fhir:value "CarePlan/tumorkonferenz-brustkrebs" ]
+  ] ;
+  fhir:Provenance.recorded [ fhir:value "2025-06-12T14:31:00+02:00"^^xsd:dateTime] ;
+  fhir:Provenance.activity [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/CodeSystem/mii-cs-provenance-prozedur-herkunft" ] ;
+       fhir:Coding.code [ fhir:value "obds-import" ] ;
+       fhir:Coding.display [ fhir:value "Import aus oBDS-Melderegister" ]
+     ]
+  ] ;
+  fhir:Provenance.agent [
+     fhir:index 0 ;
+     fhir:Provenance.agent.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/provenance-participant-type" ] ;
+         fhir:Coding.code [ fhir:value "assembler" ] ;
+         fhir:Coding.display [ fhir:value "Assembler" ]
+       ]
+     ] ;
+     fhir:Provenance.agent.who [
+       fhir:Reference.identifier [
+         fhir:Identifier.system [ fhir:value "https://bzkf.github.io/obds-to-fhir/identifiers/obds-to-fhir-device-id" ] ;
+         fhir:Identifier.value [ fhir:value "obds-to-fhir-2.1.0" ]
+       ] ;
+       fhir:Reference.display [ fhir:value "obds-to-fhir ETL" ]
+     ]
+  ] ;
+  fhir:Provenance.entity [
+     fhir:index 0 ;
+     fhir:Provenance.entity.role [ fhir:value "source" ] ;
+     fhir:Provenance.entity.what [
+       fhir:Reference.identifier [
+         fhir:Identifier.system [ fhir:value "https://bzkf.github.io/obds-to-fhir/identifiers/obds-meldung-id" ] ;
+         fhir:Identifier.value [ fhir:value "2025-M-00891" ]
+       ] ;
+       fhir:Reference.display [ fhir:value "oBDS-Meldung Tumorkonferenz-Beschluss" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Provenance/mii-exa-provenance-obds-import-tumorkonferenz.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,448 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Bundle/bundle-abrechnungskontext-mi-001> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "bundle-abrechnungskontext-mi-001"] ;
+  fhir:Bundle.identifier [
+     fhir:Identifier.system [ fhir:value "https://medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/bundle" ] ;
+     fhir:Identifier.value [ fhir:value "abrechnungskontext-mi-001" ]
+  ] ;
+  fhir:Bundle.type [ fhir:value "collection"] ;
+  fhir:Bundle.timestamp [ fhir:value "2026-03-16T03:12:00+01:00"^^xsd:dateTime] ;
+  fhir:Bundle.entry [
+     fhir:index 0 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://example.org/fhir/Patient/pat-mi-001" ] ;
+     fhir:Bundle.entry.resource <http://example.org/fhir/Patient/pat-mi-001>
+  ], [
+     fhir:index 1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://example.org/fhir/Encounter/enc-mi-001" ] ;
+     fhir:Bundle.entry.resource <http://example.org/fhir/Encounter/enc-mi-001>
+  ], [
+     fhir:index 2 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://example.org/fhir/Condition/cond-mi-001-hd-i21" ] ;
+     fhir:Bundle.entry.resource <http://example.org/fhir/Condition/cond-mi-001-hd-i21>
+  ], [
+     fhir:index 3 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://example.org/fhir/Condition/cond-mi-001-nd-i10" ] ;
+     fhir:Bundle.entry.resource <http://example.org/fhir/Condition/cond-mi-001-nd-i10>
+  ], [
+     fhir:index 4 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://example.org/fhir/Procedure/proc-mi-001-ptca" ] ;
+     fhir:Bundle.entry.resource <http://example.org/fhir/Procedure/proc-mi-001-ptca>
+  ], [
+     fhir:index 5 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://example.org/fhir/Organization/org-ukb" ] ;
+     fhir:Bundle.entry.resource <http://example.org/fhir/Organization/org-ukb>
+  ], [
+     fhir:index 6 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://example.org/fhir/Device/etl-p21-fhir-v142" ] ;
+     fhir:Bundle.entry.resource <http://example.org/fhir/Device/etl-p21-fhir-v142>
+  ], [
+     fhir:index 7 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://example.org/fhir/Device/src-ikarus-kis-ukb" ] ;
+     fhir:Bundle.entry.resource <http://example.org/fhir/Device/src-ikarus-kis-ukb>
+  ], [
+     fhir:index 8 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://example.org/fhir/DocumentReference/kis-drg-aufbereitung-2026-03-15" ] ;
+     fhir:Bundle.entry.resource <http://example.org/fhir/DocumentReference/kis-drg-aufbereitung-2026-03-15>
+  ], [
+     fhir:index 9 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://example.org/fhir/Provenance/prov-abrechnungskontext-mi-001" ] ;
+     fhir:Bundle.entry.resource <http://example.org/fhir/Provenance/prov-abrechnungskontext-mi-001>
+  ] .
+
+<http://example.org/fhir/Patient/pat-mi-001> a fhir:Patient ;
+  fhir:Resource.id [ fhir:value "pat-mi-001"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_pat-mi-001\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient pat-mi-001</b></p><a name=\"pat-mi-001\"> </a><a name=\"hcpat-mi-001\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Anonymous Patient Male, DoB: 1958-04-22 ( https://example.org/fhir/sid/patienten-pseudonym#P21-MI-001)</p><hr/></div>"
+  ] ;
+  fhir:Patient.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "https://example.org/fhir/sid/patienten-pseudonym" ] ;
+     fhir:Identifier.value [ fhir:value "P21-MI-001" ]
+  ] ;
+  fhir:Patient.gender [ fhir:value "male"] ;
+  fhir:Patient.birthDate [ fhir:value "1958-04-22"^^xsd:date] .
+
+<http://example.org/fhir/Encounter/enc-mi-001> a fhir:Encounter ;
+  fhir:Resource.id [ fhir:value "enc-mi-001"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Encounter_enc-mi-001\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Encounter enc-mi-001</b></p><a name=\"enc-mi-001\"> </a><a name=\"hcenc-mi-001\"> </a><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.2.0/CodeSystem-v3-ActCode.html#v3-ActCode-IMP\">ActCode: IMP</a> (inpatient encounter)</p><p><b>subject</b>: <a href=\"Patient-pat-mi-001.html\">Anonymous Patient Male, DoB: 1958-04-22 ( https://example.org/fhir/sid/patienten-pseudonym#P21-MI-001)</a></p><p><b>period</b>: 2026-03-01 08:42:00+0100 --&gt; 2026-03-15 14:30:00+0100</p><h3>Hospitalizations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>AdmitSource</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/admit-source emd}\">From accident/emergency department</span></td></tr></table></div>"
+  ] ;
+  fhir:Encounter.status [ fhir:value "finished"] ;
+  fhir:Encounter.class [
+     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ] ;
+     fhir:Coding.code [ fhir:value "IMP" ] ;
+     fhir:Coding.display [ fhir:value "inpatient encounter" ]
+  ] ;
+  fhir:Encounter.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Patient/pat-mi-001> ;
+     fhir:Reference.reference [ fhir:value "Patient/pat-mi-001" ]
+  ] ;
+  fhir:Encounter.period [
+     fhir:Period.start [ fhir:value "2026-03-01T08:42:00+01:00"^^xsd:dateTime ] ;
+     fhir:Period.end [ fhir:value "2026-03-15T14:30:00+01:00"^^xsd:dateTime ]
+  ] ;
+  fhir:Encounter.hospitalization [
+     fhir:Encounter.hospitalization.admitSource [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/admit-source" ] ;
+         fhir:Coding.code [ fhir:value "emd" ] ;
+         fhir:Coding.display [ fhir:value "From accident/emergency department" ]
+       ]
+     ]
+  ] .
+
+<http://example.org/fhir/Condition/cond-mi-001-hd-i21> a fhir:Condition ;
+  fhir:Resource.id [ fhir:value "cond-mi-001-hd-i21"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Condition_cond-mi-001-hd-i21\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Condition cond-mi-001-hd-i21</b></p><a name=\"cond-mi-001-hd-i21\"> </a><a name=\"hccond-mi-001-hd-i21\"> </a><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/diagnosis-role billing}\">Billing</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm I21.0}\">Akuter transmuraler Myokardinfarkt der Vorderwand</span></p><p><b>subject</b>: <a href=\"Patient-pat-mi-001.html\">Anonymous Patient Male, DoB: 1958-04-22 ( https://example.org/fhir/sid/patienten-pseudonym#P21-MI-001)</a></p><p><b>encounter</b>: <a href=\"Encounter-enc-mi-001.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP); period = 2026-03-01 08:42:00+0100 --&gt; 2026-03-15 14:30:00+0100</a></p><p><b>recordedDate</b>: 2026-03-15</p></div>"
+  ] ;
+  fhir:Condition.clinicalStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-clinical" ] ;
+       fhir:Coding.code [ fhir:value "active" ]
+     ]
+  ] ;
+  fhir:Condition.verificationStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-ver-status" ] ;
+       fhir:Coding.code [ fhir:value "confirmed" ]
+     ]
+  ] ;
+  fhir:Condition.category [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/diagnosis-role" ] ;
+       fhir:Coding.code [ fhir:value "billing" ] ;
+       fhir:Coding.display [ fhir:value "Billing" ]
+     ]
+  ] ;
+  fhir:Condition.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/bfarm/icd-10-gm" ] ;
+       fhir:Coding.code [ fhir:value "I21.0" ] ;
+       fhir:Coding.display [ fhir:value "Akuter transmuraler Myokardinfarkt der Vorderwand" ]
+     ]
+  ] ;
+  fhir:Condition.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Patient/pat-mi-001> ;
+     fhir:Reference.reference [ fhir:value "Patient/pat-mi-001" ]
+  ] ;
+  fhir:Condition.encounter [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Encounter/enc-mi-001> ;
+     fhir:Reference.reference [ fhir:value "Encounter/enc-mi-001" ]
+  ] ;
+  fhir:Condition.recordedDate [ fhir:value "2026-03-15"^^xsd:date] .
+
+<http://example.org/fhir/Condition/cond-mi-001-nd-i10> a fhir:Condition ;
+  fhir:Resource.id [ fhir:value "cond-mi-001-nd-i10"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Condition_cond-mi-001-nd-i10\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Condition cond-mi-001-nd-i10</b></p><a name=\"cond-mi-001-nd-i10\"> </a><a name=\"hccond-mi-001-nd-i10\"> </a><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/diagnosis-role billing}\">Billing</span></p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm I10.90}\">Essentielle Hypertonie, nicht näher bezeichnet</span></p><p><b>subject</b>: <a href=\"Patient-pat-mi-001.html\">Anonymous Patient Male, DoB: 1958-04-22 ( https://example.org/fhir/sid/patienten-pseudonym#P21-MI-001)</a></p><p><b>encounter</b>: <a href=\"Encounter-enc-mi-001.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP); period = 2026-03-01 08:42:00+0100 --&gt; 2026-03-15 14:30:00+0100</a></p><p><b>recordedDate</b>: 2026-03-15</p></div>"
+  ] ;
+  fhir:Condition.clinicalStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-clinical" ] ;
+       fhir:Coding.code [ fhir:value "active" ]
+     ]
+  ] ;
+  fhir:Condition.verificationStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-ver-status" ] ;
+       fhir:Coding.code [ fhir:value "confirmed" ]
+     ]
+  ] ;
+  fhir:Condition.category [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/diagnosis-role" ] ;
+       fhir:Coding.code [ fhir:value "billing" ] ;
+       fhir:Coding.display [ fhir:value "Billing" ]
+     ]
+  ] ;
+  fhir:Condition.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/bfarm/icd-10-gm" ] ;
+       fhir:Coding.code [ fhir:value "I10.90" ] ;
+       fhir:Coding.display [ fhir:value "Essentielle Hypertonie, nicht näher bezeichnet" ]
+     ]
+  ] ;
+  fhir:Condition.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Patient/pat-mi-001> ;
+     fhir:Reference.reference [ fhir:value "Patient/pat-mi-001" ]
+  ] ;
+  fhir:Condition.encounter [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Encounter/enc-mi-001> ;
+     fhir:Reference.reference [ fhir:value "Encounter/enc-mi-001" ]
+  ] ;
+  fhir:Condition.recordedDate [ fhir:value "2026-03-15"^^xsd:date] .
+
+<http://example.org/fhir/Procedure/proc-mi-001-ptca> a fhir:Procedure ;
+  fhir:Resource.id [ fhir:value "proc-mi-001-ptca"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Procedure_proc-mi-001-ptca\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Procedure proc-mi-001-ptca</b></p><a name=\"proc-mi-001-ptca\"> </a><a name=\"hcproc-mi-001-ptca\"> </a><p><b>status</b>: Completed</p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/ops 8-837.k0}\">Perkutan-transluminale Gefäßintervention an Herz und Koronargefäßen: Einlegen eines beschichteten Stents in Koronargefäße: Ein Stent</span></p><p><b>subject</b>: <a href=\"Patient-pat-mi-001.html\">Anonymous Patient Male, DoB: 1958-04-22 ( https://example.org/fhir/sid/patienten-pseudonym#P21-MI-001)</a></p><p><b>encounter</b>: <a href=\"Encounter-enc-mi-001.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP); period = 2026-03-01 08:42:00+0100 --&gt; 2026-03-15 14:30:00+0100</a></p><p><b>performed</b>: 2026-03-01 11:18:00+0100</p></div>"
+  ] ;
+  fhir:Procedure.status [ fhir:value "completed"] ;
+  fhir:Procedure.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/bfarm/ops" ] ;
+       fhir:Coding.code [ fhir:value "8-837.k0" ] ;
+       fhir:Coding.display [ fhir:value "Perkutan-transluminale Gefäßintervention an Herz und Koronargefäßen: Einlegen eines beschichteten Stents in Koronargefäße: Ein Stent" ]
+     ]
+  ] ;
+  fhir:Procedure.subject [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Patient/pat-mi-001> ;
+     fhir:Reference.reference [ fhir:value "Patient/pat-mi-001" ]
+  ] ;
+  fhir:Procedure.encounter [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Encounter/enc-mi-001> ;
+     fhir:Reference.reference [ fhir:value "Encounter/enc-mi-001" ]
+  ] ;
+  fhir:Procedure.performedDateTime [ fhir:value "2026-03-01T11:18:00+01:00"^^xsd:dateTime] .
+
+<http://example.org/fhir/Organization/org-ukb> a fhir:Organization ;
+  fhir:Resource.id [ fhir:value "org-ukb"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_org-ukb\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization org-ukb</b></p><a name=\"org-ukb\"> </a><a name=\"hcorg-ukb\"> </a><p><b>identifier</b>: <code>http://fhir.de/NamingSystem/arge-ik/iknr</code>/260100000</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/organization-type prov}\">Healthcare Provider</span></p><p><b>name</b>: Universitätsklinikum Beispielstadt</p></div>"
+  ] ;
+  fhir:Organization.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "http://fhir.de/NamingSystem/arge-ik/iknr" ] ;
+     fhir:Identifier.value [ fhir:value "260100000" ]
+  ] ;
+  fhir:Organization.type [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/organization-type" ] ;
+       fhir:Coding.code [ fhir:value "prov" ] ;
+       fhir:Coding.display [ fhir:value "Healthcare Provider" ]
+     ]
+  ] ;
+  fhir:Organization.name [ fhir:value "Universitätsklinikum Beispielstadt"] .
+
+<http://example.org/fhir/Device/etl-p21-fhir-v142> a fhir:Device ;
+  fhir:Resource.id [ fhir:value "etl-p21-fhir-v142"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Device_etl-p21-fhir-v142\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Device etl-p21-fhir-v142</b></p><a name=\"etl-p21-fhir-v142\"> </a><a name=\"hcetl-p21-fhir-v142\"> </a><p><b>status</b>: Active</p><p><b>manufacturer</b>: Universitätsklinikum Beispielstadt – DIZ-IT</p><h3>DeviceNames</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Name</b></td><td><b>Type</b></td></tr><tr><td style=\"display: none\">*</td><td>p21-to-fhir ETL-Pipeline</td><td>User Friendly name</td></tr></table><h3>Versions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td></tr><tr><td style=\"display: none\">*</td><td>1.4.2</td></tr></table><p><b>note</b>: </p><blockquote><div><p>Transformiert den KIS-DRG-Aufbereitungsstand (gleicher Stand, aus dem auch §21-CSV und §301-DTA gespeist werden) in FHIR R4 nach MII-KDM-Profilen.</p>\n</div></blockquote></div>"
+  ] ;
+  fhir:Device.status [ fhir:value "active"] ;
+  fhir:Device.manufacturer [ fhir:value "Universitätsklinikum Beispielstadt – DIZ-IT"] ;
+  fhir:Device.deviceName [
+     fhir:index 0 ;
+     fhir:Device.deviceName.name [ fhir:value "p21-to-fhir ETL-Pipeline" ] ;
+     fhir:Device.deviceName.type [ fhir:value "user-friendly-name" ]
+  ] ;
+  fhir:Device.version [
+     fhir:index 0 ;
+     fhir:Device.version.value [ fhir:value "1.4.2" ]
+  ] ;
+  fhir:Device.note [
+     fhir:index 0 ;
+     fhir:Annotation.text [ fhir:value "Transformiert den KIS-DRG-Aufbereitungsstand (gleicher Stand, aus dem auch §21-CSV und §301-DTA gespeist werden) in FHIR R4 nach MII-KDM-Profilen." ]
+  ] .
+
+<http://example.org/fhir/Device/src-ikarus-kis-ukb> a fhir:Device ;
+  fhir:Resource.id [ fhir:value "src-ikarus-kis-ukb"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Device_src-ikarus-kis-ukb\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Device src-ikarus-kis-ukb</b></p><a name=\"src-ikarus-kis-ukb\"> </a><a name=\"hcsrc-ikarus-kis-ukb\"> </a><p><b>status</b>: Active</p><p><b>manufacturer</b>: Ikarus Healthcare GmbH (fiktiv)</p><h3>DeviceNames</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Name</b></td><td><b>Type</b></td></tr><tr><td style=\"display: none\">*</td><td>Ikarus-KIS — Subsystem Abrechnung</td><td>User Friendly name</td></tr></table><p><b>modelNumber</b>: Ikarus-KIS 2025.1</p><p><b>type</b>: <span title=\"Codes:{https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/CodeSystem/mii-cs-datenquellsystem Sekundaersystem}\">Sekundärsystem</span></p><p><b>owner</b>: <a href=\"Organization-org-ukb.html\">Organization Universitätsklinikum Beispielstadt</a></p><p><b>note</b>: </p><blockquote><div><p>Fiktiver KIS-Hersteller. Der Name spielt auf die Mythologie an (Ikarus = Sohn des Dedalus) und ist NICHT mit einem realen Produkt assoziiert.</p>\n</div></blockquote></div>"
+  ] ;
+  fhir:Device.status [ fhir:value "active"] ;
+  fhir:Device.manufacturer [ fhir:value "Ikarus Healthcare GmbH (fiktiv)"] ;
+  fhir:Device.deviceName [
+     fhir:index 0 ;
+     fhir:Device.deviceName.name [ fhir:value "Ikarus-KIS — Subsystem Abrechnung" ] ;
+     fhir:Device.deviceName.type [ fhir:value "user-friendly-name" ]
+  ] ;
+  fhir:Device.modelNumber [ fhir:value "Ikarus-KIS 2025.1"] ;
+  fhir:Device.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/CodeSystem/mii-cs-datenquellsystem" ] ;
+       fhir:Coding.code [ fhir:value "Sekundaersystem" ] ;
+       fhir:Coding.display [ fhir:value "Sekundärsystem" ]
+     ]
+  ] ;
+  fhir:Device.owner [
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Organization/org-ukb> ;
+     fhir:Reference.reference [ fhir:value "Organization/org-ukb" ]
+  ] ;
+  fhir:Device.note [
+     fhir:index 0 ;
+     fhir:Annotation.text [ fhir:value "Fiktiver KIS-Hersteller. Der Name spielt auf die Mythologie an (Ikarus = Sohn des Dedalus) und ist NICHT mit einem realen Produkt assoziiert." ]
+  ] .
+
+<http://example.org/fhir/DocumentReference/kis-drg-aufbereitung-2026-03-15> a fhir:DocumentReference ;
+  fhir:Resource.id [ fhir:value "kis-drg-aufbereitung-2026-03-15"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"DocumentReference_kis-drg-aufbereitung-2026-03-15\"> </a><p class=\"res-header-id\"><b>Generated Narrative: DocumentReference kis-drg-aufbereitung-2026-03-15</b></p><a name=\"kis-drg-aufbereitung-2026-03-15\"> </a><a name=\"hckis-drg-aufbereitung-2026-03-15\"> </a><p><b>identifier</b>: <code>https://example.org/fhir/sid/kis-drg-aufbereitung</code>/UKB-260100000-enc-mi-001-2026-03-15</p><p><b>status</b>: Current</p><p><b>type</b>: <span title=\"Codes:{http://loinc.org 11506-3}\">Subsequent evaluation note</span></p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActReason HPAYMT}\">Payment</span></p><p><b>date</b>: 2026-03-15 23:00:00+0100</p><p><b>author</b>: </p><ul><li><a href=\"Organization-org-ukb.html\">Organization Universitätsklinikum Beispielstadt</a></li><li><a href=\"Device-src-ikarus-kis-ukb.html\">Device: status = active; manufacturer = Ikarus Healthcare GmbH (fiktiv); modelNumber = Ikarus-KIS 2025.1; type = Sekundärsystem; note = Fiktiver KIS-Hersteller. Der Name spielt auf die Mythologie an (Ikarus = Sohn des Dedalus) und ist NICHT mit einem realen Produkt assoziiert.</a></li></ul><p><b>description</b>: Gemeinsamer DRG-Aufbereitungsstand (Codierung + Grouping). Schwester-Outputs: §21-CSV (Lieferung an InEK Q1/2027), §301-DTA (innerhalb von 3 Werktagen an Krankenkasse), FHIR-Bundle (zeitnah ins DIZ).</p><blockquote><p><b>content</b></p><h3>Attachments</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ContentType</b></td><td><b>Title</b></td></tr><tr><td style=\"display: none\">*</td><td>application/octet-stream</td><td>KIS-DRG-Aufbereitungsstand UKB enc-mi-001 (2026-03-15)</td></tr></table></blockquote></div>"
+  ] ;
+  fhir:DocumentReference.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "https://example.org/fhir/sid/kis-drg-aufbereitung" ] ;
+     fhir:Identifier.value [ fhir:value "UKB-260100000-enc-mi-001-2026-03-15" ]
+  ] ;
+  fhir:DocumentReference.status [ fhir:value "current"] ;
+  fhir:DocumentReference.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a loinc:11506-3 ;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+       fhir:Coding.code [ fhir:value "11506-3" ] ;
+       fhir:Coding.display [ fhir:value "Subsequent evaluation note" ]
+     ]
+  ] ;
+  fhir:DocumentReference.category [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActReason" ] ;
+       fhir:Coding.code [ fhir:value "HPAYMT" ] ;
+       fhir:Coding.display [ fhir:value "Payment" ]
+     ]
+  ] ;
+  fhir:DocumentReference.date [ fhir:value "2026-03-15T23:00:00+01:00"^^xsd:dateTime] ;
+  fhir:DocumentReference.author [
+     fhir:index 0 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Organization/org-ukb> ;
+     fhir:Reference.reference [ fhir:value "Organization/org-ukb" ]
+  ], [
+     fhir:index 1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Device/src-ikarus-kis-ukb> ;
+     fhir:Reference.reference [ fhir:value "Device/src-ikarus-kis-ukb" ]
+  ] ;
+  fhir:DocumentReference.description [ fhir:value "Gemeinsamer DRG-Aufbereitungsstand (Codierung + Grouping). Schwester-Outputs: §21-CSV (Lieferung an InEK Q1/2027), §301-DTA (innerhalb von 3 Werktagen an Krankenkasse), FHIR-Bundle (zeitnah ins DIZ)."] ;
+  fhir:DocumentReference.content [
+     fhir:index 0 ;
+     fhir:DocumentReference.content.attachment [
+       fhir:Attachment.contentType [ fhir:value "application/octet-stream" ] ;
+       fhir:Attachment.title [ fhir:value "KIS-DRG-Aufbereitungsstand UKB enc-mi-001 (2026-03-15)" ]
+     ]
+  ] .
+
+<http://example.org/fhir/Provenance/prov-abrechnungskontext-mi-001> a fhir:Provenance ;
+  fhir:Resource.id [ fhir:value "prov-abrechnungskontext-mi-001"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Provenance_prov-abrechnungskontext-mi-001\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Provenance prov-abrechnungskontext-mi-001</b></p><a name=\"prov-abrechnungskontext-mi-001\"> </a><a name=\"hcprov-abrechnungskontext-mi-001\"> </a><p>Provenance for: </p><ul><li><a href=\"Patient-pat-mi-001.html\">Anonymous Patient Male, DoB: 1958-04-22 ( https://example.org/fhir/sid/patienten-pseudonym#P21-MI-001)</a></li><li><a href=\"Encounter-enc-mi-001.html\">Encounter: status = finished; class = inpatient encounter (ActCode#IMP); period = 2026-03-01 08:42:00+0100 --&gt; 2026-03-15 14:30:00+0100</a></li><li><a href=\"Condition-cond-mi-001-hd-i21.html\">Condition Akuter transmuraler Myokardinfarkt der Vorderwand</a></li><li><a href=\"Condition-cond-mi-001-nd-i10.html\">Condition Essentielle Hypertonie, nicht näher bezeichnet</a></li><li><a href=\"Procedure-proc-mi-001-ptca.html\">Procedure Perkutan-transluminale Gefäßintervention an Herz und Koronargefäßen: Einlegen eines beschichteten Stents in Koronargefäße: Ein Stent</a></li></ul><p>Summary</p><table class=\"grid\"><tr><td>Occurrence</td><td>2026-03-01 08:42:00+0100 --&gt; 2026-03-15 14:30:00+0100</td></tr><tr><td>Recorded</td><td>2026-03-16 03:12:00+0100</td></tr><tr><td>Policy</td><td><ul><li><a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=https://www.gesetze-im-internet.de/khentgg/__21.html\">https://www.gesetze-im-internet.de/khentgg/__21.html</a></li><li><a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=https://www.gesetze-im-internet.de/sgb_5/__301.html\">https://www.gesetze-im-internet.de/sgb_5/__301.html</a></li></ul></td></tr><tr><td>Activity</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-DataOperation CREATE}\">create</span></td></tr></table><p><b>Agents</b></p><table class=\"grid\"><tr><td><b>Type</b></td><td><b>who</b></td></tr><tr><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/provenance-participant-type assembler}\">Assembler</span></td><td><a href=\"Device-etl-p21-fhir-v142.html\">Device: status = active; manufacturer = Universitätsklinikum Beispielstadt – DIZ-IT; note = Transformiert den KIS-DRG-Aufbereitungsstand (gleicher Stand, aus dem auch §21-CSV und §301-DTA gespeist werden) in FHIR R4 nach MII-KDM-Profilen.</a></td></tr><tr><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/provenance-participant-type performer}\">Performer</span></td><td><a href=\"Organization-org-ukb.html\">Organization Universitätsklinikum Beispielstadt</a></td></tr></table></div>"
+  ] ;
+  fhir:Provenance.target [
+     fhir:index 0 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Patient/pat-mi-001> ;
+     fhir:Reference.reference [ fhir:value "Patient/pat-mi-001" ]
+  ], [
+     fhir:index 1 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Encounter/enc-mi-001> ;
+     fhir:Reference.reference [ fhir:value "Encounter/enc-mi-001" ]
+  ], [
+     fhir:index 2 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Condition/cond-mi-001-hd-i21> ;
+     fhir:Reference.reference [ fhir:value "Condition/cond-mi-001-hd-i21" ]
+  ], [
+     fhir:index 3 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Condition/cond-mi-001-nd-i10> ;
+     fhir:Reference.reference [ fhir:value "Condition/cond-mi-001-nd-i10" ]
+  ], [
+     fhir:index 4 ;
+     fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Procedure/proc-mi-001-ptca> ;
+     fhir:Reference.reference [ fhir:value "Procedure/proc-mi-001-ptca" ]
+  ] ;
+  fhir:Provenance.occurredPeriod [
+     fhir:Period.start [ fhir:value "2026-03-01T08:42:00+01:00"^^xsd:dateTime ] ;
+     fhir:Period.end [ fhir:value "2026-03-15T14:30:00+01:00"^^xsd:dateTime ]
+  ] ;
+  fhir:Provenance.recorded [ fhir:value "2026-03-16T03:12:00+01:00"^^xsd:dateTime] ;
+  fhir:Provenance.policy [
+     fhir:value "https://www.gesetze-im-internet.de/khentgg/__21.html" ;
+     fhir:index 0
+  ], [
+     fhir:value "https://www.gesetze-im-internet.de/sgb_5/__301.html" ;
+     fhir:index 1
+  ] ;
+  fhir:Provenance.reason [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActReason" ] ;
+       fhir:Coding.code [ fhir:value "HPAYMT" ] ;
+       fhir:Coding.display [ fhir:value "Payment" ]
+     ]
+  ] ;
+  fhir:Provenance.activity [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-DataOperation" ] ;
+       fhir:Coding.code [ fhir:value "CREATE" ] ;
+       fhir:Coding.display [ fhir:value "create" ]
+     ]
+  ] ;
+  fhir:Provenance.agent [
+     fhir:index 0 ;
+     fhir:Provenance.agent.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/provenance-participant-type" ] ;
+         fhir:Coding.code [ fhir:value "assembler" ] ;
+         fhir:Coding.display [ fhir:value "Assembler" ]
+       ]
+     ] ;
+     fhir:Provenance.agent.who [
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Device/etl-p21-fhir-v142> ;
+       fhir:Reference.reference [ fhir:value "Device/etl-p21-fhir-v142" ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:Provenance.agent.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/provenance-participant-type" ] ;
+         fhir:Coding.code [ fhir:value "performer" ] ;
+         fhir:Coding.display [ fhir:value "Performer" ]
+       ]
+     ] ;
+     fhir:Provenance.agent.who [
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Organization/org-ukb> ;
+       fhir:Reference.reference [ fhir:value "Organization/org-ukb" ]
+     ]
+  ] ;
+  fhir:Provenance.entity [
+     fhir:index 0 ;
+     fhir:Provenance.entity.role [ fhir:value "source" ] ;
+     fhir:Provenance.entity.what [
+       fhir:link <https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/DocumentReference/kis-drg-aufbereitung-2026-03-15> ;
+       fhir:Reference.reference [ fhir:value "DocumentReference/kis-drg-aufbereitung-2026-03-15" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://www.medizininformatik-initiative.de/fhir/ext/modul-metadaten-provenance/Bundle/bundle-abrechnungskontext-mi-001.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

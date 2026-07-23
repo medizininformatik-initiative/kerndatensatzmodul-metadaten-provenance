@@ -1,0 +1,64 @@
+# mii-ig-metadaten-provenance-de-v2026#0.2.0-rc.1: MII IG Kerndatensatz-Modul Metadaten Provenance
+
+## Pages
+
+* [Übersicht](index.md)
+* [Ansatz 1: Meta.tag (Taskforce Metadaten)](ansatz-metatag.md)
+* [Anwendungsbeispiel: Abrechnungsdatenkontext (KHEntgG, SGB V, DRG)](anwendungsbeispiel-abrechnungskontext.md)
+* [Ansatz 2: FHIR Provenance Ressource (BZKF)](ansatz-fhir-provenance.md)
+* [ISiK: Kennzeichnung von Fremdübernahmen](isik.md)
+* [Motivation und Problemstellung](motivation.md)
+* [Datenqualitätsindikatoren (DQ-Framework)](dq-framework.md)
+* [Technische Grundlagen](technische-grundlagen.md)
+* [Anwendungsbeispiel: Deduplizierung Onkologie-Prozedur](anwendungsbeispiel-deduplizierung.md)
+* [Anwendungsbeispiel: Datenqualitätsprüfung](anwendungsbeispiel-datenqualitaet.md)
+* [Artifacts Summary](artifacts.md)
+* [Use-Case-Katalog](usecase-katalog.md)
+
+## Resources
+
+### CodeSystems
+
+* [Greifswald OBC DQ-Framework](CodeSystem-Greifswald-OBC-DQ-Framework.md)
+* [DQ_Rule_Successful](CodeSystem-dq-rule-successful.md)
+* [MII CS Datenquellsystem](CodeSystem-mii-cs-datenquellsystem.md)
+* [MII CS Provenance Prozedur Herkunft](CodeSystem-mii-cs-provenance-prozedur-herkunft.md)
+
+### ValueSets
+
+* [MII VS Provenance Prozedur Herkunft](ValueSet-mii-vs-provenance-prozedur-herkunft.md)
+* [Alle_DQ_Indikatoren_VS](ValueSet-primary.md)
+* [Procedure Intent Value Set](ValueSet-procedure-intent-vs.md)
+
+### Resource Profiles
+
+* [MII PR Provenance Ressourcen-Herkunft](StructureDefinition-mii-pr-provenance-prozedur-herkunft.md)
+
+### ImplementationGuides
+
+* [MII IG Kerndatensatz-Modul Metadaten Provenance](index.md)
+
+### SearchParameters
+
+* [MII_SP_Provenance_Reason](SearchParameter-mii-sp-provenance-reason.md)
+
+### Examples
+
+* [bundle-abrechnungskontext-mi-001 (Bundle)](Bundle-bundle-abrechnungskontext-mi-001.md)
+* [cond-mi-001-hd-i21 (Condition)](Condition-cond-mi-001-hd-i21.md)
+* [cond-mi-001-nd-i10 (Condition)](Condition-cond-mi-001-nd-i10.md)
+* [etl-p21-fhir-v142 (Device)](Device-etl-p21-fhir-v142.md)
+* [src-ikarus-kis-ukb (Device)](Device-src-ikarus-kis-ukb.md)
+* [kis-drg-aufbereitung-2026-03-15 (DocumentReference)](DocumentReference-kis-drg-aufbereitung-2026-03-15.md)
+* [enc-mi-001 (Encounter)](Encounter-enc-mi-001.md)
+* [dq-test-1 (Observation)](Observation-dq-test-1.md)
+* [Universitätsklinikum Beispielstadt (Organization)](Organization-org-ukb.md)
+* [mighty-m (Patient)](Patient-mighty-m.md)
+* [pat-mi-001 (Patient)](Patient-pat-mi-001.md)
+* [proc-mi-001-ptca (Procedure)](Procedure-proc-mi-001-ptca.md)
+* [mii-exa-provenance-abrechnung-import (Provenance)](Provenance-mii-exa-provenance-abrechnung-import.md)
+* [mii-exa-provenance-deduplizierung (Provenance)](Provenance-mii-exa-provenance-deduplizierung.md)
+* [mii-exa-provenance-obds-import-diagnose (Provenance)](Provenance-mii-exa-provenance-obds-import-diagnose.md)
+* [mii-exa-provenance-obds-import-tumorkonferenz (Provenance)](Provenance-mii-exa-provenance-obds-import-tumorkonferenz.md)
+* [mii-exa-provenance-obds-import (Provenance)](Provenance-mii-exa-provenance-obds-import.md)
+* [prov-abrechnungskontext-mi-001 (Provenance)](Provenance-prov-abrechnungskontext-mi-001.md)
